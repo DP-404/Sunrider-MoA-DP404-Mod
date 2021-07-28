@@ -1,0 +1,106 @@
+
+label skirmish_battle:
+
+    $ ship_music = renpy.music.get_playing("music")
+
+    $ random_bg = renpy.random.randint(1,9)
+
+    if random_bg == 1:
+        scene space back1 with battlewipe
+    if random_bg == 2:
+        scene space back2 with battlewipe
+    if random_bg == 3:
+        scene space back3 with battlewipe
+    if random_bg == 4:
+        scene space back4 with battlewipe
+    if random_bg == 5:
+        scene space back5 with battlewipe
+    if random_bg == 6:
+        scene space back6 with battlewipe
+    if random_bg == 7:
+        scene space back7 with battlewipe
+    if random_bg == 8:
+        scene space back8 with battlewipe
+    if random_bg == 9:
+        scene space back9 with battlewipe
+
+    python:
+        store.tempmoney = BM.money
+        store.tempcmd = BM.cmd
+        # store.temprockets = store.sunrider.rockets
+        # store.temprepair_drones = store.sunrider.repair_drones
+        player_ships_original = player_ships
+        original_sunrider = sunrider
+        player_ships = deepcopy(player_ships) #upgrades should not be permanent.
+        sunrider = get_ship_from_list(player_ships, 'Sunrider')
+        enemy_ships = []
+        destroyed_ships = []
+        clean_grid()
+        BM.mission = 'skirmish'
+        BM.xadj.value = 872
+        BM.yadj.value = 370
+        store.zoomlevel = 0.65
+        BM.phase = 'formation'
+        BM.selected = None #if something is selected it won't get shown in the player pool.
+        battlemode()
+        BM.remove_mode = False #when True player can click on units and delete them quickly
+        for ship in player_ships:
+            ship.location = None
+
+    $ PlayerTurnMusic = "music/Titan.ogg"
+    $ EnemyTurnMusic = "music/Dusty_Universe.ogg"
+
+    hide screen ship_map
+    show screen battle_screen
+    show screen player_unit_pool_collapsed
+    show screen enemy_unit_pool_collapsed
+
+    if not BM.seen_skirmish:
+        show screen skirmishhelp
+        $ BM.seen_skirmish = True
+
+    call mission_skirmish from _call_mission_skirmish
+
+    python:
+        BM.phase = 'Player'
+        BM.mission = 'skirmishbattle'
+        update_stats()
+
+    call battle_start from _call_battle_start
+
+    python:
+        BM.cmd = store.tempcmd
+        BM.money = store.tempmoney
+        # store.sunrider.rockets = store.temprockets
+        # store.sunrider.repair_drones = store.temprepair_drones
+        player_ships = player_ships_original
+        sunrider = original_sunrider
+        BM.mission = None
+        BM.ships = []
+        for pship in player_ships:
+            BM.ships.append(pship)
+    scene Solid((0, 0, 0, 255))
+    jump dispatch
+    return
+
+label missionskirmishbattle:
+
+    $BM.battle()  #continue the battle
+
+    if BM.battlemode == True:   #whenever this is set to False battle ends.
+        jump missionskirmishbattle #loop back
+    else:
+        pass #continue down
+
+    # jump dispatch
+    return
+
+label mission_skirmish:
+    $ BM.skirmish_phase()
+
+    if BM.battlemode == True:   #whenever this is set to False battle ends.
+        jump mission_skirmish #loop back
+    else:
+        pass #continue down
+    # jump dispatch
+    return
