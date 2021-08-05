@@ -19,12 +19,12 @@ You are free to modify, translate and/or expand Sunrider or this mod in any mane
 Changes
 - Code and files cleaning and reorganization.
 
-Bugs and Oter fixes
+Bugs and Other fixes
 - Added missing spanish translated 'dontmissit' image at the end of the game.
 
 ### DP404 Mod v1.3
 
-Bugs and Oter fixes
+Bugs and Other fixes
 - Added full stability to the change language option.
 - Fixed a bug which caused the game to crash when using Repair Drone order.
 - Fixed spanish translation errors.
