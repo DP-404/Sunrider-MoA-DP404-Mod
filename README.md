@@ -1,4 +1,4 @@
-# Sunrider-DP404-Mod
+# Sunrider MoA DP404 Mod
 
 ## What is DP404 Mod?
 This is a mod for the open source visual novel Sunrider Mask of Arcadius Beta 7.2 developed by Love In Space.
