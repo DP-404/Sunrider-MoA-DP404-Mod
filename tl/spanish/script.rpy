@@ -22974,7 +22974,7 @@ translate spanish onroutetoongess_4873a654:
 translate spanish onroutetoongess_ac53624a:
 
     # ava "Due to its resources, Ongess has had a long and troubled history. First conquered by the Ryuvians, then by the New Empire, then by PACT, Ongess has been the target of virtually every space faring power for as long as recorded history."
-    ava2 "Debido a sus recursos, Ongess ha tenido una larga y atormentada historia. Primero cnquistado por los Ryuvianos, entonces por el Nuevo Imperio, luego por el PACT, Ongess ha sido el objetivo de casi todos los poderes espaciales hasta donde ha grabado la historia."
+    ava2 "Debido a sus recursos, Ongess ha tenido una larga y atormentada historia. Primero conquistado por los Ryuvianos, entonces por el Nuevo Imperio, luego por el PACT, Ongess ha sido el objetivo de casi todos los poderes espaciales hasta donde ha grabado la historia."
 
 # game/script.rpy:16847
 translate spanish onroutetoongess_29e6a055:
