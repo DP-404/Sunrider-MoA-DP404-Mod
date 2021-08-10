@@ -2350,7 +2350,7 @@ translate spanish firstpriority_564cce1d:
 translate spanish firstprioritytofindryders_351bb38f:
 
     # ava "First things first. Like you said, the Sunrider's an assault carrier without any ryders. Our first priority should be to find pilots and ryders to fill up our empty hangar."
-    ava2 "Las primeras cosas primero. Como dijo, el Sunrider es un carguero de asalto sin ningún ryder. Nuestra primera prioridad debería ser encontrar pilotos y ryders para llenar nuestro hangar vacío."
+    ava2 "Primero lo primero. Como dijo, el Sunrider es un carguero de asalto sin ningún ryder. Nuestra primera prioridad debería ser encontrar pilotos y ryders para llenar nuestro hangar vacío."
 
 # game/script.rpy:2050
 translate spanish firstprioritytofindryders_8193e084:
@@ -2746,7 +2746,7 @@ translate spanish attackonpiratesnest_3e0d4518:
 translate spanish attackonpiratesnest_c8d13ec8:
 
     # ava "The base itself has been built into an asteroid which the pirates dug out, then reinforced with armor and decked out with weapons. The asteroid base is impervious to most conventional weaponry as a result. Not only that, but the asteroids surrounding the base will make a natural environment for ambush."
-    ava2 "La base misma ha sido construida dentro de un asteroide que los piratas excavaron, entonces la roforzaron con armadura y la equiparon con armas. Como resultado la base asteroide es impenetrable para la mayoría del armamento convencional. No solo eso, sino que los asteroides alrededor de la base crearán un hambiente natural para emboscadas."
+    ava2 "La base misma ha sido construida dentro de un asteroide que los piratas excavaron, entonces la reforzaron con armadura y la equiparon con armas. Como resultado la base asteroide es impenetrable para la mayoría del armamento convencional. No solo eso, sino que los asteroides alrededor de la base crearán un hambiente natural para emboscadas."
 
 # game/script.rpy:2514
 translate spanish attackonpiratesnest_83f28eed:
@@ -4276,7 +4276,7 @@ translate spanish after_mission6_0f17d8d3:
 translate spanish after_mission6_cb493152:
 
     # ica "If you haven't noticed, this area of the galaxy's like the Wild Wild West. Plenty of guns for sale have thrown their lots with PACT nowadays, thinking that's the way the galaxy's gonna spin."
-    ica2 "Si no lo has notado, esta área de la galaxia es como el Viejo Vijeo Oeste. Montones de armas para la venta se han lanzado en cantidades para el PACT en estos días, pensando en que esa es la forma en la que la galaxia va a girar."
+    ica2 "Si no lo has notado, esta área de la galaxia es como el Viejo Viejo Oeste. Montones de armas para la venta se han lanzado en cantidades para el PACT en estos días, pensando en que esa es la forma en la que la galaxia va a girar."
 
 # game/script.rpy:4292
 translate spanish after_mission6_1de5c473:
@@ -4294,7 +4294,7 @@ translate spanish after_mission6_0497d1f0:
 translate spanish after_mission6_e1908c3d:
 
     # ica "No! Hate 'em. I would have busted up their whole fleet back there."
-    ica2 "¡No! Los odio. Yo podría haber lanzado su flota entera de vuelta a aquí."
+    ica2 "¡No! Los odio. Yo podría haber lanzado su flota entera de vuelta aquí."
 
 # game/script.rpy:4301
 translate spanish after_mission6_30ccf48e:
@@ -9635,7 +9635,7 @@ translate spanish jumptograveyard_ede3bffa:
 translate spanish jumptograveyard_07553fd8:
 
     # chi "Could the ship have been fully AI controlled? If the ship was depressurized in the middle of a battle, you'd think there'd be frozen crewmen..."
-    chi2 "¿Podría haber sido la nave controlada completamente por un IA? Si la nave fue depresionada en medio de una batalla, pensarías que habrían tripulantes congelados..."
+    chi2 "¿Podría haber sido la nave controlada completamente por un IA? Si la nave fue depresuarizada en medio de una batalla, pensarías que habrían tripulantes congelados..."
 
 # game/script.rpy:8250
 translate spanish jumptograveyard_93a66e0a:
@@ -10361,7 +10361,7 @@ translate spanish boardthatsuperdreadnought_6a8fc439:
 translate spanish boardthatsuperdreadnought_8c943603:
 
     # sol "Imposters to the throne, led by the pretender Crow Harbour."
-    sol2 "Inpostores del trono, liderados por el pretendiente Crow Harbour."
+    sol2 "Impostores del trono, liderados por el pretendiente Crow Harbour."
 
 # game/script.rpy:8839
 translate spanish boardthatsuperdreadnought_8ab513d0:
@@ -10397,7 +10397,7 @@ translate spanish enoughryuvianknownjewel_100aa3e4:
 translate spanish enoughryuvianknownjewel_ee4934a6:
 
     # kay "Sure, can you go get it?"
-    kay2 "Seguro, ¿puedes obtenerlo?"
+    kay2 "Seguro, ¿puedes tomarlo?"
 
 # game/script.rpy:8867
 translate spanish enoughryuvianknownjewel_ef635018:
@@ -10931,7 +10931,7 @@ translate spanish chap4_start_8a6a1727:
 translate spanish chap4_start_98c5eef0:
 
     # cul "Merely because he is young, he thinks he owns this place! I'll show that whelp who owns what once I'm governor of Ryuvia... Hmph! Always interfering at the worst of times..."
-    cul2 "¡Solo porque es jóven, cree que es el dueño de este lugar! Le enseñaré a ese cachorro quien es el dueño de qué una vez que yo sea el gobernante de Ryuvia... ¡Hmph! Simpre interfiriendo en los peores momentos..."
+    cul2 "¡Solo porque es jóven, cree que es el dueño de este lugar! Le enseñaré a ese bribón quien es el dueño de qué una vez que yo sea el gobernante de Ryuvia... ¡Hmph! Siempre interfiriendo en los peores momentos..."
 
 # game/script.rpy:9357
 translate spanish chap4_start_f19f07c6:
@@ -11081,7 +11081,7 @@ translate spanish chap4_start_e952e10c:
 translate spanish chap4_start_4464a3f2:
 
     # chi "In other words, if you could find a watermelon floating in space, the Sunrider's warp drive is now precise enough to place the watermelon inside a large bowl in the mess hall when we warp out."
-    chi2 "En otras palabras, si pudiese encontrar un melón flotando en el espaio, el dispositivo de salto del Sunrider es ahora lo suficientemente preciso como para colocar el melón dentro de un gran tazón en el comedor cuando saltemos."
+    chi2 "En otras palabras, si pudiese encontrar un melón flotando en el espacio, el dispositivo de salto del Sunrider es ahora lo suficientemente preciso como para colocar el melón dentro de un gran tazón en el comedor cuando saltemos."
 
 # game/script.rpy:9431
 translate spanish chap4_start_c6e555a8:
@@ -11681,7 +11681,7 @@ translate spanish newhererebuild_463b7bb5:
 translate spanish newhererebuild_edda67eb:
 
     # kay "You're just lonely. I don't know what happened to you before you ended up in that tube, but you can join our crew here onboard the Sunrider."
-    kay2 "Tú solo estas sola. No sé que te pasó antes de que terminaras en ese tubo, pero te puedes unir a nuestra tripulación aquí a bordo del Sunrider."
+    kay2 "Tú solo estás sola. No sé que te pasó antes de que terminaras en ese tubo, pero te puedes unir a nuestra tripulación aquí a bordo del Sunrider."
 
 # game/script.rpy:9817
 translate spanish newhererebuild_2039fa8c_1:
@@ -11723,7 +11723,7 @@ translate spanish tellmoretime_287287d7:
 translate spanish tellmoretime_b0c6eec5:
 
     # sol "The Emperor and the Crown Prince were killed in an assassination, leaving the throne to my father, the second prince."
-    sol2 "El Emperador y el Príncipe Coronado fueron asesinados, dejando el trono a mi padre, el segundo príncipe."
+    sol2 "El Emperador y el Príncipe Heredero fueron asesinados, dejando el trono a mi padre, el segundo príncipe."
 
 # game/script.rpy:9837
 translate spanish tellmoretime_aacbadbd:
@@ -11849,7 +11849,7 @@ translate spanish tellmoretime_2039fa8c_2:
 translate spanish tellmoretime_97761248:
 
     # kay "Why is it that you're still alive?"
-    kay2 "¿Por qué es que estás todavía viva?"
+    kay2 "¿Por qué es que todavía sigues viva?"
 
 # game/script.rpy:9864
 translate spanish tellmoretime_2039fa8c_3:
@@ -11873,7 +11873,7 @@ translate spanish eyeglowingthat_2039fa8c:
 translate spanish eyeglowingthat_7579fdbd:
 
     # sol "You find me unnatural?"
-    sol2 "¿Me encuentras antinatural?"
+    sol2 "¿Me hallas antinatural?"
 
 # game/script.rpy:9884
 translate spanish eyeglowingthat_fadee3db:
@@ -11981,7 +11981,7 @@ translate spanish helptimeourfriend_79b5e80c:
 translate spanish helptimeourfriend_ac89f59e:
 
     # kay "Okay. But still help us rescue Asaga. We could really use your skills out there."
-    kay2 "De acuerdo. Pero aún así ayúdanos a rescatar a Asaga. Podríamos realmente necesitar tus habilidades ahí fuera."
+    kay2 "De acuerdo. Pero aún así ayúdanos a rescatar a Asaga. Nos vendrían realmente bien tus habilidades ahí fuera."
 
 # game/script.rpy:9927
 translate spanish helptimeourfriend_2039fa8c:
@@ -12461,7 +12461,7 @@ translate spanish operationweddingcrash_21a8394a:
 translate spanish operationweddingcrash_d20e0f43:
 
     # ava "We will make a pin point jump past the entire PACT fleet and come out mere meters away from the Star Palace. A security team supported with combat drones will then launch from modified escape pods into the wedding hall, secure Asaga, then return to the Sunrider."
-    ava2 "Haremos un salto pasada a través de la flota del PACT y saldremos a apenas algunos metros del Palacio Estelar. Un equipo de seguridad apoyado con drones de combate se lanzarán entonces en cápsulas de escape modificadas al salón de bodas, asegurarán a Asaga, y entonces regresarán al Sunrider."
+    ava2 "Haremos un salto arriesgado a través de la flota del PACT y saldremos a apenas algunos metros del Palacio Estelar. Un equipo de seguridad apoyado con drones de combate se lanzarán entonces en cápsulas de escape modificadas al salón de bodas, asegurarán a Asaga, y entonces regresarán al Sunrider."
 
 # game/script.rpy:10267
 translate spanish operationweddingcrash_f2cfdf23:
@@ -12503,7 +12503,7 @@ translate spanish operationweddingcrash_4822f6c8:
 translate spanish operationweddingcrash_02e4de6a:
 
     # "The Star Palace - T-minus 4 hours until the state wedding"
-    "El Palacio Estelar - T-mins 4 horas hasta la boda estatal"
+    "El Palacio Estelar - T-menos 4 horas hasta la boda estatal"
 
 # game/script.rpy:10288
 translate spanish operationweddingcrash_d17db140:
@@ -12599,7 +12599,7 @@ translate spanish operationweddingcrash_bdc064f4:
 translate spanish operationweddingcrash_85e9ba85:
 
     # fon "This way, my leader, to your chambers. We've prepared a special guest for you."
-   fon2 "Por aquí, mi líder, a sus cámaras. Le hemos preparado a una invitada especial para usted."
+   fon2 "Por aquí, mi líder, a sus aposentos. Hemos preparado una invitada especial para usted."
 
 # game/script.rpy:10321
 translate spanish operationweddingcrash_39532ec1:
@@ -12623,7 +12623,7 @@ translate spanish operationweddingcrash_049bf7d0:
 translate spanish operationweddingcrash_cf2bea2c:
 
     # arc "Truly your father is naïve to believe offering such a pathetic girl to us will save his dying world from the coming revolution."
-    arc2 "Ciertamente tu padre es un iluso al creer que ofrecernos a tal patética chica salvará a su mundo moribundo de la revolución próxima."
+    arc2 "Ciertamente tu padre es un iluso al pensar que ofrecernos a una chica tan patética salvará a su mundo moribundo de la revolución próxima."
 
 # game/script.rpy:10330
 translate spanish operationweddingcrash_841dd2d4:
@@ -12701,7 +12701,7 @@ translate spanish operationweddingcrash_d0aa965f:
 translate spanish operationweddingcrash_9cc7b3c5:
 
     # ryu "Does the honorable Veniczar S. Arcadius take Princess Asaga di Ryuvia as his lawfully wedded wife, to love unconditionally, in sickness and in health, in good times and in bad, and in joy as well in sorrow, to cherish and to hold for as long as he shall live?"
-    ryu2 "¿Toma el honorable Veniczar S. Arcadius a la Princesa Asaga di Ryuvia como su legítima esposa, en el amor incondicional, en la enfermedad y en la salud, en los buenos tiempos y en los malos, en la alegría y en la tristeza, apreciándola y manteniéndola mientras viva?"
+    ryu2 "¿Toma el honorable Veniczar S. Arcadius a la Princesa Asaga di Ryuvia como su legítima esposa, en el amor incondicional, en la salud y en la enfermedad, en los buenos tiempos y en los malos, en la alegría y en la tristeza, apreciándola y manteniéndola mientras viva?"
 
 # game/script.rpy:10381
 translate spanish operationweddingcrash_5628f5b1:
@@ -12713,7 +12713,7 @@ translate spanish operationweddingcrash_5628f5b1:
 translate spanish operationweddingcrash_fafa966f:
 
     # ryu "And does Princess Asaga di Ryuvia solemnly pledge to take Veniczar S. Arcadius as her lawfully wedded husband, to love unconditionally, in sickness and in health, in good times and in bad, and in joy as well in sorrow, to cherish and to hold for as long as she shall live?"
-    ryu2 "¿Y la Princesa Asaga di Ryuvia se compromete solemnemente a tomar a Veniczar S. Arcadius como su legítimo esposo, en el amor incondicional, en la enfermedad y en la salud, en los buenos tiempos y en los malos, en la alegría y en la tristeza, apreciándolo y manteniéndolo mientras viva?"
+    ryu2 "¿Y la Princesa Asaga di Ryuvia se compromete solemnemente a tomar a Veniczar S. Arcadius como su legítimo esposo, en el amor incondicional, en la salud y en la enfermedad, en los buenos tiempos y en los malos, en la alegría y en la tristeza, apreciándolo y manteniéndolo mientras viva?"
 
 # game/script.rpy:10383
 translate spanish operationweddingcrash_a827f67b:
@@ -13343,7 +13343,7 @@ translate spanish theweddingcrash_536c87c6:
 translate spanish theweddingcrash_c3020793:
 
     # kay "Good to have you back."
-    kay2 "Perfecto tenerte de vuelta."
+    kay2 "Es bueno tenerte de vuelta."
 
 # game/script.rpy:10772
 translate spanish theweddingcrash_2b604eab:
@@ -13727,7 +13727,7 @@ translate spanish sawfatherkilled_1e289657:
 translate spanish sawfatherkilled_aed819ae:
 
     # kay "I'm glad to hear you're taking this strong. But remember, we're all here for you. You don't have to carry your burdens alone."
-    kay2 "Me alegro de escuchar de que estás tomando esto fuerte. Pero recuerda, todos estamos aquí para tí. No tienes que llevar tu carga tú sola."
+    kay2 "Me alegra escuchar que estás tomándote esto bien. Pero recuerda, todos estamos aquí para tí. No tienes que llevar tu carga tú sola."
 
 # game/script.rpy:11195
 translate spanish knowarcadiustell_6ddd231b:
@@ -13775,7 +13775,7 @@ translate spanish nowqueendo_22202d72:
 translate spanish nowqueendo_f9b637e0:
 
     # asa "I'm through with being royalty, capt'n. It's just not what I was meant to be."
-    asa2 "Estoy cansada con ser de la realeza, capitán. Simplemente no es lo que se supone que sea."
+    asa2 "Estoy cansada de ser de la realeza, capitán. Simplemente no es lo que se supone que sea."
 
 # game/script.rpy:11231
 translate spanish rightchoosedestiny_dcc78958:
@@ -13811,7 +13811,7 @@ translate spanish notwantresponsibility_84d5437a:
 translate spanish nobodykingsday_135eaad0:
 
     # asa "Nobody needs kings and queens in this age, captain. The people deserve elected officials. Not royals."
-    asa2 "Nadie necesita reyes ni reinas en esta era, capitán. Las personas merecen oficiales elejidos. No realeza."
+    asa2 "Nadie necesita reyes ni reinas en esta era, capitán. Las personas merecen oficiales elegidos. No realeza."
 
 # game/script.rpy:11249
 translate spanish nobodykingsday_671a1409:
@@ -13931,7 +13931,7 @@ translate spanish fallofryuvia_2039fa8c_3:
 translate spanish fallofryuvia_e61601f9:
 
     # kay "You don't have to be alone, Sola. We're all here for you."
-    kay2 "No tienes que aislada, Sola. Todos estamos aquí para tí."
+    kay2 "No tienes que estar sola. Todos estamos aquí para tí."
 
 # game/script.rpy:11324
 translate spanish fallofryuvia_8585c79c:
@@ -14021,7 +14021,7 @@ translate spanish chigarathankrescue_52b6c7e2:
 translate spanish icarithoughtsalliance_180f3142:
 
     # ica "I must say, that was quite a rescue captain. I wasn't sure if we could have pulled it off."
-    ica2 "Debo decir, ese fue realmente un rescate capitán. No estaba segura si podríamos haberlo logrado."
+    ica2 "Debo decir, ese fue un buen rescate capitán. No estaba segura si podríamos haberlo logrado."
 
 # game/script.rpy:11394
 translate spanish pulloffcrew_5e5e5787:
@@ -14117,7 +14117,7 @@ translate spanish likewillreplace_d42c3d04:
 translate spanish likewillreplace_f6de516c:
 
     # ica "Probably, the current PACT occupied territories will end up being occupied by the Alliance instead. Either way, it doesn't look like your planet will be able to return to the way things were."
-    ica2 "Probablemente, el actuales territorios ocupados por el PACT terminarán en cambio siendo ocupados por la Alianza. De cualquier forma, no parece como que tu planeta será capaz de regresar a como estaban las cosas."
+    ica2 "Probablemente, los actuales territorios ocupados por el PACT terminarán en cambio siendo ocupados por la Alianza. De cualquier forma, no parece que tu planeta será capaz de regresar a como estaban las cosas."
 
 # game/script.rpy:11478
 translate spanish likewillreplace_ffa90ae5:
@@ -14369,7 +14369,7 @@ translate spanish worddaringspread_6e03612c:
 translate spanish worddaringspread_df0c0916:
 
     # gre "Your mission is the defense of the Alliance gateway world, Far Port. You must hold out there until our reinforcements arrive."
-    gre2 "Su misión es la defensa del mundo entrada de la Alianza, Far Port. Debe aguantar ahí hasta que lleguen nuestros refuerzos."
+    gre2 "Su misión es defender la puerta de entrada al territorio de la Alianza, Far Port. Debe aguantar ahí hasta que lleguen nuestros refuerzos."
 
 # game/script.rpy:11590
 translate spanish worddaringspread_59787415:
@@ -14381,7 +14381,7 @@ translate spanish worddaringspread_59787415:
 translate spanish worddaringspread_88ebb3b3:
 
     # gre "I know I'm asking much. To help you prepare for the battle, I'm sending you one of my personal advisors to your starship."
-    gre2 "Sé que le estoy pidiendo mucho. Para ayudarlo a prepararse para la batalla, le estoy enviando a una de mis asesoras personales a su nave estelar."
+    gre2 "Sé que le estoy pidiendo mucho. Para ayudarlo a prepararse para la batalla, le estoy enviando a una de mis asesoras personales a su nave."
 
 # game/script.rpy:11592
 translate spanish worddaringspread_0f7f7c0b:
@@ -18264,7 +18264,7 @@ translate spanish beachchigara_c5ff29ca:
 translate spanish beachchigara_9aeb3f29:
 
     # kay "That's always been your dream, huh..."
-    kay2 "Ese suiempre ha sido tu sueño, huh..."
+    kay2 "Ese siempre ha sido tu sueño, huh..."
 
 # game/script.rpy:14170
 translate spanish beachchigara_edf5fbf5:
@@ -20340,7 +20340,7 @@ translate spanish deathhisheir_31f3619a:
 translate spanish deathhisheir_2ebee545:
 
     # sol "Yes. So she used her connections to find me."
-    sol2 "Sí. Así que utilizó sus conecciones para encontrarme."
+    sol2 "Sí. Así que utilizó sus conexiones para encontrarme."
 
 # game/script.rpy:15075
 translate spanish deathhisheir_838b5958:
@@ -20622,7 +20622,7 @@ translate spanish heardexplosioncolor_d2fc3029:
 translate spanish heardexplosioncolor_77573ec4:
 
     # "The team crashed into their log cabin for the night."
-    "El equipo entró en su cabaña en el arbol por la noche."
+    "El equipo entró en su cabaña en el árbol por la noche."
 
 # game/script.rpy:15186
 translate spanish heardexplosioncolor_f444f939:
@@ -22974,7 +22974,7 @@ translate spanish onroutetoongess_4873a654:
 translate spanish onroutetoongess_ac53624a:
 
     # ava "Due to its resources, Ongess has had a long and troubled history. First conquered by the Ryuvians, then by the New Empire, then by PACT, Ongess has been the target of virtually every space faring power for as long as recorded history."
-    ava2 "Debido a sus reursos, Ongess ha tenido una larga y atormentada historia. Primero cnquistada por los Ryuvianos, entonces por el Nuevo Imperio, luego por el PACT, Ongess ha sido el objetivo de casi todos los poderes espaciales hasta donde ha grabado la historia."
+    ava2 "Debido a sus recursos, Ongess ha tenido una larga y atormentada historia. Primero conquistado por los Ryuvianos, entonces por el Nuevo Imperio, luego por el PACT, Ongess ha sido el objetivo de casi todos los poderes espaciales hasta donde ha grabado la historia."
 
 # game/script.rpy:16847
 translate spanish onroutetoongess_29e6a055:
@@ -24378,7 +24378,7 @@ translate spanish wordfastsay_b7d76723:
 translate spanish wordfastsay_bc32fcf7:
 
     # kry "Believe it or not, the smell was even worse when we first arrived. We've installed new air purifiers throughout the station's ventilation system, but even then, I doubt this station can continue to hold so many people."
-    kry2 "Créalo o no, el olor era incluso pero cuando llegamos por primera vez. Hemos instalado nuevos purificadores de aire a lo largo de los sistemas de ventilación de la estación, pero aún así, dudo que esta estación pueda continuar manteniendo a tanta gente."
+    kry2 "Créalo o no, el olor era incluso peor cuando llegamos por primera vez. Hemos instalado nuevos purificadores de aire a lo largo de los sistemas de ventilación de la estación, pero aún así, dudo que esta estación pueda continuar manteniendo a tanta gente."
 
 # game/script.rpy:17462
 translate spanish wordfastsay_93cf8966:
@@ -31092,7 +31092,7 @@ translate spanish icarimessviewstorm_8dbfa0ac:
 translate spanish icarimessviewstorm_081bd96f:
 
     # ica "Last I saw of him, he rammed his flaming orbital skiff into an Alliance cruiser. Didn't even dent the armor. Heh."
-    ica2 "La última vez que lo ví, él atacaba con su flameante nave orbital a un crucero de la Alianza. Ni siqiera abolló la armadura. Heh."
+    ica2 "La última vez que lo ví, él atacaba con su flameante nave orbital a un crucero de la Alianza. Ni siquiera abolló la armadura. Heh."
 
 # game/script.rpy:20589
 translate spanish icarimessviewstorm_4c07c981:
@@ -32064,7 +32064,7 @@ translate spanish shieldseyefile_19610f0e:
 translate spanish shieldseyefile_dfdde042:
 
     # kay "So you're gonna be in space, huh..."
-    kay2 "Así que vas a estar en el espaio, huh..."
+    kay2 "Así que vas a estar en el espacio, huh..."
 
 # game/script.rpy:20908
 translate spanish shieldseyefile_d0c559d0:
@@ -32910,7 +32910,7 @@ translate spanish after_mission19_731d8987:
 translate spanish after_mission19_6800fd41:
 
     # ava "And what good did any of it do. It's not like any of the school officials listened to anything I had to say anyways."
-    ava2 "Y qué bueno logró algo de eso. No es como si alguno de los oficiales de la escuela escuchara nada de lo que yo tenía que decir de todas formas."
+    ava2 "¿Y qué resultado logró algo de eso? No es como si alguno de los oficiales de la escuela escuchara nada de lo que yo tenía que decir de todas formas."
 
 # game/script.rpy:21327
 translate spanish after_mission19_6dea7faf:
@@ -33534,7 +33534,7 @@ translate spanish goodbyemaray_68a9ae68:
 translate spanish goodbyemaray_f7741960:
 
     # "-Mostly happy ones of friendship and family, only punctuated with brief moments of sadness."
-    "-La mayoría felices de amistades y familia, solo marcados con cortos momentos de tristeza."
+    "La mayoría felices de amistades y familia, solo marcados con cortos momentos de tristeza."
 
 # game/script.rpy:21494
 translate spanish goodbyemaray_2d6fcdc9:
@@ -34716,7 +34716,7 @@ translate spanish satalonestaring_8e22e511:
 translate spanish satalonestaring_836227c7:
 
     # kay "Together, we will end the Legion's reign of terror! It may have spawned from the deepest depths hell, but we will send it crashing back to the hellfire it came from!"
-    kay2 "¡Juntos, terminaremos el reino del terror del Legion! ¡Podrá haber surgido de las más profundas profundidades del infierno, pero lo enviaremos de vuelta al fuego infernal de donde vino!"
+    kay2 "¡Juntos, terminaremos el reino del terror del Legion! ¡Podrá haber surgido de lo más profundo del infierno, pero lo enviaremos de vuelta al fuego infernal de donde vino!"
 
 # game/script.rpy:21860
 translate spanish satalonestaring_0c9ce6bd:
@@ -35388,7 +35388,7 @@ translate spanish getvanguardthe_4fdd8f56:
 translate spanish getvanguardthe_e17d47a9:
 
     # "She grabbed it with her only remaining hand."
-    "La agarró con su única pano restante."
+    "La agarró con su única mano restante."
 
 # game/script.rpy:22476
 translate spanish getvanguardthe_56698554:

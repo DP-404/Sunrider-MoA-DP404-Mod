@@ -166,7 +166,7 @@ translate spanish censorscene1_9c3ce53e:
 translate spanish censorscene1_de6231b6:
 
     # "Their hands met. Their fingers intertwined."
-    "Sus manos se encontraros. Sus dedos se entrelazaron."
+    "Sus manos se encontraron. Sus dedos se entrelazaron."
 
 # game/censoreddata.rpy:55
 translate spanish censorscene1_245c22c6:
