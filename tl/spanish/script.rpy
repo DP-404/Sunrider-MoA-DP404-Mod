@@ -2314,7 +2314,7 @@ translate spanish completeourtestsandresupply_6e8088ee:
 translate spanish completeourtestsandresupply_b5e4365f:
 
     # kay "Begin captain's log. {i}The Sunrider's been in dry dock for the past two days. Repairs have gone ahead of schedule and we're back to full combat status already. That Chigara girl really is something. I wouldn't mind having her in my engineering staff.{/i}"
-    kay2 "Comienzando el registro del capitán. {i}El Sunrider ha estado atracado en el puerto por los últimos dos días. Las reparaciones han ido como lo previsto y ya hemos vuelto a un completo estado de combate. Esa chica Chigara es realmente algo. No me imagino teniéndola en mi personal de ingeniería."
+    kay2 "Comenzando el registro del capitán. {i}El Sunrider ha estado atracado en el puerto por los últimos dos días. Las reparaciones han ido como lo previsto y ya hemos vuelto a un completo estado de combate. Esa chica Chigara es realmente algo. No me imagino teniéndola en mi personal de ingeniería."
 
 # game/script.rpy:2008
 translate spanish completeourtestsandresupply_f3045f41:
