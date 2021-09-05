@@ -221,7 +221,7 @@ label loadsavedgame:   #used when the player chooses to load a saved game after 
     return
 
 label tryagain:
-    hide screen badend
+    hide badend with battlewipe
     $ clean_battle_exit(True)
     python:
         store.battle1_check1 = False
