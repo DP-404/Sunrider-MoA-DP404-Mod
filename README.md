@@ -14,6 +14,13 @@ You are free to modify, translate and/or expand Sunrider or this mod in any mane
 
 ## Changelog
 
+### DP404 Mod v1.4b
+
+Bugs and Other fixes
+- Added missing images
+- Fixed a bug which caused the badend background not to disappear after choosing to try again.
+- Fixed spanish translation errors
+
 ### DP404 Mod v1.4a
 
 Bugs and Other fixes
