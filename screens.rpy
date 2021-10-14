@@ -46,46 +46,6 @@ screen say:
     if 'mouseup_2' not in config.keymap['game_menu']:
         key 'mouseup_2' action HideInterface()
     key 'H' action HideInterface()
-
-# I don't know why some characters 'who' don't get displayed in translations so let's use all of them there this way
-    if who == 'Kayto2':
-        $ who = 'Kayto'
-    if who == 'Asaga2':
-        $ who = 'Asaga'
-    if who == 'Chigara2':
-        $ who = 'Chigara'
-    if who == 'Ava2':
-        $ who = 'Ava'
-    if who == 'Sola2':
-        $ who = 'Sola'
-    if who == 'Maray2':
-        $ who = 'Maray'
-    if who == 'Grey2':
-        $ who = 'Grey'
-    if who == 'Arcadius2':
-        $ who = 'Arcadius'
-    if who == 'Jaylor2':
-        $ who = 'Jaylor'
-    if who == 'Prototype2':
-        $ who = 'Prototipo'
-    if who == 'Claude2':
-        $ who = 'Claude'
-    if who == 'Fontana2':
-        $ who = 'Fontana'
-    if who == 'Cullen2':
-        $ who = 'Cullen'
-    if who == 'Icari2':
-        $ who = 'Icari'
-    if who == 'Kryska2':
-        $ who = 'Kryska'
-    if who == 'Cosette2':
-        $ who = 'Cosette'
-    if who == 'Pilot2':
-        $ who = 'Piloto'
-    if who == 'Kyoko2':
-        $ who = 'Kyoko'
-    if who == 'Sophita2':
-        $ who = 'Sophita'
     
     # Defaults for side_image and two_window
     default side_image = None
