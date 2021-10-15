@@ -60,10 +60,7 @@ screen store_union:
                     ypos 12
                     for item in store_items:
                         if item.isVisible():
-                            if _preferences.language == None:
-                                text item.display_name + ("    [[Store:{!s}]".format(eval(item.variable_name)) if item.variable_name != None else "") font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
-                            else:
-                                text item.display_name_es + ("    [[Almacén:{!s}]".format(eval(item.variable_name)) if item.variable_name != None else "") font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
+                            text item.display_name + (__("    [[Store:{!s}]").format(eval(item.variable_name)) if item.variable_name != None else "") font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
                 vbox:
                     ypos 12
                     for item in store_items:
@@ -88,12 +85,8 @@ screen store_info:
 
         for item in store_items:
             if BM.hovered == item.id:
-                if _preferences.language == None:
-                    text item.display_name xpos 50 ypos 50 size 35 font "Font/sui generis rg.ttf" color '000'
-                    text item.tooltip xpos 50 ypos 150 size 20 font "Font/GOTHIC.TTF" color '000'
-                else:
-                    text item.display_name_es xpos 50 ypos 50 size 35 font "Font/sui generis rg.ttf" color '000'
-                    text item.tooltip_es xpos 50 ypos 150 size 20 font "Font/GOTHIC.TTF" color '000'
+                text item.display_name xpos 50 ypos 50 size 35 font "Font/sui generis rg.ttf" color '000'
+                text item.tooltip xpos 50 ypos 150 size 20 font "Font/GOTHIC.TTF" color '000'
 
 
 
