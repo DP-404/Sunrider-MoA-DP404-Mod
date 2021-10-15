@@ -20,55 +20,55 @@ translate spanish strings:
 
     # game/classes.rpy:1683
     old "Kinetic Damage"
-    new "Kinético: Daño"
+    new "Daño"
 
     # game/classes.rpy:1683
     old "Kinetic Accuracy"
-    new "Kinético: Precisión"
+    new "Precisión"
 
     # game/classes.rpy:1683
     old "Kinetic Energy Cost"
-    new "Kinético: Costo de EN"
+    new "Coste de EN"
 
     # game/classes.rpy:1683
     old "Energy Damage"
-    new "Energía: Daño"
+    new "Daño"
 
     # game/classes.rpy:1683
     old "Energy Accuracy"
-    new "Energía: Precisión"
+    new "Precisión"
 
     # game/classes.rpy:1683
     old "Energy Cost"
-    new "Energía: Costo de EN"
+    new "Coste de EN"
 
     # game/classes.rpy:1683
     old "Missile Damage"
-    new "Misil: Daño"
+    new "Daño"
 
     # game/classes.rpy:1683
     old "Missile Flak Resistance"
-    new "Misil: Resistencia"
+    new "Resistencia"
 
     # game/classes.rpy:1683
     old "Missile Energy Cost"
-    new "Misil: Coste de EN"
+    new "Coste de EN"
 
     # game/classes.rpy:1683
     old "Missile Storage"
-    new "Misil: Almacén"
+    new "Almacén"
 
     # game/classes.rpy:1683
     old "Melee Damage"
-    new "Melee: Daño"
+    new "Daño"
 
     # game/classes.rpy:1683
     old "Melee Accuracy"
-    new "Melee: Precisión"
+    new "Precisión"
 
     # game/classes.rpy:1683
     old "Melee Energy Cost"
-    new "Melee: Coste de EN"
+    new "Coste de EN"
 
     # game/classes.rpy:1683
     old "Shield Power"

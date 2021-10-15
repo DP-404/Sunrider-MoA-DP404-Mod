@@ -25,8 +25,8 @@ init 2 python:
             self.repair_drones = None
             
             #custom upgrades
-            self.upgrades['base_armor'] = ['Armadura',1,5,500,2]
-            self.upgrades['max_missiles'] = ['Missile: Almacén',1,1,500,2]
+            self.upgrades['base_armor'] = ['Armor',1,5,500,2]
+            self.upgrades['max_missiles'] = ['Missile Storage',1,1,500,2]
             
             
             self.missiles = self.max_missiles
@@ -193,8 +193,8 @@ init 2 python:
                 'character':"Character/Icari/icari_plugsuit_point_angry.png"
                 }
             self.flak = 20
-            self.upgrades['max_hp'] = ['Cobertura de la Coraza',1,100,100,2.0]
-            self.upgrades['max_en'] = ['Reactor de Energía',1,5,150,1.4]
+            self.upgrades['max_hp'] = ['Hull Plating',1,100,100,2.0]
+            self.upgrades['max_en'] = ['Energy Reactor',1,5,150,1.4]
 
             ####################UPGRADE BACKGROUND AND ICONS
             self.upgrade_menu = 'Menu/upgrade_phoenix.png'
