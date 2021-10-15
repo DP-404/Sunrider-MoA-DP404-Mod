@@ -16,7 +16,7 @@ translate spanish strings:
 
     # game/screens custom.rpy:986
     old "Provides +20 Flak, +10 Evasion and +10 Shield Generation to all allied units. Will cancel Full Forward if active."
-    new "Provee +20 Fuego Antiaéreo, +10 Evasión y +10 Generación de Escudo a todas las unidades aliadas. Cancelará Avance Completo si se activa."
+    new "Provee +20 Fuego Antiaéreo, +10 Evasión y +10 Generación de Escudo a todas las unidades. Cancelará Avance Completo si se activa."
 
     # game/screens custom.rpy:999
     old "Restores 50% of the Sunrider's health."
@@ -145,4 +145,12 @@ translate spanish strings:
     # game/screens custom.rpy:1908
     old "PROCEED"
     new "PROCEDER"
+
+# TODO: Translation updated at 2021-10-15 15:47
+
+translate spanish strings:
+
+    # game/screens custom.rpy:986
+    old "Provides +20 Flak, +10 Evasion and +10 Shield Generation to all allied units. Will cancel FULL FORWARD if active."
+    new ""
 

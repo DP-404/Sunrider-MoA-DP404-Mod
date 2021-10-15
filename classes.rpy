@@ -593,7 +593,7 @@ init -2 python:
                     #check if you can hit the target. if not, let the player know he's stupid.
                     if self.target.cth <= 0:
                         self.draggable = False
-                        renpy.say('',_('¡That\'s hopeless, captain!'))
+                        renpy.say('',_('That\'s hopeless, captain!!'))
                         self.draggable = True
                         return #do end the method, this is important.
                     else:

@@ -51,7 +51,7 @@ translate spanish strings:
     new "¡El objetivo está fuera del rango, capitán!"
 
     # game/classes.rpy:596
-    old "¡That's hopeless, captain!"
+    old "That's hopeless, captain!!"
     new "¡Eso es inútil, capitán!"
 
     # game/classes.rpy:700
