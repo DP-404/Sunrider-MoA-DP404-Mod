@@ -90,3 +90,6 @@ translate spanish strings:
     old "Repair Crew"
     new "Tripulación de Reparación"
 
+    # game/classes.rpy:2738
+    old "\n            Allows Claude to move any Ryder a single hex.\n            This movement will provoke Blindside attacks, if you move an enemy Ryder\n            into the range of a friendly unit with an Assault type weapon.\n            Has unlimited range."
+    new "        Permite a Claude mover a cualquier Ryder una sola casilla.\n        Este movimiento provocará contraataques, si mueves a un Ryder enemigo\n        en el rango de una unidad aliada con un arma de tipo Asalto.\n        Tiene rango ilimitado."

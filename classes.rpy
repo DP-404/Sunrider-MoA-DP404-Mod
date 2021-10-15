@@ -2842,12 +2842,11 @@ init -2 python:
             self.buff_strength = 0 #how many points does it increase a stat?
             self.buff_duration = 1
             self.keep_after_reset = {} #used by save compatibility code
-            self.tooltip = """
+            self.tooltip = _("""
             Allows Claude to move any Ryder a single hex.
             This movement will provoke Blindside attacks, if you move an enemy Ryder
             into the range of a friendly unit with an Assault type weapon.
-            Has unlimited range."""
-            self.tooltip_es = "Permite a Claude mover a cualquier una sola casilla.\nEste movimiento provocará contraataques, si mueves a un Ryder enemigo\nen el rango de una unidad aliada con un arma de tipo Asalto.\nTiene rango ilimitado."
+            Has unlimited range.""")
 
             #always hits
             self.accuracy = 9999
