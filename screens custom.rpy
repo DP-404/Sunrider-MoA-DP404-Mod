@@ -1128,11 +1128,11 @@ screen commands: ##show the weapon buttons etc##
                 text modifier xpos 1217 ypos (922+count*24) size 20 outlines [(1,'000',0,0)]
                 if BM.selected.modifiers[modifier][0] > 0:
                     if BM.selected.modifiers[modifier][1] > 0:
-                        $ status_effect = '+{}% for {} turns'.format(BM.selected.modifiers[modifier][0],BM.selected.modifiers[modifier][1])
+                        $ status_effect = __('+{}% for {} turns').format(BM.selected.modifiers[modifier][0],BM.selected.modifiers[modifier][1])
                     else:
                         $ status_effect = '+{}%'.format(BM.selected.modifiers[modifier][0])
                 else:
-                    $ status_effect = '{}% for {} turns'.format(BM.selected.modifiers[modifier][0],BM.selected.modifiers[modifier][1])
+                    $ status_effect = __('{}% for {} turns').format(BM.selected.modifiers[modifier][0],BM.selected.modifiers[modifier][1])
                 text status_effect xanchor 1.0 xpos 1554 ypos (922+count*24) size 19 outlines [(1,'000',0,0)]
                 $count += 1
 

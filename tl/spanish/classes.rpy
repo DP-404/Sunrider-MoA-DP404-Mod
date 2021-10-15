@@ -174,6 +174,50 @@ translate spanish strings:
     old "Repair Crew"
     new "Tripulación de Reparación"
 
+    # game/classes.rpy:1742
+    old "accuracy"
+    new "Precisión"
+
+    # game/classes.rpy:1742
+    old "move_cost"
+    new "Coste de Mov"
+
+    # game/classes.rpy:1742
+    old "evasion"
+    new "Evasión"
+
+    # game/classes.rpy:1742
+    old "damage"
+    new "Daño"
+
+    # game/classes.rpy:1742
+    old "armor"
+    new "Armadura"
+
+    # game/classes.rpy:1742
+    old "shield"
+    new "Escudo"
+
+    # game/classes.rpy:1742
+    old "flak"
+    new "Fuego AA"
+
+    # game/classes.rpy:1742
+    old "energy"
+    new "Energía"
+
+    # game/classes.rpy:1742
+    old "stealth"
+    new "Sigilo"
+
+    # game/classes.rpy:1742
+    old "shield_generation"
+    new "Gen. de Escudo"
+
+    # game/classes.rpy:1742
+    old "energy regen"
+    new "Regen. de Energía"
+
     # game/classes.rpy:2076
     old "COUNTER ATTACK!"
     new "¡CONTRAATAQUE!"

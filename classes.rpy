@@ -1739,17 +1739,17 @@ init -2 python:
               #modifiers list temporary (de)buffs.
               #these values represent the strength of the modifier and the number of turns it stays in effect
             self.modifiers = {
-                'accuracy':[0,0],
-                'move_cost':[0,0],
-                'evasion':[0,0],
-                'damage':[0,0],
-                'armor':[0,0],
-                'shield':[0,0],
-                'flak':[0,0],
-                'energy':[0,0],
-                'stealth':[0,0],
-                'shield_generation':[0,0],
-                'energy regen':[0,0],
+                _('accuracy'):[0,0],
+                _('move_cost'):[0,0],
+                _('evasion'):[0,0],
+                _('damage'):[0,0],
+                _('armor'):[0,0],
+                _('shield'):[0,0],
+                _('flak'):[0,0],
+                _('energy'):[0,0],
+                _('stealth'):[0,0],
+                _('shield_generation'):[0,0],
+                _('energy regen'):[0,0],
                 }
 
         #return None if an attribute does not exist

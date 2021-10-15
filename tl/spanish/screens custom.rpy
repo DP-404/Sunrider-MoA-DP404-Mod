@@ -38,6 +38,14 @@ translate spanish strings:
     old "Retreat your units from battle without applying penalties."
     new "Retira a tus unidades de la batalla sin aplicar penalizaciones."
 
+    # game/screens custom.rpy:1131
+    old "+{}% for {} turns"
+    new "+{}% por {} turnos"
+
+    # game/screens custom.rpy:1135
+    old "{}% for {} turns"
+    new "{}% por {} turnos"
+
     # game/screens custom.rpy:1505
     old "HP: {!s}/{!s}"
     new "PS: {!s}/{!s}"
