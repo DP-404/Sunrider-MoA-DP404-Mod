@@ -28,53 +28,38 @@ screen upgrade:
 
     #dictionaries are inherently unsorted, so this is needed ;_;
     $ upgrade_list = []
-    if _preferences.language == None:
-        $ upgrade_list.append(["BASIC -----------",None,None,None,None])
-    else:
-        $ upgrade_list.append(["BÁSICO -----------",None,None,None,None])
+    $ upgrade_list.append([_("BASIC -----------"),None,None,None,None])
     $ upgrade_list.append(ship.upgrades['max_hp'])
     $ upgrade_list.append(ship.upgrades['max_en'])
     $ upgrade_list.append(ship.upgrades['evasion'])
 #    $ upgrade_list.append(ship.upgrades['move_cost'])  #probably should be set individually in design
 
     if uses_kinetics:
-        if _preferences.language == None:
-            $ upgrade_list.append(["KINETIC -----------",None,None,None,None])
-        else:
-            $ upgrade_list.append(["KINÉTICO -----------",None,None,None,None])
+        $ upgrade_list.append([_("KINETIC -----------"),None,None,None,None])
         $ upgrade_list.append(ship.upgrades['kinetic_dmg'])
         $ upgrade_list.append(ship.upgrades['kinetic_acc'])
         $ upgrade_list.append(ship.upgrades['kinetic_cost'])
 
     if uses_lasers:
-        if _preferences.language == None:
-            $ upgrade_list.append(["LASER -----------",None,None,None,None])
-        else:
-            $ upgrade_list.append(["LÁSER -----------",None,None,None,None])
+        $ upgrade_list.append([_("LASER -----------"),None,None,None,None])
         $ upgrade_list.append(ship.upgrades['energy_dmg'])
         $ upgrade_list.append(ship.upgrades['energy_acc'])
         $ upgrade_list.append(ship.upgrades['energy_cost'])
 
     if ship.max_missiles > 0:
-        if _preferences.language == None:
-            $ upgrade_list.append(["MISSILE -----------",None,None,None,None])
-        else:
-            $ upgrade_list.append(["MISILES -----------",None,None,None,None])
+        $ upgrade_list.append([_("MISSILE -----------"),None,None,None,None])
         $ upgrade_list.append(ship.upgrades['missile_dmg'])
         $ upgrade_list.append(ship.upgrades['missile_eccm'])
         $ upgrade_list.append(ship.upgrades['missile_cost'])
         $ upgrade_list.append(ship.upgrades['max_missiles'])
 
     if can_use_melee:
-        $ upgrade_list.append(["MELEE -----------",None,None,None,None])
+        $ upgrade_list.append([_("MELEE -----------"),None,None,None,None])
         $ upgrade_list.append(ship.upgrades['melee_dmg'])
         $ upgrade_list.append(ship.upgrades['melee_acc'])
         $ upgrade_list.append(ship.upgrades['melee_cost'])
 
-    if _preferences.language == None:
-        $ upgrade_list.append(["DEFENSES -----------",None,None,None,None])
-    else:
-        $ upgrade_list.append(["DEFENSAS -----------",None,None,None,None])
+    $ upgrade_list.append([_("DEFENSES -----------"),None,None,None,None])
 
     if ship.shield_generation > 0:
         $ upgrade_list.append(ship.upgrades['shield_generation'])
@@ -92,7 +77,7 @@ screen upgrade:
 
     add ship.upgrade_menu
 
-    $ funds_text = '${!s}'.format(BM.money) if BM.mission!='skirmish' else 'UNLIMITED'
+    $ funds_text = '${!s}'.format(BM.money) if BM.mission!='skirmish' else _('UNLIMITED')
     text funds_text:
         size 50
         xpos 70
@@ -303,25 +288,15 @@ screen upgrade:
             ypos 0.7
             vbox:
                 if level < 18:
-                    if _preferences.language == None:
-                        label "Future costs:":
-                            right_padding 10
-                            text_color '000'
-                    else:
-                        label "Costes futuros:":
-                            right_padding 10
-                            text_color '000'
+                    label _("Future costs:"):
+                        right_padding 10
+                        text_color '000'
                 for i in range(1,10):
                     hbox:
                         if level+i+1 < 20:
-                            if _preferences.language == None:
-                                text "Mark {}:".format( level+i+1 ):
-                                    min_width 100
-                                    color '000'
-                            else:
-                                text "Marca {}:".format( level+i+1 ):
-                                    min_width 100
-                                    color '000'
+                            text _("Mark {}:").format( level+i+1 ):
+                                min_width 100
+                                color '000'
                             text " ${}".format( int(cost*multiplier**i) ):
                                 color '000'
 
