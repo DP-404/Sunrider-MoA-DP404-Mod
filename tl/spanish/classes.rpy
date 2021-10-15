@@ -2,6 +2,90 @@
 
 translate spanish strings:
 
+    # game/classes.rpy:65
+    old "FULL FORWARD"
+    new "AVANCE COMPLETO"
+
+    # game/classes.rpy:65
+    old "ALL GUARD"
+    new "DEFENSA TOTAL"
+
+    # game/classes.rpy:65
+    old "REPAIR DRONES"
+    new "DRONES REPARADORES"
+
+    # game/classes.rpy:65
+    old "VANGUARD CANNON"
+    new "CAÑÓN VANGUARD"
+
+    # game/classes.rpy:111
+    old "RESURRECTION"
+    new "RESURRECCIÓN"
+
+    # game/classes.rpy:111
+    old "SHORT RANGE WARP"
+    new "SALTO DE CORTO RANGO"
+
+    # game/classes.rpy:111
+    old "RETREAT"
+    new "RETIRADA"
+
+    # game/classes.rpy:273
+    old "Please add at least 1 player unit"
+    new "Por favor añada al menos 1 unidad del jugador."
+
+    # game/classes.rpy:319
+    old "Player music was changed"
+    new "¡La música del jugador fue cambiada!"
+
+    # game/classes.rpy:323
+    old "Enemy music was changed"
+    new "¡La música del enemigo fue cambiada!"
+
+    # game/classes.rpy:402
+    old "there are still ships you have not placed!"
+    new "¡Todavía quedan naves que no has colocado!"
+
+    # game/classes.rpy:580
+    old "The target is out of range, captain!"
+    new "¡El objetivo está fuera del rango, capitán!"
+
+    # game/classes.rpy:596
+    old "¡That's hopeless, captain!"
+    new "¡Eso es inútil, capitán!"
+
+    # game/classes.rpy:700
+    old "Full Forward order cancelled!"
+    new "¡Orden Avance Completo cancelada!"
+
+    # game/classes.rpy:717
+    old "alredy active!"
+    new "¡Ya está activo!"
+
+    # game/classes.rpy:724
+    old "all ships gained improved flak, shielding and evasion!"
+    new "¡Todas las naves ganan mejora de fuego antiaéreo, escudos y evasión!"
+
+    # game/classes.rpy:750
+    old "All Guard order cancelled!"
+    new "¡Orden Defensa Total cancelada!"
+
+    # game/classes.rpy:773
+    old "All ships gain 20% damage and 15% accuracy!"
+    new "¡Todas las naves ganan 20% de daño y 15% de precisión!"
+
+    # game/classes.rpy:795
+    old "no available droids in storage!"
+    new "¡No hay drones disponibles en el almacén!"
+
+    # game/classes.rpy:801
+    old "ORDER: Repair drones restore 50% of Sunrider's hull integrity"
+    new "ORDEN: Drones reparadores restauran el 50% de la integridad del casco del Sunrider."
+
+    # game/classes.rpy:1189
+    old "the {} is disabled!"
+    new "¡El {} está desactivado!"
+
     # game/classes.rpy:1683
     old "Hull Plating"
     new "Dureza del Casco"
@@ -90,6 +174,19 @@ translate spanish strings:
     old "Repair Crew"
     new "Tripulación de Reparación"
 
+    # game/classes.rpy:2076
+    old "COUNTER ATTACK!"
+    new "¡CONTRAATAQUE!"
+
     # game/classes.rpy:2738
     old "\n            Allows Claude to move any Ryder a single hex.\n            This movement will provoke Blindside attacks, if you move an enemy Ryder\n            into the range of a friendly unit with an Assault type weapon.\n            Has unlimited range."
     new "        Permite a Claude mover a cualquier Ryder una sola casilla.\n        Este movimiento provocará contraataques, si mueves a un Ryder enemigo\n        en el rango de una unidad aliada con un arma de tipo Asalto.\n        Tiene rango ilimitado."
+
+    # game/classes.rpy:2756
+    old "you can only use this ability on ryders!"
+    new "¡Solo puedes usar esta habilidad en ryders!"
+
+    # game/classes.rpy:2838
+    old "the asteroid was destroyed!"
+    new "¡El asteroide fue destruido!"
+

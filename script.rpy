@@ -13030,10 +13030,7 @@ label battlefarportstart:
     $ alliancecruiser1 = create_ship(AllianceCruiser(),(5,5),alliancecruiser_weapons)
     $ alliancecruiser2 = create_ship(AllianceCruiser(),(5,4),alliancecruiser_weapons)
 
-    if _preferences.language == "spanish":
-        $ BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp']
-    else:
-        $ BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
+    $ BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
 
     call mission12_inits from _call_mission12_inits
     $ BM.mission = 12
@@ -15854,10 +15851,7 @@ label afterbeachcarry:
         if alliancecruiser2 in BM.ships:
             BM.ships.remove(alliancecruiser2)
             player_ships.remove(alliancecruiser2)
-    if _preferences.language == "spanish":
-        $ BM.orders['RESURRECCIÓN'] = [2000,'resurrect']
-    else:
-        $ BM.orders['RESURRECTION'] = [2000,'resurrect']
+    $ BM.orders['RESURRECTION'] = [2000,'resurrect']
 
     $ versta_ambush = True
     $ farport_losttech = True
@@ -16248,10 +16242,7 @@ label mission14:
         ava "It's... unlike anything I've ever seen before!"
         "Tip: The Retreat Order is available to escape from this battle."
 
-        if _preferences.language == "spanish":
-            $ BM.orders['RETIRADA'] = [0,'retreat']
-        else:
-            $ BM.orders['RETREAT'] = [0,'retreat']
+        $ BM.orders['RETREAT'] = [0,'retreat']
 
         hide ava onlayer screens with dissolve
 
@@ -23671,10 +23662,7 @@ label continuewithchoices:
         BM.money = 19000
         BM.cmd = 4000
         ## Adds in SRW, since the plot event to add it is skipped. Tested it in the current steam ver with and without, should work.
-        if _preferences.language == "spanish":
-            BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp'] 
-        else:
-            BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp'] 
+        BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp'] 
         gal_event = 'jumptogalaxy'
         alliancecruiser1 = None
         alliancecruiser2 = None

@@ -458,7 +458,7 @@ screen battle_screen:
                     $ wait = ship.flaksim[0]
                     $ intercept_count = ship.flaksim[1]
                     if intercept_count:
-                        $ BM.battle_log_insert(['attack', 'missile'], "-El {0} intercepta {1} misiles. Efectividad: {2}%".format(ship.name, intercept_count, int(ship.flak_effectiveness)))
+                        $ BM.battle_log_insert(['attack', 'missile'], "-{0} intercepts {1} missiles. Effectiveness: {2}%".format(ship.name, intercept_count, int(ship.flak_effectiveness)))
 
                     add 'Battle UI/warning icon.png':
                         xanchor 0.5
@@ -473,28 +473,16 @@ screen battle_screen:
                     if ship.faction == 'Player':
                         $ textcolor = '0f0'
 
-                    if _preferences.language == None:
-                        text '{} intercepted! \nEffectiveness: {}%'.format( intercept_count , int(ship.flak_effectiveness) ):
-                            xanchor 0.5
-                            yanchor 0.5
-#                            xmaximum 200
-                            xpos xposition
-                            ypos yposition
-                            size 28
-                            color textcolor
-                            outlines [(2,'000',0,0)]
-                            at delay_float_text(yposition,wait)
-                    else:
-                        text '¡{} interceptado/s! \nEfectividad: {}%'.format( intercept_count , int(ship.flak_effectiveness) ):
-                            xanchor 0.5
-                            yanchor 0.5
-#                            xmaximum 200
-                            xpos xposition
-                            ypos yposition
-                            size 28
-                            color textcolor
-                            outlines [(2,'000',0,0)]
-                            at delay_float_text(yposition,wait)
+                    text __('{} intercepted! \nEffectiveness: {}%').format( intercept_count , int(ship.flak_effectiveness) ):
+                        xanchor 0.5
+                        yanchor 0.5
+#                        xmaximum 200
+                        xpos xposition
+                        ypos yposition
+                        size 28
+                        color textcolor
+                        outlines [(2,'000',0,0)]
+                        at delay_float_text(yposition,wait)
 
 
 ##show missiles on the map that are currently flying in space##
@@ -830,18 +818,11 @@ screen battle_screen:
                     textbutton "debug eships" xalign 1.0 action Show('debug_eships')
 
     if BM.just_moved:
-        if _preferences.language == None:
-            textbutton 'Cancel movement':
-                ypos 70
-                text_size 50
-                text_color 'fff'
-                action Return(['cancel movement'])
-        else:
-            textbutton 'Cancelar movimiento':
-                ypos 70
-                text_size 50
-                text_color 'fff'
-                action Return(['cancel movement'])
+        textbutton _('Cancel movement'):
+            ypos 70
+            text_size 50
+            text_color 'fff'
+            action Return(['cancel movement'])
 
     if not BM.showing_orders and not BM.order_used and not BM.missile_moving and not BM.moving and BM.phase == "Player" and sunrider.location != None:
         imagebutton:
@@ -970,7 +951,7 @@ screen orders:
                     hbox:
                         #I should rework orders to include this info :/
 
-                        if order == 'REPAIR DRONES' or order == 'DRONES REPARADORES':
+                        if order == 'REPAIR DRONES':
                             if sunrider.repair_drones != None:
                                 if sunrider.repair_drones == 0:
                                     $colour = '900'
@@ -983,152 +964,98 @@ screen orders:
                                     color colour
                                     outlines [(1,colour,0,0)]
 
-                        if order == 'FULL FORWARD' and BM.show_tooltips == True or order == 'AVANCE COMPLETO' and BM.show_tooltips == True: #FULL FORWARD
+                        if order == 'FULL FORWARD' and BM.show_tooltips == True: #FULL FORWARD
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
-                                if _preferences.language == None:
-                                    text str('Provides +15 Aim and +20% damage to all allied units. Will cancel All Guard if active.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Provee +15 Presición y +20% Daño a todas las unidades aliadas. Se cancelará si DEFENSA TOTAL se activa.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
+                                text unicode(_('Provides +15 Aim and +20% damage to all allied units. Will cancel All Guard if active.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
 
-                        if order == 'ALL GUARD' and BM.show_tooltips == True or order == 'DEFENSA TOTAL' and BM.show_tooltips == True:
-                            frame:
-                                background Solid((0,0,0,200))
-                                xpos 150
-                                ycenter 20
-                                if _preferences.language == None:
-                                    text str('Provides +20 Flak, +10 Evasion and +10 Shield Generation to all allied units. Will cancel FULL FORWARD if active.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Provee +20 Flak, +10 Evasión y +10 Generación de Escudo a todas las naves. Se cancelará si AVANCE COMPLETO se activa.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-
-                        if order == 'REPAIR DRONES' and BM.show_tooltips == True or order == 'DRONES REPARADORES' and BM.show_tooltips == True:
+                        if order == 'ALL GUARD' and BM.show_tooltips == True:
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
-                                if _preferences.language == None:
-                                    text str('Restores 50% of the Sunrider\'s health.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Restaura el 50% de la salud del Sunrider.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
+                                text unicode(_('Provides +20 Flak, +10 Evasion and +10 Shield Generation to all allied units. Will cancel Full Forward if active.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
 
-                        if order == 'VANGUARD CANNON' and BM.show_tooltips == True or order == 'CAÑÓN VANGUARDIA' and BM.show_tooltips == True:
+                        if order == 'REPAIR DRONES' and BM.show_tooltips == True:
+                            frame:
+                                background Solid((0,0,0,200))
+                                xpos 150
+                                ycenter 20
+
+                                text unicode(_('Restores 50% of the Sunrider\'s health.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
+
+                        if order == 'VANGUARD CANNON' and BM.show_tooltips == True:
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
                                 $ damage = get_modified_damage(BM.vanguard_damage,'notplayer')
-                                if _preferences.language == None:
-                                    text str('Deals {} unavoidable damage to all units in a straight line extending outwards from the Sunrider with a maximum range of {} hexes.'.format(damage,BM.vanguard_range)):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Provoca {} de daño inevadible a todas las unidades en la línea que se extiende desde el Sunrider con un rango de hasta {} casillas.'.format(damage,BM.vanguard_range)):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
 
-                        if order == 'SHORT RANGE WARP' and BM.show_tooltips == True or order == 'SALTO DE CORTO RANGO' and BM.show_tooltips == True:
+                                text unicode(__('Deals {} unavoidable damage to all units in a straight line extending outwards from the Sunrider with a maximum range of {} hexes.').format(damage,BM.vanguard_range)):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
+
+                        if order == 'SHORT RANGE WARP' and BM.show_tooltips == True:
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
-                                if _preferences.language == None:
-                                    text str('Moves the Sunrider to any point on the map. Does not cancel the command tab if used.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Mueve al Sunrider a cualquier punto del mapa. No cancela la etiqueta de comando si se usa.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
+                                text unicode(_('Moves the Sunrider to any point on the map. Does not cancel the command tab if used.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
 
-                        if order == 'RESURRECTION' and BM.show_tooltips == True or order == 'RESURRECCIÓN' and BM.show_tooltips == True:
+                        if order == 'RESURRECTION' and BM.show_tooltips == True:
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
-                                if _preferences.language == "spanish":
-                                    text unicode('Selecciona una unidad destruida para lanzarla a la batalla una vez más con toda la salud.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text str('Select a downed unit to launch into the battle once more at full health.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
+                                text unicode(_('Select a downed unit to launch into the battle once more at full health.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
 
-                        if order == 'RETREAT' and BM.show_tooltips == True or order == 'RETIRADA' and BM.show_tooltips == True:
+                        if order == 'RETREAT' and BM.show_tooltips == True:
                             frame:
                                 background Solid((0,0,0,200))
                                 xpos 150
                                 ycenter 20
 
-                                if _preferences.language == None:
-                                    text str('Retreat your units from battle without applying penalties.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
-                                else:
-                                    text unicode('Retira a tus unidades de la batalla sin aplicar penalidades.'):
-                                        xpos 0
-                                        ypos 0
-                                        size 18
-                                        font "Font/sui generis rg.ttf"
-                                        outlines [(1,'000',0,0)]
+                                text unicode(_('Retreat your units from battle without applying penalties.')):
+                                    xpos 0
+                                    ypos 0
+                                    size 18
+                                    font "Font/sui generis rg.ttf"
+                                    outlines [(1,'000',0,0)]
 
                                     #I couldn't get the mouse detection working properly with the buttons. Sorry! :S
 
@@ -1541,23 +1468,12 @@ screen tooltips:
                 xpos mouse_x + 100
                 ycenter mouse_y
 
-                if _preferences.language == None:
-
-                    text str(weapon.tooltip):
-                        xpos -40 #NO IDEA why I can only get things to align right this way. Originally 70
-                        ypos -10
-                        size 18
-                        font "Font/sui generis rg.ttf"
-                        outlines [(1,'000',0,0)]
-
-                else:
-
-                    text unicode(weapon.tooltip_es):
-                        xpos 0 #NO IDEA why I can only get things to align right this way.
-                        ypos 0
-                        size 18
-                        font "Font/sui generis rg.ttf"
-                        outlines [(1,'000',0,0)]
+                text unicode(weapon.tooltip):
+                    xpos -40 #NO IDEA why I can only get things to align right this way. Originally 70
+                    ypos -10
+                    size 18
+                    font "Font/sui generis rg.ttf"
+                    outlines [(1,'000',0,0)]
 
 transform hp_falls(hp_size1,hp_size2):
     crop (0,0,hp_size1,42)
@@ -1586,7 +1502,7 @@ screen animation_hp:
         xpos 1340
         ypos 3
         crop (0,0,hp_size1,42)
-    text 'HP: {!s}/{!s}'.format(current_hp,BM.target.max_hp):
+    text __('HP: {!s}/{!s}').format(current_hp,BM.target.max_hp):
         xpos 1750
         ypos 8
         size 19
@@ -1612,7 +1528,7 @@ screen animation_hp2:
         ypos 3
         at hp_falls(hp_size1,hp_size2)
 
-    text 'HP: {!s}/{!s}'.format((current_hp-damage),BM.target.max_hp):
+    text __('HP: {!s}/{!s}').format((current_hp-damage),BM.target.max_hp):
         xpos 1750
         ypos 8
         size 19
@@ -1644,51 +1560,27 @@ screen animation_hp2:
 
         # moved shield to before armor since it is applied first
         if store.total_shield_negation > 0:
-            if _preferences.language == None:
-                text ( '{image=Battle UI/icon_shield.png} ' + '-{} damage negated!'.format(int(store.total_shield_negation)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color '6bf'
-                    outlines [(1,'000',0,0)]
-            else:
-                text ( '{image=Battle UI/icon_shield.png} ' + '-{} daño negado!'.format(int(store.total_shield_negation)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color '6bf'
-                    outlines [(1,'000',0,0)]
+            text ( '{image=Battle UI/icon_shield.png} ' + __('-{} damage negated!').format(int(store.total_shield_negation)) ):
+                xalign 1.0
+                xoffset -32
+                size 32
+                color '6bf'
+                outlines [(1,'000',0,0)]
         if store.total_armor_negation > 0:
-            if _preferences.language == None:
-                text ( '{image=Battle UI/icon_armor.png} ' + '-{} damage!'.format(int(store.total_armor_negation)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color 'fff'
-                    outlines [(1,'000',0,0)]
-            else:
-                text ( '{image=Battle UI/icon_armor.png} ' + '-{} daño!'.format(int(store.total_armor_negation)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color 'fff'
-                    outlines [(1,'000',0,0)]
+            text ( '{image=Battle UI/icon_armor.png} ' + __('-{} damage!').format(int(store.total_armor_negation)) ):
+                xalign 1.0
+                xoffset -32
+                size 32
+                color 'fff'
+                outlines [(1,'000',0,0)]
 
         if hasattr(store,'total_flak_interception') and store.total_flak_interception > 0:
-            if _preferences.language == None:
-                text ( '{image=Battle UI/icon_intercept.png} ' + '{} intercepted!'.format(int(store.total_flak_interception)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color 'fa6'
-                    outlines [(1,'000',0,0)]
-            else:
-                text ( '{image=Battle UI/icon_intercept.png} ' + '{} interceptado/s!'.format(int(store.total_flak_interception)) ):
-                    xalign 1.0
-                    xoffset -32
-                    size 32
-                    color 'fa6'
-                    outlines [(1,'000',0,0)]
+            text ( '{image=Battle UI/icon_intercept.png} ' + __('{} intercepted!').format(int(store.total_flak_interception)) ):
+                xalign 1.0
+                xoffset -32
+                size 32
+                color 'fa6'
+                outlines [(1,'000',0,0)]
 
 transform victory_tf(xx,wait):
     alpha 0
@@ -1702,12 +1594,8 @@ transform victory_tf(xx,wait):
 
 screen victory:
 #    mod
-    if _preferences.language == None:
-        $word = 'VICTORY!'
-        $wait = 0.2
-    else:
-        $word = '¡VICTORIA!'
-        $wait = 0.25
+    $word = __('VICTORY!')
+    $wait = 0.2
     $xx = 750
 
     add Solid((0,0,0,200))
@@ -1743,34 +1631,18 @@ screen victory2:
 
     add Solid((0,0,0,200))
 
-    if _preferences.language == None:
-        textbutton 'Continue':
-            xalign 0.5
-            ypos 0.8
-            text_size 30
-            action Hide('victory2')
-            text_color 'fff'
+    textbutton _('Continue'):
+        xalign 0.5
+        ypos 0.8
+        text_size 30
+        action Hide('victory2')
+        text_color 'fff'
 
-        text 'Destroyed enemy ships:':
-            xpos 0.2
-            ypos 0.2
-            size 50
-            outlines [(2,'000',0,0)]
-
-    else:
-
-        textbutton 'Continuar':
-            xalign 0.5
-            ypos 0.8
-            text_size 30
-            action Hide('victory2')
-            text_color 'fff'
-
-        text 'Naves enemigas destruidas:':
-            xpos 0.2
-            ypos 0.2
-            size 50
-            outlines [(2,'000',0,0)]
+    text _('Destroyed enemy ships:'):
+        xpos 0.2
+        ypos 0.2
+        size 50
+        outlines [(2,'000',0,0)]
 
     $ textsize = 50
     if len(destroyed_ships) > 12:
@@ -1808,148 +1680,81 @@ screen victory2:
             add ship.blbl:
                 xanchor 0.5
                 at victory_ships(xx,wait,0.5)
-            if _preferences.language == None:
-                text 'Surrendered':
-                    xanchor 0.5
-                    yanchor 1.0
-                    color '090'
-                    size textsize - 15
-                    outlines [(2,'000',0,0)]
-                    at victory_ships(xx,wait,1)
-            else:
-                text 'Rendida':
-                    xanchor 0.5
-                    yanchor 1.0
-                    color '090'
-                    size textsize - 15
-                    outlines [(2,'000',0,0)]
-                    at victory_ships(xx,wait,1)
+            text _('Surrendered'):
+                xanchor 0.5
+                yanchor 1.0
+                color '090'
+                size textsize - 15
+                outlines [(2,'000',0,0)]
+                at victory_ships(xx,wait,1)
 
             $wait += 0.3
             $xx += 1520/total_ships
 
     $wait += 0.5
-    if _preferences.language == None:
-        text 'Destroyed enemies: {}$'.format(int(store.total_money)):
-            xpos 0.2
-            ypos 0.6
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
-    else:
-        text 'Enemigos destruidos: {}$'.format(int(store.total_money)):
-            xpos 0.2
-            ypos 0.6
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
+    text __('Destroyed enemies: {}$').format(int(store.total_money)):
+        xpos 0.2
+        ypos 0.6
+        size 40
+        outlines [(2,'000',0,0)]
+        at delay_text(wait)
 
     $ yposition = 0.65
     if store.surrender_bonus > 0:
         $wait += 0.1
-        if _preferences.language == None:
-            text 'Surrendered bonus: {}$'.format(int(store.surrender_bonus)):
-                xpos 0.2
-                ypos yposition
-                size 40
-                outlines [(2,'000',0,0)]
-                at delay_text(wait)
-        else:
-            text 'Bonus por rendición: {}$'.format(int(store.surrender_bonus)):
-                xpos 0.2
-                ypos yposition
-                size 40
-                outlines [(2,'000',0,0)]
-                at delay_text(wait)
+        text __('Surrendered bonus: {}$').format(int(store.surrender_bonus)):
+            xpos 0.2
+            ypos yposition
+            size 40
+            outlines [(2,'000',0,0)]
+            at delay_text(wait)
         $ yposition += 0.05
 
 
     $wait += 0.1
-    if _preferences.language == None:
-        text 'Repair costs: {}$'.format(int(store.repair_cost)):
-            xpos 0.2
-            ypos yposition
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
-    else:
-        text 'Costos de reparación: {}$'.format(int(store.repair_cost)):
-            xpos 0.2
-            ypos yposition
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
+    text __('Repair costs: {}$').format(int(store.repair_cost)):
+        xpos 0.2
+        ypos yposition
+        size 40
+        outlines [(2,'000',0,0)]
+        at delay_text(wait)
     $ yposition += 0.05
 
     if store.Difficulty == 5:
         $wait += 0.1
-        if _preferences.language == None:
-            text 'Space Whale tax: {}$'.format(int(store.net_gain * 0.25)):
-                xpos 0.2
-                ypos yposition
-                size 40
-                outlines [(2,'000',0,0)]
-                at delay_text(wait)
-        else:
-            text 'Impuesto por Ballena Espacial: {}$'.format(int(store.net_gain * 0.25)):
-                xpos 0.2
-                ypos yposition
-                size 40
-                outlines [(2,'000',0,0)]
-                at delay_text(wait)
+        text __('Space Whale tax: {}$').format(int(store.net_gain * 0.25)):
+            xpos 0.2
+            ypos yposition
+            size 40
+            outlines [(2,'000',0,0)]
+            at delay_text(wait)
         $ yposition += 0.05
 
     $wait += 0.1
-    if _preferences.language == None:
-        text 'Net gain: {}$'.format(int(store.net_gain)):
-            xpos 0.2
-            ypos yposition
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
-    else:
-        text 'Ganancia neta: {}$'.format(int(store.net_gain)):
-            xpos 0.2
-            ypos yposition
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
+    text __('Net gain: {}$').format(int(store.net_gain)):
+        xpos 0.2
+        ypos yposition
+        size 40
+        outlines [(2,'000',0,0)]
+        at delay_text(wait)
 
     $wait += 0.5
-    if _preferences.language == None:
-        text 'Command Points':
-            xanchor 1.0
-            xpos 0.8
-            ypos 0.6
-            size 50
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
-    else:
-        text 'Puntos de Comando':
-            xanchor 1.0
-            xpos 0.8
-            ypos 0.6
-            size 50
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
+    text _('Command Points'):
+        xanchor 1.0
+        xpos 0.8
+        ypos 0.6
+        size 50
+        outlines [(2,'000',0,0)]
+        at delay_text(wait)
 
     $wait += 0.1
-    if _preferences.language == None:
-        text 'Number of turns: {}'.format(BM.turn_count):
-            xanchor 1.0
-            xpos 0.8
-            ypos 0.65
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
-    else:
-        text 'Número de turnos: {}'.format(BM.turn_count):
-            xanchor 1.0
-            xpos 0.8
-            ypos 0.65
-            size 40
-            outlines [(2,'000',0,0)]
-            at delay_text(wait)
+    text __('Number of turns: {}').format(BM.turn_count):
+        xanchor 1.0
+        xpos 0.8
+        ypos 0.65
+        size 40
+        outlines [(2,'000',0,0)]
+        at delay_text(wait)
 
     $wait += 0.1
 
@@ -1957,7 +1762,7 @@ screen victory2:
     if difficulty_penalty < 0:
         $ difficulty_penalty = 0
 
-    text 'Total: {}'.format( int( (store.net_gain*10)/(BM.turn_count+difficulty_penalty) ) ):
+    text __('Total: {}').format( int( (store.net_gain*10)/(BM.turn_count+difficulty_penalty) ) ):
         xanchor 1.0
         xpos 0.8
         ypos 0.70
@@ -1965,12 +1770,8 @@ screen victory2:
         outlines [(2,'000',0,0)]
         at delay_text(wait)
 
-    if _preferences.language == None:
-        $ diff_text = "Current difficult: {}".format( DIFFICULTY_NAMES[store.Difficulty] )
-        $ low_diff_text = "Lowest difficult: {}".format( DIFFICULTY_NAMES[BM.lowest_difficulty] )
-    else:
-        $ diff_text = "Dificultad actual: {}".format( DIFFICULTY_NAMES[store.Difficulty] )
-        $ low_diff_text = "Menor dificultad: {}".format( DIFFICULTY_NAMES[BM.lowest_difficulty] )
+    $ diff_text = __("Current difficult: {}").format( DIFFICULTY_NAMES[store.Difficulty] )
+    $ low_diff_text = __("Lowest difficult: {}").format( DIFFICULTY_NAMES[BM.lowest_difficulty] )
 
     vbox:
         xalign 1.0
@@ -2021,7 +1822,7 @@ screen ryderlist:
 
     key "mousedown_3" action Return(["deselect"])
 
-    text 'Escoja cual Ryder reparar':
+    text 'Choose which Ryder to repair':
             xalign 0.5
             yalign 0.1
             size 40
