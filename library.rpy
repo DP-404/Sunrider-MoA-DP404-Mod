@@ -2641,11 +2641,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'new warhead'
-            self.display_name = "WARHEAD AMMO"
-            self.display_name_es = "MUNICIÓN DE CABEZAS DE GUERRA"
+            self.display_name = _("WARHEAD AMMO")
             self.cost = 300
-            self.tooltip = 'Purchase warheads to allow the Sunrider to fire powerful rockets at the enemy. A rocket deals {} damage, but can be shot down by enemy flak. The Sunrider can carry a maximum of 2 at a time.'.format(sunrider.weapons[3].damage)
-            self.tooltip_es = 'Comprar cabezas de guerra para permitir al Sunrider disparar poderosos torpedos al enemigo. Un torpedo provoca {} puntos de daño, pero puede ser derribado por las torretas antiaéreas del enemigo. El Sunrider puede cargar un máximo de 2 al mismo tiempo.'.format(sunrider.weapons[3].damage)
+            self.tooltip = __('Purchase warheads to allow the Sunrider to fire powerful rockets at the enemy. A rocket deals {} damage, but can be shot down by enemy flak. The Sunrider can carry a maximum of 2 at a time.').format(sunrider.weapons[3].damage)
             self.variable_name = 'sunrider.rockets'    #this decides what is shown in the store after [owned:
             self.max_amt = 2    #you can buy no more than this number of this item. see previous field
 
@@ -2656,11 +2654,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'Rocketupgrade1'
-            self.display_name = "QUANTUM TORPEDO LICENSE"
-            self.display_name_es = "LICENCIA DE TORPEDOS CUÁNTICOS"
+            self.display_name = _("QUANTUM TORPEDO LICENSE")
             self.cost = 2000
-            self.tooltip = 'While the proliferation of nuclear warheads throughout the galaxy has made them readily available, more powerful weapons are regulated closely by the Alliance. With the payment of appropriate fees, the Union can replace your current stock of nuclear warheads with quantum warheads, permanently increasing the Sunrider\'s rocket damage to 1200.'
-            self.tooltip_es = 'Si bien la proliferación de las cabezas de guerra nucleares a través de la galaxia las ha hecho fácilmente disponibles, armas más poderosas estan siendo reguladas de cerca por la Alianza. Con la paga de cuotas apropiadas, la Unión puede reemplazar tus actuales provisiones de cabezas de guerra nucleares con cabezas de guerra cuánticas, incrementando permanentemente el daño de los torpedos del Sunrider a 1200.'
+            self.tooltip = _('While the proliferation of nuclear warheads throughout the galaxy has made them readily available, more powerful weapons are regulated closely by the Alliance. With the payment of appropriate fees, the Union can replace your current stock of nuclear warheads with quantum warheads, permanently increasing the Sunrider\'s rocket damage to 1200.')
             self.visibility_condition = 'sunrider_rocket.damage < 1200'
 
         def buy(self):
@@ -2671,11 +2667,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'RepairUpgrade1'
-            self.display_name = "PORTABLE REPAIR BOOSTER"
-            self.display_name_es = "ACELERADOR DE REPARACIONES PORTABLE"
+            self.display_name = _("PORTABLE REPAIR BOOSTER")
             self.cost = 1000
-            self.tooltip = 'While extensive repairs require time in the dry dock, battlefield repairs are still a must for combat operations. These new portable repair drones will allow the Liberty to repair 200 more HP. This upgrade also reduces the energy cost of the repair ability by 10EN'
-            self.tooltip_es = 'Si bien las reparaciones extensivas requieren tiempo en el puerto, las reparaciones en el campo de batalla siguen siendo lo mejor para operaciones de combate. Estos nuevos drones reparadores portables permiten al Liberty reparar 200 puntos más de HP. Esta mejora también reduce el costo de energía de la habilidad Reparar en 10EN'
+            self.tooltip = _('While extensive repairs require time in the dry dock, battlefield repairs are still a must for combat operations. These new portable repair drones will allow the Liberty to repair 200 more HP. This upgrade also reduces the energy cost of the repair ability by 10EN')
             self.visibility_condition = 'store.chigara_repair.damage < 500'
 
         def buy(self):
@@ -2688,11 +2682,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'repair drones'
-            self.display_name = "REPAIR DRONE"
-            self.display_name_es = "DRON REPARADOR"
+            self.display_name = _("REPAIR DRONE")
             self.cost = 400
-            self.tooltip = 'These autonomous robots can rapidly restore destroyed hull sections as well as complex electronic systems. They are a must have for all hostile operations.  Restores 50% of the Sunrider\'s HP on use. The Sunrider can carry a maximum of 8 at a time.'
-            self.tooltip_es = 'Estos robots autónomos pueden restaurar rápidamente secciones del casco destruidas así como complejos sistemas electrónicos. Son un deber para todas las operaciones bélicas.  Restauran el 50% de la salud del Sunrider al usarlos. El Sunrider puede cargar un máximo de 8 al mismo tiempo.'
+            self.tooltip = _('These autonomous robots can rapidly restore destroyed hull sections as well as complex electronic systems. They are a must have for all hostile operations.  Restores 50% of the Sunrider\'s HP on use. The Sunrider can carry a maximum of 8 at a time.')
             self.visibility_condition = 'sunrider.repair_drones != None'
             self.variable_name = 'sunrider.repair_drones'
             self.max_amt = 8
@@ -2704,14 +2696,12 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'alliance cruiser'
-            self.display_name = "ALLIANCE CRUISER"
-            self.display_name_es = "CRUCERO DE LA ALIANZA"
+            self.display_name = _("ALLIANCE CRUISER")
             self.cost = 2000
             self.visibility_condition = 'store.mission12_complete'  #not sure
             self.variable_name = "get_shipcount_in_list('Alliance Cruiser',player_ships)"
             self.max_amt = 2
-            self.tooltip = 'With the Solar Congress\' declaration of war, countless Alliance battle cruisers have been called to the front lines. With a generous payment, the Mining Union can use its leverage in the Solar Congress to assign a fully operational Alliance battle cruiser as the Sunrider\'s escort. While slow, the Alliance battle cruiser is built like a brick and packs a punch. You can have up to {} in your fleet at any time'.format(self.max_amt)
-            self.tooltip_es = 'Con la declaración de guerra del Congreso Solar, incontables cruceros de batalla de la Alianza han sido llamados al frente de batalla. Por una generosa paga, la Unión Minera puede usar sus contactos en el Congreso Solar para asignar un crucero de batalla de la Alianza completamente operacional como escolta del Sunrider. A pesar de ser lento, el crucero de batalla de la Alianza está construido como un ladrillo y asesta golpes. Puedes tener hasta {} en tu flota al mismo tiempo.'.format(self.max_amt)
+            self.tooltip = __('With the Solar Congress\' declaration of war, countless Alliance battle cruisers have been called to the front lines. With a generous payment, the Mining Union can use its leverage in the Solar Congress to assign a fully operational Alliance battle cruiser as the Sunrider\'s escort. While slow, the Alliance battle cruiser is built like a brick and packs a punch. You can have up to {} in your fleet at any time').format(self.max_amt)
 
         def buy(self):
             create_ship(AllianceCruiser()) #location=None, weaponlist=[] i.e. default
@@ -2721,14 +2711,12 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'union frigate'
-            self.display_name = "UNION FRIGATE"
-            self.display_name_es = "FRAGATA DE LA UNIÓN"
+            self.display_name = _("UNION FRIGATE")
             self.cost = 750
             self.visibility_condition = 'store.mission12_complete'  #not sure
             self.variable_name =  "get_shipcount_in_list('Mining Union Frigate',player_ships)"
             self.max_amt = 4
-            self.tooltip = 'The Mining Union regularly fields a large private army to protect its shipping from pirates. With the payment of the appropriate fees, you too can have a Union security frigate watching your back. While small and lightly armed, these frigates are inexpensive and speedy. You can have up to {} in your fleet at any time'.format(self.max_amt)
-            self.tooltip_es = 'La Unión Minera regularmente posiciona una gran armada privada para proteger sus envios de piratas. Con la paga de apropiadas cuotas, tú tambien puedes tener una fragata de seguridad de la Unión cuidando tu espalda. Aunque pequeñas y ligeramente armadas, estas fragatas son baratas y rápidas. Puedes tener hasta {} en tu flota al mismo tiempo.'.format(self.max_amt)
+            self.tooltip = __('The Mining Union regularly fields a large private army to protect its shipping from pirates. With the payment of the appropriate fees, you too can have a Union security frigate watching your back. While small and lightly armed, these frigates are inexpensive and speedy. You can have up to {} in your fleet at any time').format(self.max_amt)
 
         def buy(self):
             create_ship(UnionFrigate()) #location=None, weaponlist=[] i.e. default
@@ -2738,11 +2726,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'wishall'
-            self.display_name = "SELL WISHALL"
-            self.display_name_es = "VENDER WISHALL"
+            self.display_name = _("SELL WISHALL")
             self.cost = -10000
-            self.tooltip = 'The Wishall is an ancient Ryuvian artifact which allows its user to make one free command decision during the story. Alternately, you may decide to sell it here for an instant cash infusion of 10 000 credits.'
-            self.tooltip_es = 'El Wishall es un antiguo artefacto Ryuviano que permite a su usuario realizar una decisión durante la historia. Alternativamente, puedes decidir venderlo por una infusion de efectivo instantánea de 10 000 creditos.'
+            self.tooltip = _('The Wishall is an ancient Ryuvian artifact which allows its user to make one free command decision during the story. Alternately, you may decide to sell it here for an instant cash infusion of 10 000 credits.')
             self.visibility_condition = "store.wishall"
 
         def buy(self): #here is where you decide what this item -does-.
@@ -2752,11 +2738,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'sunrider_shield_upgrade'
-            self.display_name = "SUNRIDER SHIELD UPGRADE"
-            self.display_name_es = "MEJORA DE ESCUDO DEL SUNRIDER"
+            self.display_name = _("SUNRIDER SHIELD UPGRADE")
             self.cost = 1500
-            self.tooltip = "Due to the Sunrider's unexpected departure from Cera, she was never outfitted with energy shielding. While her top of the line shield generator was lost with the fall of Cera, the Union can outfit the Sunrider with a basic shield generator. The Sunrider's shields can be further upgraded in the Research Lab after it is purchased."
-            self.tooltip_es = "Debido a la inesperada partida del Sunrider de Cera, nunca fue provista con un escudo de energía. Aunque su mejor generador de escudo se perdió con la caída de Cera, la Unión puede proveer al Sunrider con un generador de escudos básico. Los escudos del Sunrider pueden ser mejorados en el Laboratorio de Investigación después de ser comprados."
+            self.tooltip = _("Due to the Sunrider's unexpected departure from Cera, she was never outfitted with energy shielding. While her top of the line shield generator was lost with the fall of Cera, the Union can outfit the Sunrider with a basic shield generator. The Sunrider's shields can be further upgraded in the Research Lab after it is purchased.")
             self.visibility_condition = 'store.sunrider.shield_generation == 0'
 
         def buy(self):
@@ -2768,11 +2752,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'black_jack_thrusters'
-            self.display_name = "BLACK JACK THRUSTER UPGRADES"
-            self.display_name_es = "MEJORA DE IMPULSORES DEL BLACK JACK"
+            self.display_name = _("BLACK JACK THRUSTER UPGRADES")
             self.cost = 750
-            self.tooltip = "The Black Jack was designed to be compatible with military grade high-powered thrusters, but those are not easy to find. Thanks to your connections with the Mining Union, this no longer needs to hold her back."
-            self.tooltip_es = "El Black Jack fue designado como compatible con los impulsores de alta-potencia de grado militar, pero estos no son fáciles de conseguir. Gracias a tus conexiones con la Unión Minera, esto ya no necesita seguir siendo así."
+            self.tooltip = _("The Black Jack was designed to be compatible with military grade high-powered thrusters, but those are not easy to find. Thanks to your connections with the Mining Union, this no longer needs to hold her back.")
             self.visibility_condition = 'store.blackjack.move_cost > 15 and store.mission5_complete'
 
         def buy(self):
@@ -2782,11 +2764,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'gravity_gun_booster'
-            self.display_name = "GRAVITINO GENERATOR"
-            self.display_name_es = "GENERADOR GRAVITATORIO"
+            self.display_name = _("GRAVITINO GENERATOR")
             self.cost = 750
-            self.tooltip = "Chigara can make the Bianca's gravity gun more efficient by adding one of these high tech devices. Energy cost per use will drop to 40 (from 60)."
-            self.tooltip_es = "Chigara puede hacer al arma de gravedad del Bianca más eficiente añadiéndole uno de estos dispositivos técnicos. El coste de energía disminuye a 40 (de 60)."
+            self.tooltip = _("Chigara can make the Bianca's gravity gun more efficient by adding one of these high tech devices. Energy cost per use will drop to 40 (from 60).")
             self.visibility_condition = 'store.bianca.weapons[1].energy_use == 60 and mission12_complete'
 
         def buy(self):
@@ -2797,11 +2777,9 @@ init 2 python:
         def __init__(self):
             StoreItem.__init__(self)
             self.id = 'sunrider_vanguard_upgrade'
-            self.display_name = "SUNRIDER VANGUARD UPGRADE"
-            self.display_name_es = "MEJORA DEL VANGUARDIA DEL SUNRIDER"
+            self.display_name = _("SUNRIDER VANGUARD UPGRADE")
             self.cost = 1100
-            self.tooltip = "Increase the Vanguard cannon's damage from 800 to 1000 damage and extend the range by 1 hex"
-            self.tooltip_es = "Incrementa el daño del Cañón Vanguardia de 800 a 1000 y extiende el rango en 1 casilla."
+            self.tooltip = _("Increase the Vanguard cannon's damage from 800 to 1000 damage and extend the range by 1 hex")
             self.visibility_condition = 'store.mission12_complete and BM.vanguard_damage < 1000'
 
         def buy(self):
