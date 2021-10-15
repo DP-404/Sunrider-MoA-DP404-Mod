@@ -234,3 +234,9 @@ translate spanish die_phoenixboaster_8d7784ed:
     # ava "There's still the rest of the fleet to worry about. Take out their capital ships!"
     ava "Todavía está el resto de la flota por lo qué preocuparnos. ¡Derriben sus acorazados!"
 
+translate spanish strings:
+
+    # game/attack animations.rpy:981
+    old "Miss"
+    new "Fallo"
+

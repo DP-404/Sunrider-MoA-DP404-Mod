@@ -37050,6 +37050,30 @@ translate spanish strings:
     old "Pilot"
     new "Piloto"
 
+    # game/script.rpy:69
+    old "Please select your difficulty."
+    new "Por favor seleccione su dificultad."
+
+    # game/script.rpy:85
+    old "Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars."
+    new "La humanidad se ha esparcido hacia las cuatro esquinas de la galaxia.{p}Subyagando toda forma de vida, nos hemos convertido en la especie dominante a través de las estrellas."
+
+    # game/graphic inits.rpy:90
+    old "Yet, we are far from secure."
+    new "Aún así, estamos lejos de la seguridad."
+
+    # game/graphic inits.rpy:95
+    old "War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire."
+    new "La guerra ha tomado el cuadrante norte de la galaxia.{p}PACT, la Alianza de las Personas, ha derrumbado al una vez poderoso Nuevo Imperio."
+
+    # game/graphic inits.rpy:100
+    old "Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order."
+    new "Liderados por un misterioso individuo conocido solamente como Veniczar Arcadius, el PACT busca{p}subyagar la galaxia bajo su nuevo orden del mundo."
+
+    # game/graphic inits.rpy:105
+    old "Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins..."
+    new "Distante de las empapadas nubes de guerra, el mundo neutral de Cera{p}parecía a salvo de la fuerza armada del PACT que se aproximaba.{p}Es en este tranquilo mundo donde nuestro viaje comienza..."
+
     # game/script.rpy:224
     old "At ease, commander."
     new "Un placer, comandante."

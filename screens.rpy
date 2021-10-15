@@ -379,20 +379,12 @@ screen load:
         $ BM = Battle()
         $ MasterBM = BM
     if (BM.phase == 'PACT' or BM.phase == 'Pirate' or BM.phase == 'Unknown'):
-        if _preferences.language == "spanish":
-            text '¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo.':
-                xalign 0.5
-                yalign 0.5
-                size 35
-                color 'fff'
-                outlines [(2,'f00',0,0)]
-        else:
-            text 'WARNING! \n You can not save during the enemy \n turn.':
-                xalign 0.5
-                yalign 0.5
-                size 35
-                color 'fff'
-                outlines [(2,'f00',0,0)]
+        text _('WARNING! \n You can not save during the enemy \n turn.'):
+            xalign 0.5
+            yalign 0.5
+            size 35
+            color 'fff'
+            outlines [(2,'f00',0,0)]
 
         timer 2 action Hide('load')
     else:
@@ -469,7 +461,7 @@ screen save:
         $ BM = Battle()
         #No need to update the MasterBM if there is no battle manager to begin with.  Besides, the MasterBM and the BM might not be the same
     if (BM.phase == 'PACT' or BM.phase == 'Pirate'):
-        text '¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo.':
+        text _('WARNING! \n You can not save during the enemy \n turn.'):
             xalign 0.5
             yalign 0.5
             size 35

@@ -69,10 +69,7 @@ label start:
     with Dissolve(2)
 
     if store.Difficulty == 3:
-        if _preferences.language == "spanish":
-            $ show_message('Por favor seleccione su dificultad.',0.5,0.8,2)
-        else:
-            $ show_message('Please select your difficulty.',0.5,0.8,2)
+        $ show_message(_('Please select your difficulty.'),0.5,0.8,2)
         show screen gameprefs
 
     play music "Music/Tides.ogg" loop
@@ -88,29 +85,29 @@ label start:
     pause
     hide introtext0 with Dissolve(1)
 
-    show screen intro_1
+    show expression Text(_("Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro1
     pause
-    hide screen intro_1
+    hide intro1
     with Dissolve(1)
 
-    show screen intro_2
+    show expression Text(_("Yet, we are far from secure."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro2
     pause
-    hide screen intro_2
+    hide intro2
     with Dissolve(1)
 
-    show screen intro_3
+    show expression Text(_("War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro3
     pause
-    hide screen intro_3
+    hide intro3
     with Dissolve(1)
 
-    show screen intro_4
+    show expression Text(_("Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro4
     pause
-    hide screen intro_4
+    hide intro4
     with Dissolve(1)
 
-    show screen intro_5
+    show expression Text(_("Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins..."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro5
     pause
-    hide screen intro_5
+    hide intro5
     with Dissolve(1)
 
     $ renpy.pause (2.0)
