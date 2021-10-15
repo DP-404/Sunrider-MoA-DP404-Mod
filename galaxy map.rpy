@@ -9,29 +9,29 @@ init 5 python:
     # Add missions to planets
 
     # TYDARIA
-    TYDARIA.missions.append(["MetAsaga == False and mission2_complete == False", "Main: Repair and Resupply", "Tydaria_jump1", "Principal: Reparaciones y Reabastecimiento"])
-    TYDARIA.missions.append(["mission_pirateattack == True and mission5_complete == False", "Main: Attack Pirate Nest", "piratebaseattack", "Principal: Atacar Nido Pirata"])
-    TYDARIA.missions.append(["tydaria_morepirates == True and mission13_complete == False", "Side: Annihilate pirate bases", "clearoutpirates", "Lateral: Aniquilar bases pirata"])
-    TYDARIA.missions.append(["tydaria_escort == True", "Side: Escort civilian freighter", "jumptotydariaescort", "Lateral: Escoltar transportador civil"])
+    TYDARIA.missions.append(["MetAsaga == False and mission2_complete == False", _("Main: Repair and Resupply"), "Tydaria_jump1"])
+    TYDARIA.missions.append(["mission_pirateattack == True and mission5_complete == False", _("Main: Attack Pirate Nest"), "piratebaseattack"])
+    TYDARIA.missions.append(["tydaria_morepirates == True and mission13_complete == False", _("Side: Annihilate pirate bases"), "clearoutpirates"])
+    TYDARIA.missions.append(["tydaria_escort == True", _("Side: Escort civilian freighter"), "jumptotydariaescort"])
 
     # ASTRAL EXPANSE
-    ASTRAL_EXPANSE.missions.append(["mission_pirateattack == True and mission3_complete == False and mission4_complete == False", "Side: Stop slavers","humantraffickers", "Lateral: Detener esclavistas"])
+    ASTRAL_EXPANSE.missions.append(["mission_pirateattack == True and mission3_complete == False and mission4_complete == False", _("Side: Stop slavers"),"humantraffickers"])
 
     # PACT STATION
-    PACT_STATION.missions.append(["mission_pirateattack == True and mission3_complete == False and mission4_complete == False", "Side: Destroy PACT outpost", "pactstationattack", "Lateral: Destruir avanzada del PACT"])
+    PACT_STATION.missions.append(["mission_pirateattack == True and mission3_complete == False and mission4_complete == False", _("Side: Destroy PACT outpost"), "pactstationattack"])
     
     # VERSTA
-    VERSTA.missions.append(["amissionforalliance == True and mission6_complete == False", "Main: Rescue Diplomats", "jumphotversta", "Principal: Rescatar Diplomáticos"])
-    VERSTA.missions.append(["versta_ambush == True and mission15_complete == False", "Side: Ambush Resupply Stations", "ambushpactresupply", "Lateral: Emboscar Estaciones de Suministros"])
+    VERSTA.missions.append(["amissionforalliance == True and mission6_complete == False", _("Main: Rescue Diplomats"), "jumphotversta"])
+    VERSTA.missions.append(["versta_ambush == True and mission15_complete == False", _("Side: Ambush Resupply Stations"), "ambushpactresupply"])
 
     # NOMODORN CORRIDOR
-    NOMODORN.missions.append(["missionforryuvia == True and mission9_complete == False", "Main: Find Crown Jewel", "jumptonomodorn", "Principal: Encontrar la Joya Corona"])
+    NOMODORN.missions.append(["missionforryuvia == True and mission9_complete == False", _("Main: Find Crown Jewel"), "jumptonomodorn"])
 
     # FAR PORT
-    FAR_PORT.missions.append(["farport_losttech == True and mission14_complete == False", "Side: Investigate lost technology", "investigatemoon", "Lateral: Investigar tecnología perdida"])
+    FAR_PORT.missions.append(["farport_losttech == True and mission14_complete == False", _("Side: Investigate lost technology"), "investigatemoon"])
 
     # ONGESS
-    ONGESS.missions.append(["greytour == True and mission16_complete == False", "Main: Meet Admiral Grey", "arrivalatongess", "Principal: Encontrarse con el Almirante Grey"])
+    ONGESS.missions.append(["greytour == True and mission16_complete == False", _("Main: Meet Admiral Grey"), "arrivalatongess"])
 
 screen galaxymap_buttons: ###################################GALAXY MAP BUTTONS
 # Now, picked planets are set to GM_selected so they can be traced by screen code
@@ -155,14 +155,9 @@ screen map_travelto_dynamic:
                                 action Jump(mission[2])
                                 idle "Map/whitebutton.png"
                                 hover "Map/whitebutton_hover.png"
-                            if _preferences.language == None:
-                                text "[mission[1]]":
-                                    xpos -10 ypos -70
-                                    font "Font/sui generis rg.ttf" size 27 first_indent 30 line_spacing 10 outlines [ (2, "#000", 0, 0) ]
-                            else:
-                                text "[mission[3]]":
-                                    xpos -10 ypos -70
-                                    font "Font/sui generis rg.ttf" size 27 first_indent 30 line_spacing 10 outlines [ (2, "#000", 0, 0) ]
+                            text mission[1]:
+                                xpos -10 ypos -70
+                                font "Font/sui generis rg.ttf" size 27 first_indent 30 line_spacing 10 outlines [ (2, "#000", 0, 0) ]
             imagebutton:
                 ypos -35
                 action Jump(map_back)
