@@ -2095,31 +2095,16 @@ screen skirmishhelp:
         background Solid((0,0,0,200))
 
         vbox:
-            if _preferences.language == "spanish":
-                text "¡Bienvenido al modo escramuza! Aquí, serás capaz de refinar tus estrategias mediante batallas personalizadas."
-                text "Haga click en ADD PLAYER SHIPS y seleccione y coloque sus unidades en el mapa. Haga lo mismo para añadir unidades enemigas."
-                text "Presionando SHIFT puedes añadir la unidad seleccionada múltiples veces en el mapa."
-                text "Presionando el BOTÓN CENTRAL DEL RATÓN puedes coger instantáneamente la próxima unidad del jugador."
-                text "Para remover unidades, simplemente presione el botón REMOVE, y haga click en la unidad que desee remover."
-                text "Deberás también establecer la cantidad de Puntos de Comando a utilizar durante la batalla."
-                text "Adicionalmente, puedes sentirte libre de utilizar todas las posibles mejoras haciendo click en el botón azul de mejoras."
-                text "¡Ten en cuenta que {b}no{/b} obtendrás dinero ni Puntos de Comando en el Modo Escramuza!"
+                text _("Welcome to skirmish mode! Here, you will be able to refine your strategies by fighting custom battles.")
+                text _("Click on ADD PLAYER SHIPS and click and drop your units to the map. Do the same to add enemy units.")
+                text _("Pressing SHIFT allows you to add the selected unit multiple times to the map.")
+                text _("Pressing the MIDDLE MOUSE BUTTON allows you to instantly grab the next player unit from the player pool.")
+                text _("To remove placed units, simply press the REMOVE button, then click on the unit you wish to remove.")
+                text _("You may set the amount of usable command points during the battle using the buttons on the player pool bar.")
+                text _("Additionally, you can freely try out all possible upgrades by clicking the blue upgrades button.")
+                text _("Keep in mind that you will {b}not{/b} earn any money or command points in Skirmish Mode!")
 
-                textbutton "PROCEDER":
-                    xalign 0.5
-                    action Hide('skirmishhelp')
-
-            else:
-                text "Welcome to skirmish mode! Here, you will be able to refine your strategies by fighting custom battles."
-                text "Click on ADD PLAYER SHIPS and click and drop your units to the map. Do the same to add enemy units."
-                text "Pressing SHIFT allows you to add the selected unit multiple times to the map."
-                text "Pressing the MIDDLE MOUSE BUTTON allows you to instantly grab the next player unit from the player pool."
-                text "To remove placed units, simply press the REMOVE button, then click on the unit you wish to remove."
-                text "You may set the amount of usable command points during the battle using the buttons on the player pool bar."
-                text "Additionally, you can freely try out all possible upgrades by clicking the blue upgrades button."
-                text "Keep in mind that you will {b}not{/b} earn any money or command points in Skirmish Mode!"
-
-                textbutton "PROCEED":
+                textbutton _("PROCEED"):
                     xalign 0.5
                     action Hide('skirmishhelp')
 
@@ -2453,106 +2438,3 @@ screen debug_eships:
                         value YScrollValue('debug eship list')
                         hovered SetField(BM, 'draggable', False)
                         unhovered SetField(BM, 'draggable', True)
-
-# Screens for either images or texts in screen. Useful if change the language while playing
-
-screen intro_1:
-
-    if _preferences.language == "spanish":
-
-        text unicode("La humanidad se ha esparcido hacia las cuatro esquinas de la galaxia.{p}Subyagando toda forma de vida, nos hemos convertido en la especie dominante a través de las estrellas."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-    else:
-
-        text unicode("Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-screen intro_2:
-
-    if _preferences.language == "spanish":
-
-        text unicode("Aún así, estamos lejos de la seguridad."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-    else:
-
-        text unicode("Yet, we are far from secure."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-screen intro_3:
-
-    if _preferences.language == "spanish":
-
-        text unicode("La guerra ha tomado el cuadrante norte de la galaxia.{p}El PACT, las Personas de la Alianza, ha derrumbado al una vez poderoso Nuevo Imperio."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-    else:
-
-        text unicode("War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-screen intro_4:
-
-    if _preferences.language == "spanish":
-
-        text unicode("Liderados por un misterioso individuo conocido solamente como Veniczar Arcadius, el PACT busca{p}subyagar la galaxia bajo su nuevo orden del mundo."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-    else:
-
-        text unicode("Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-screen intro_5:
-
-    if _preferences.language == "spanish":
-
-        text unicode("Distante de las empapadas nubes de guerra, el mundo neutral de Cera{p}parecía a salvo de la fuerza armada del PACT que se aproximaba.{p}Es en este tranquilo mundo donde nuestro viaje comienza..."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-
-    else:
-
-        text unicode("Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins..."):
-            text_align 0.5
-            yalign 0.12
-            xalign 0.5
-            size 30
-            font "Font/GOTHIC.TTF"
-        

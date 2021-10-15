@@ -588,9 +588,9 @@ screen preferences:
         hotspot (726, 59, 137, 44) action [ Hide('preferences'), Show('save', transition=dissolve) ]
         hotspot (1140, 59, 137, 44) action MainMenu()
 
-        imagebutton xpos 1140 ypos 500 idle "Menu/usa_base.jpg" hover "Menu/usa_hover.jpg" selected_idle "Menu/usa_select.jpg" selected_hover "Menu/usa_select_hover.jpg" action Language(None),Show("lang")
+        imagebutton xpos 1140 ypos 500 idle "Menu/usa_base.jpg" hover "Menu/usa_hover.jpg" selected_idle "Menu/usa_select.jpg" selected_hover "Menu/usa_select_hover.jpg" action Language(None)
 
-        imagebutton xpos 1140 ypos 600 idle "Menu/spain_base.jpg" hover "Menu/spain_hover.jpg" selected_idle "Menu/spain_select.jpg" selected_hover "Menu/spain_select_hover.jpg" action Language("spanish"),Show("lang")
+        imagebutton xpos 1140 ypos 600 idle "Menu/spain_base.jpg" hover "Menu/spain_hover.jpg" selected_idle "Menu/spain_select.jpg" selected_hover "Menu/spain_select_hover.jpg" action Language("spanish")
 
         hotspot (948, 926, 107, 23) action Hide('preferences', transition=dissolve)
 
@@ -633,62 +633,6 @@ screen preferences:
             ypos 880
             xmaximum 250
             value Preference("auto-forward time")
-       
-screen lang:
-
-    python:
-
-        if _preferences.language == "spanish":
-
-            for order in BM.orders:
-
-                if order == "RESURRECTION":
-                    del BM.orders['RESURRECTION']
-                    BM.orders['RESURRECCIÓN'] = [2000,'resurrection']
-                if order == "ALL GUARD":
-                    del BM.orders['ALL GUARD']
-                    BM.orders['DEFENSA TOTAL'] = [750,'all_guard']
-                if order == "FULL FORWARD":
-                    del BM.orders['FULL FORWARD']
-                    BM.orders['AVANCE COMPLETO'] = [750,'full_forward']
-                if order == "REPAIR DRONES":
-                    del BM.orders['REPAIR DRONES']
-                    BM.orders['DRONES REPARADORES'] = [750,'repair_drones']
-                if order == "SHORT RANGE WARP":
-                    del BM.orders['SHORT RANGE WARP']
-                    BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp']
-                if order == "RETREAT":
-                    del BM.orders['RETREAT']
-                    BM.orders['RETIRADA'] = [0,'retreat']
-                if order == "VANGUARD CANNON":
-                    del BM.orders['VANGUARD CANNON']
-                    BM.orders['CAÑÓN VANGUARDIA'] = [2500,'order_vanguard_cannon']
-
-        else:
-
-            for order in BM.orders:
-
-                if order == "RESURRECCIÓN":
-                    del BM.orders['RESURRECCIÓN']
-                    BM.orders['RESURRECTION'] = [2000,'resurrection']
-                if order == "DEFENSA TOTAL":
-                    del BM.orders['DEFENSA TOTAL']
-                    BM.orders['ALL GUARD'] = [750,'all_guard']
-                if order == "AVANCE COMPLETO":
-                    del BM.orders['AVANCE COMPLETO']
-                    BM.orders['FULL FORWARD'] = [750,'full_forward']
-                if order == "DRONES REPARADORES":
-                    del BM.orders['DRONES REPARADORES']
-                    BM.orders['REPAIR DRONES'] = [750,'repair_drones']
-                if order == "SALTO DE CORTO RANGO":
-                    del BM.orders['SALTO DE CORTO RANGO']
-                    BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
-                if order == "RETIRADA":
-                    del BM.orders['RETIRADA']
-                    BM.orders['RETREAT'] = [0,'retreat']
-                if order == "CAÑÓN VANGUARDIA":
-                    del BM.orders['CAÑÓN VANGUARDIA']
-                    BM.orders['VANGUARD CANNON'] = [2500,'order_vanguard_cannon']
 
 screen gameprefs:
     

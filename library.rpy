@@ -42,8 +42,6 @@ init 2 python:
             self.shield_range = 0
             self.base_armor = 15
             self.armor = self.base_armor
-            self.test = 'test1234'
-            self.test2 = 'test2'
 
             ####################UPGRADE BACKGROUND AND ICONS
             self.upgrade_menu = 'Menu/upgrade_sunrider.png'

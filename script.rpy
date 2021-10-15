@@ -52,9 +52,6 @@ label start:
     $ InGame = True
     $ InGameInit = True
 
-    if language == "spanish":
-        $ _preferences.language = "spanish"
-
     if config.developer:
         menu:
             "normal start":

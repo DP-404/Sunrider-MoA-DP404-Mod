@@ -500,7 +500,7 @@ init -1 python:
     mr.add("Music/Sora_no_Senritsu.ogg",always_unlocked=True)
     mr.add("Music/Firn.ogg",always_unlocked=True)
 
-########## OP
+########## CENSORED CG
 
 init 10:
 
@@ -516,6 +516,8 @@ init 10:
 
         $ gallery.button("cg48")
         $ gallery.unlock_image("cg_avacg2")
+
+########## OP
 
 label replay_op:
     
