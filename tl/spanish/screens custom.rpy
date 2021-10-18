@@ -40,11 +40,11 @@ translate spanish strings:
 
     # game/screens custom.rpy:1131
     old "+{}% for {} turns"
-    new "+{}% por {} turnos"
+    new "+{}% [[{} turnos]"
 
     # game/screens custom.rpy:1135
     old "{}% for {} turns"
-    new "{}% por {} turnos"
+    new "{}% [[{} turnos]"
 
     # game/screens custom.rpy:1505
     old "HP: {!s}/{!s}"
