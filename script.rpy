@@ -23036,12 +23036,6 @@ label credits:
 
     hide credits1 with dissolve
 
-    show credits1b:
-        xalign 0.5
-        ypos 1.1
-        linear 15 ypos -0.25
-    pause 3.0
-
     show credits2:
         xalign 0.5
         ypos 1.1

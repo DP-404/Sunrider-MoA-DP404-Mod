@@ -943,7 +943,6 @@ init -5:
     image shieldsvanguard4 = Text("FIRE!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
 
     image credits1 = Text("Project Director {p}         Sam Yang (Samu-kun)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image credits1b = Text("Mod Creator{p}         DP404", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits2 = Text("Writer{p}         Sam Yang (Samu-kun)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits3 = Text("Lead Character Artist{p}         Ashton Wilson (Melonbunny)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits5 = Text("Additional Character Design{p}         Adrian Ferrer (Sixten)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
