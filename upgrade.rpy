@@ -294,7 +294,7 @@ screen upgrade:
                 for i in range(1,10):
                     hbox:
                         if level+i+1 < 20:
-                            text _("Mark {}:").format( level+i+1 ):
+                            text __("Mark {}:").format( level+i+1 ):
                                 min_width 100
                                 color '000'
                             text " ${}".format( int(cost*multiplier**i) ):
