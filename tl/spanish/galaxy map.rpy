@@ -44,5 +44,5 @@ translate spanish strings:
 
     # game/galaxy map.rpy:34
     old "Main: Meet Admiral Grey"
-    new "Principal: Reunirse con Almirante Grey"
+    new "Principal: Encontrarse con el Almirante Grey"
 
