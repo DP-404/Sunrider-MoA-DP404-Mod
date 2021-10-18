@@ -38,9 +38,9 @@ screen deck0:
         hover "Menu/deck0_hover.jpg"
         idle "Menu/deck0.jpg"
 
-        hotspot (1610, 858, 310, 70):
+        hotspot (1570, 852, 350, 76):
             action Show("deck1", dissolve)
-        hotspot (1610, 960, 310, 70):
+        hotspot (1570, 957, 350, 76):
             action Show("deck2", dissolve)
 
 
@@ -262,9 +262,9 @@ screen deck1:
         hover "Menu/deck1_hover.jpg"
         idle "Menu/deck1.jpg"
 
-        hotspot (1610, 758, 310, 70):
+        hotspot (1570, 755, 350, 76):
             action Show("deck0", dissolve)
-        hotspot (1610, 960, 310, 70):
+        hotspot (1570, 957, 350, 76):
             action Show("deck2", dissolve)
 
     frame:##################################### BRIDGE
@@ -477,9 +477,9 @@ screen deck2:
         hover "Menu/deck2_hover.jpg"
         idle "Menu/deck2.jpg"
 
-        hotspot (1610, 758, 310, 70):
+        hotspot (1570, 755, 350, 76):
             action Show("deck0", dissolve)
-        hotspot (1610, 858, 310, 70):
+        hotspot (1570, 855, 350, 76):
             action Show("deck1", dissolve)
 
     frame:##################################### LAB
