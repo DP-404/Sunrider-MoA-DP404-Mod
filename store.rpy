@@ -60,7 +60,9 @@ screen store_union:
                     ypos 12
                     for item in store_items:
                         if item.isVisible():
-                            text item.display_name + (__("    [[Store:{!s}]").format(eval(item.variable_name)) if item.variable_name != None else "") font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
+                            hbox:
+                                text item.display_name font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
+                                text (__("    [[Store:{!s}]").format(eval(item.variable_name)) if item.variable_name != None else "") font "Font/sui generis rg.ttf" size 20 first_indent 50 line_spacing 45 color "#0a0a0a"
                 vbox:
                     ypos 12
                     for item in store_items:
