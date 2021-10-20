@@ -845,7 +845,7 @@ screen gallery_bg:
 
                     add gallery.make_button("bg22", "Background/thumb/corebridge_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
                     add gallery.make_button("bg23", "Background/thumb/balcony_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
-                    add gallery.make_button("bg24", "Background/thumb/engineroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
+                    add gallery.make_button("bg25", "Background/thumb/engineroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
 
                     add gallery.make_button("bg26", "Background/thumb/paradoxback_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
                     add gallery.make_button("bg27", "Background/thumb/space1_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
@@ -894,9 +894,9 @@ screen gallery_bg:
 
                     add gallery.make_button("bg22", "Background/thumb/corebridge_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
                     add gallery.make_button("bg23", "Background/thumb/balcony_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
-                    add gallery.make_button("bg24", "Background/thumb/engineroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
+                    add gallery.make_button("bg24", "Background/thumb/avaroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
 
-                    add gallery.make_button("bg25", "Background/thumb/avaroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
+                    add gallery.make_button("bg25", "Background/thumb/engineroom_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
                     add gallery.make_button("bg26", "Background/thumb/paradoxback_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
                     add gallery.make_button("bg27", "Background/thumb/space1_thumb.jpg", locked="cg/thumb/locked.jpg",hover_border="cg/thumb/hover.png", idle_border=None, background=None)
 

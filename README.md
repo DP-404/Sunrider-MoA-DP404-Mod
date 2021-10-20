@@ -26,6 +26,7 @@ You are free to modify, translate and/or expand Sunrider or this mod in any mane
 - Translated R&D, ship map, buffs tooltips, CGs, backgrounds, buttons and other images.
 
 ### Bugs and Other fixes
+- Fixed the appearance of a wrong bg in the gallery without the decensor mod.
 - Fixed spanish translation errors.
 
 ## DP404 Mod v1.4b
