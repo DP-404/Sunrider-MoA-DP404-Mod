@@ -15,6 +15,7 @@ You are free to modify, translate and/or expand Sunrider or this mod in any mane
 - Delete the "game/cache" folder within the Sunrider Mask of Arcadius main game folder since it may cause some errors.
 - Run SunriderMaskOfArcadius.exe. Check the bottom left corner of the main menu screen. If 'DP404 Mod' text appears, then you're good to go.
 
+This mod works correctly whether or not you have the decensor patch installed.
 **Warning:** This mod tampers with several parts of the original game code in order to work properly. Compatibility with other mods is highly unlikely.
 
 # Changelog
