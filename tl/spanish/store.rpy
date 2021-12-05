@@ -4,5 +4,5 @@ translate spanish strings:
 
     # game/store.rpy:63
     old "    [[Store:{!s}]"
-    new "    [[Tienda:{!s}]"
+    new "    [[Almacén:{!s}]"
 
