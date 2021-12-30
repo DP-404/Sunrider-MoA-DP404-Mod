@@ -62,20 +62,12 @@ init -2 python:
             self.mouse_location = (0,0)
             self.vanguard_damage = 800
             self.vanguard_range = 6
-            if _preferences.language == "spanish":
-                self.orders = {
-                    'AVANCE COMPLETO':[750,'full_forward'],
-                    'DEFENSA TOTAL':[750,'all_guard'],
-                    'DRONES REPARADORES':[750,'repair_drones'],
-                    'CAÑÓN VANGUARDIA':[2500,'vanguard_cannon']
-                    }
-            else:
-                self.orders = {
-                    'FULL FORWARD':[750,'full_forward'],
-                    'ALL GUARD':[750,'all_guard'],
-                    'REPAIR DRONES':[750,'repair_drones'],
-                    'VANGUARD CANNON':[2500,'vanguard_cannon']
-                    }
+            self.orders = {
+                _('FULL FORWARD'):[750,'full_forward'],
+                _('ALL GUARD'):[750,'all_guard'],
+                _('REPAIR DRONES'):[750,'repair_drones'],
+                _('VANGUARD CANNON'):[2500,'vanguard_cannon']
+                }
             self.order_used = False   #when True the orders button is hidden.
               #environment modifiers are initialized here and can be changed later
             self.environment = {
@@ -126,22 +118,13 @@ init -2 python:
                                        "selection"        : self.battle_selection,
                                        "move"             : self.battle_move,
                                        "cancel movement"  : self.battle_cancel_movement,
-                                       # English orders
-                                       "RESURRECTION"     : self.battle_order_resurrection,
-                                       "ALL GUARD"        : self.battle_order_all_guard,
-                                       "FULL FORWARD"     : self.battle_order_full_forward,
-                                       "REPAIR DRONES"    : self.battle_order_repair_drones,
-                                       "SHORT RANGE WARP" : self.battle_short_range_warp,
-                                       "RETREAT"          : self.battle_retreat,
-                                       "VANGUARD CANNON"  : self.battle_order_vanguard_cannon,
-                                       # Spanish orders
-                                       "RESURRECCIÓN"     : self.battle_order_resurrection,
-                                       "DEFENSA TOTAL"    : self.battle_order_all_guard,
-                                       "AVANCE COMPLETO"  : self.battle_order_full_forward,
-                                       "DRONES REPARADORES"    : self.battle_order_repair_drones,
-                                       "SALTO DE CORTO RANGO"  : self.battle_short_range_warp,
-                                       "RETIRADA"         : self.battle_retreat,
-                                       "CAÑÓN VANGUARDIA" : self.battle_order_vanguard_cannon,
+                                       _("RESURRECTION")     : self.battle_order_resurrection,
+                                       _("ALL GUARD")        : self.battle_order_all_guard,
+                                       _("FULL FORWARD")     : self.battle_order_full_forward,
+                                       _("REPAIR DRONES")    : self.battle_order_repair_drones,
+                                       _("SHORT RANGE WARP") : self.battle_short_range_warp,
+                                       _("RETREAT")          : self.battle_retreat,
+                                       _("VANGUARD CANNON")  : self.battle_order_vanguard_cannon,
                                        "toggle player ai" : self.toggle_player_ai,
                                        "endturn"          : self.battle_end_turn   }
 
@@ -287,8 +270,7 @@ init -2 python:
                 if ship.location != None:
                     player_ship_present = True
             if not player_ship_present:
-                 show_message('Please add at least 1 player unit')
-                 #show_message('Por favor añada al menos 1 unidad del jugador')
+                 show_message(_('Please add at least 1 player unit'))
                  renpy.jump('mission_skirmish')
 
             renpy.hide_screen('player_unit_pool_collapsed')
@@ -334,13 +316,11 @@ init -2 python:
 
         def skirmish_playermusic(self):
             store.PlayerTurnMusic = self.result[1]
-            show_message('Player music was changed')
-            show_message('La música del Jugador fue cambiada')
+            show_message(_('Player music was changed'))
 
         def skirmish_enemymusic(self):
             store.EnemyTurnMusic = self.result[1]
-            show_message('Enemy music was changed')
-            show_message('La música del Enemigo fue cambiada')
+            show_message(_('Enemy music was changed'))
 
         def skirmish_selection(self):
             # this result can be from one of the imagebuttons in the pool screens or returned from
@@ -419,10 +399,7 @@ init -2 python:
                 if ship.location == None:
                     unplaced_units = True
             if unplaced_units:
-                if _preferences.language != "spanish":
-                    show_message('there are still ships you have not placed!')
-                else:
-                    show_message('¡Todavía hay naves que no ha colocado!')
+                show_message(_('there are still ships you have not placed!'))
             else:
                 renpy.hide_screen('player_unit_pool_collapsed')
                 renpy.hide_screen('enemy_unit_pool_collapsed')
@@ -600,10 +577,7 @@ init -2 python:
                     if weapon.wtype == 'Support' or weapon.wtype == 'Special':
                         if self.target.cth <= 0:
                             self.draggable = False
-                            if _preferences.language == "spanish":
-                                renpy.say('',"¡El objetivo está fuera del rango, capitán!")
-                            else:
-                                renpy.say('',"The target is out of range, captain!")
+                            renpy.say('',_("The target is out of range, captain!"))
                             self.draggable = True
                             self.targetingmode = True #try again
                             return #do end the method, this is important.
@@ -619,10 +593,7 @@ init -2 python:
                     #check if you can hit the target. if not, let the player know he's stupid.
                     if self.target.cth <= 0:
                         self.draggable = False
-                        if _preferences.language == "spanish":
-                            renpy.say('','¡Eso es imposible, capitán!')
-                        else:
-                            renpy.say('','¡That\'s hopeless, captain!')
+                        renpy.say('',_('That\'s hopeless, captain!!'))
                         self.draggable = True
                         return #do end the method, this is important.
                     else:
@@ -686,7 +657,7 @@ init -2 python:
                 result = ui.interact()
 
                 if result[0] == 'deselect':
-                    self.cmd += 2000#self.orders['RESURECCIÓN'][0]
+                    self.cmd += self.orders['RESURRECTION'][0]
                     renpy.hide_screen('ryderlist')
                     self.order_used = False
                     return
@@ -703,7 +674,6 @@ init -2 python:
                     revived_ship.location = launch_location
                     set_cell_available(launch_location, True) #the optional True actually lets me set this cell /un/available
                     message = "ORDER: {0} is resurrected".format(revived_ship.name)
-                    #message = "-ORDEN: {0} es resucitado".format(revived_ship.name)
                     self.battle_log_insert(['order'], message)
                     BM.order_used = True
 
@@ -727,11 +697,7 @@ init -2 python:
                 self.cmd -= self.orders[self.result[0]][0]
 
                 if self.active_strategy[0] == 'full forward':
-                    if _preferences.language == "spanish":
-                        show_message('¡Orden Avance Completo cancelada!')
-                    else:
-                        show_message('Full Forward order cancelled!')
-                    show_message("¡Orden AVANCE COMPLETO cancelada!")
+                    show_message(_('Full Forward order cancelled!'))
                     for ship in player_ships:
                         if ship.modifiers['accuracy'][0] == 15:
                             ship.modifiers['accuracy'] = [0,0]
@@ -748,20 +714,14 @@ init -2 python:
                         if apply_modifier(ship,'shield_generation',10,5): succesful = True
                     if apply_modifier(ship,'evasion',10,5): succesful = True
                 if not succesful:
-                    if _preferences.language == "spanish":
-                        show_message('¡Ya está activado!')
-                    else:
-                        show_message('alredy active!')
+                    show_message(_('alredy active!'))
                     self.order_used = False
                     self.cmd += self.orders[self.result[0]][0]
                 else:
-                    message = "-ORDEN: DEFENSA TOTAL"
+                    message = "-ORDER: ALL GUARD"
                     self.battle_log_insert(['order'], message)
                     BM.order_used = True
-                    if _preferences.language == "spanish":
-                        store.show_message('¡Todas las naves ganaron una mejora a las torretas antiaéreas, los escudos y la evasión!')
-                    else:
-                        store.show_message('all ships gained improved flak, shielding and evasion!')
+                    store.show_message(_('all ships gained improved flak, shielding and evasion!'))
 
                     random_ship = renpy.random.choice( get_player_ships_in_battle() )
                     random_voice = renpy.random.choice(random_ship.buffed_voice)
@@ -787,10 +747,7 @@ init -2 python:
                 self.cmd -= self.orders[self.result[0]][0]
 
                 if self.active_strategy[0] == 'all guard':
-                    if _preferences.language == "spanish":
-                        show_message('¡Orden Defensa Total cancelada!')
-                    else:
-                        show_message('All Guard order cancelled!')
+                    show_message(_('All Guard order cancelled!'))
                     for ship in player_ships:
                         if ship.modifiers['flak'][0] == 20:
                             ship.modifiers['flak'] = [0,0]
@@ -806,20 +763,14 @@ init -2 python:
                     if apply_modifier(ship,'accuracy',15,5): succesful = True
                     if apply_modifier(ship,'damage',20,5): succesful = True
                 if not succesful:
-                    if _preferences.language == "spanish":
-                        show_message('¡Ya está activado!')
-                    else:
-                        show_message('alredy active!')
+                    show_message('alredy active!')
                     self.order_used = False
                     self.cmd += self.orders[self.result[0]][0]
                 else:
-                    message = "-ORDEN: AVANCE COMPLETO"
+                    message = "-ORDER: FULL FORWARD"
                     self.battle_log_insert(['order'], message)
                     BM.order_used = True
-                    if _preferences.language == "spanish":
-                        store.show_message('¡Todas las naves ganan 20% de daño y 15% de precisión!')
-                    else:
-                        store.show_message('All ships gain 20% damage and 15% accuracy!')
+                    store.show_message(_('All ships gain 20% damage and 15% accuracy!'))
                     random_ship = player_ships[renpy.random.randint(0,len(player_ships)-1)]
                     random_voice = renpy.random.randint(0,len(random_ship.buffed_voice)-1)
                     renpy.music.play('sound/Voice/{}'.format(random_ship.buffed_voice[random_voice]),channel = random_ship.voice_channel)
@@ -841,19 +792,13 @@ init -2 python:
             if self.cmd >= self.orders[self.result[0]][0]:
                 if sunrider.repair_drones != None:
                     if sunrider.repair_drones <= 0:
-                        if _preferences.language == "spanish":
-                            show_message('¡No hay drones disponibles en el almacén!')
-                        else:
-                            show_message('no available droids in storage!')
+                        show_message(_('no available droids in storage!'))
                         self.order_used = False
                         return
                     else:
                         sunrider.repair_drones -= 1
                 self.cmd -= self.orders[self.result[0]][0]
-                if _preferences.language == "spanish":
-                    message = "ORDEN: Drones reparadores restauran el 50% de la integridad de la coraza del Sunrider"
-                else:
-                    message = "ORDER: Repair drones restore 50% of Sunrider's hull integrity"
+                message = _("ORDER: Repair drones restore 50% of Sunrider's hull integrity")
                 self.battle_log_insert(['order'], message)
                 show_message(message)
                 BM.order_used = True
@@ -914,7 +859,7 @@ init -2 python:
                         zoom_handling(result,self)
 
                     if result[0] == 'deselect':
-                        self.cmd += 750#self.orders['SALTO DE CORTO RANGO'][0]
+                        self.cmd += self.orders['SHORT RANGE WARP'][0]
                         looping = False
                         renpy.hide_screen('mousefollow')
                         self.phase = 'Player'
@@ -934,8 +879,8 @@ init -2 python:
                 if get_distance(sunrider.location,ship.location) <= BM.vanguard_range:
                     inrange = True
             if inrange:
-                if self.cmd >= 2500:#:self.orders[self.result[0]][0]:
-                    self.cmd -= 2500#:self.orders[self.result[0]][0]
+                if self.cmd >= self.orders[self.result[0]][0]:
+                    self.cmd -= self.orders[self.result[0]][0]
                     self.vanguardtarget = True
                     looping = True
                     while looping:
@@ -958,7 +903,7 @@ init -2 python:
                                                 hasship = True
                                 if not hasship:
                                     #no good targets found
-                                    self.cmd += 2500#self.orders['CAÑÓN VANGUARDIA'][0]
+                                    self.cmd += self.orders['VANGUARD CANNON'][0]
                                     looping = False
                                     self.order_used = False
                                     return
@@ -977,7 +922,6 @@ init -2 python:
                                 store.total_flak_interception = 0
                                 templist = enemy_ships[:]
                                 self.battle_log_insert(['order'], "ORDER: FIRE VANGUARD CANNON")
-                                #self.battle_log_insert(['order'], "-ORDEN: DISPARAR CAÑÓN VANGUARDIA")
                                 for ship in templist:
                                     for tile in listlocs:
                                         if ship.location != None and self.battlemode: #failsaves. it's now legal for a location to be None
@@ -996,7 +940,7 @@ init -2 python:
                                     BM.order_used = True
 
                         if result[0] == 'deselect':
-                            self.cmd += 2500#self.orders['CAÑÓN VANGUARDIA'][0]
+                            self.cmd += self.orders['VANGUARD CANNON'][0]
                             looping = False
                             self.vanguardtarget = False
                             self.order_used = False
@@ -1005,10 +949,7 @@ init -2 python:
                     renpy.music.play('sound/Voice/Ava/Ava Others 9.ogg',channel='avavoice')
                     self.order_used = False
             else:
-                if _preferences.language == "spanish":
-                    renpy.say('','¡Eso es imposible, capitán!')
-                else:
-                    renpy.say('','That\'s hopeless, captain!!')
+                renpy.say('','That\'s hopeless, captain!!')
                 self.order_used = False
 
         def toggle_player_ai(self):
@@ -1113,7 +1054,6 @@ init -2 python:
                 renpy.jump('sunrider_destroyed')
             else:
                 show_message('You were defeated! better luck next time...')
-                #show_message('¡Has sido derrotado! Mejor suerte la próxima vez...')
                 clean_battle_exit()
                 renpy.jump('dispatch')
 
@@ -1157,9 +1097,9 @@ init -2 python:
             if (self.phase) == 'PACT':
                 self.battle_log_insert(['system'], "---------PACT: Phase finished---------")#.format(self.phase))
             if (self.phase) == 'Pirate':
-                self.battle_log_insert(['system'], "---------PIRATAS: Phase finished---------")#.format(self.phase))
+                self.battle_log_insert(['system'], "---------PIRATES: Phase finished---------")#.format(self.phase))
             if (self.phase) == 'Unknown':
-                self.battle_log_insert(['system'], "---------DESCONOCIDO: Phase finished---------")#.format(self.phase))
+                self.battle_log_insert(['system'], "---------UNKNOWN: Phase finished---------")#.format(self.phase))
             self.battle_log_trimm()
              ##I have NO idea why this dumb workaround is needed, but the destroy() method -somehow- doesn't want to jump to this label sometimes.
             if sunrider.hp < 0:
@@ -1246,8 +1186,7 @@ init -2 python:
                     if not pship.modifiers['energy regen'][0] == -100:
                         pship.AI()
                     else:
-                        show_message('the {} is disabled!'.format(pship.name) )
-                        #show_message('¡El {} está desactivado!'.format(pship.name) )
+                        show_message(__('the {} is disabled!').format(pship.name) )
                 except:
                     pship.modifiers['energy regen'] = (0,0)
                     pship.AI()
@@ -1272,8 +1211,7 @@ init -2 python:
                     if not pship.modifiers['energy regen'][0] == -100:
                         pship.AI()
                     else:
-                        show_message('the {} is disabled!'.format(pship.name) )
-                        #show_message('¡El {} está desactivado!'.format(pship.name) )
+                        show_message(__('the {} is disabled!').format(pship.name) )
                 except:
                     pship.modifiers['energy regen'] = (0,0)
                     pship.AI()
@@ -1288,8 +1226,7 @@ init -2 python:
 
                     try:
                         if ship.modifiers['energy regen'][0] == -100:
-                            show_message('the {} is disabled!'.format(ship.name) )
-                            #show_message('¡El {} está desactivado!'.format(ship.name) )
+                            show_message(__('the {} is disabled!').format(ship.name) )
                             ship.en = 0
                         else:
                             ship.en = ship.max_en
@@ -1354,8 +1291,7 @@ init -2 python:
                     if not eship.modifiers['energy regen'][0] == -100:
                         eship.AI()
                     else:
-                        show_message('the {} is disabled!'.format(eship.name) )
-                        #show_message('¡El {} está desactivado!'.format(eship.name) )
+                        show_message(_('the {} is disabled!').format(eship.name) )
                         eship.en = 0
                 except:
                     eship.modifiers['energy regen'] = (0,0)
@@ -1384,8 +1320,7 @@ init -2 python:
                     if not eship.modifiers['energy regen'][0] == -100:
                         eship.AI()
                     else:
-                        show_message('the {} is disabled!'.format(eship.name) )
-                        #show_message('¡El {} está desactivado!'.format(eship.name) )
+                        show_message(__('the {} is disabled!').format(eship.name) )
                         eship.en = 0
                 except:
                     eship.modifiers['energy regen'] = (0,0)
@@ -1401,8 +1336,7 @@ init -2 python:
 
                     try:
                         if ship.modifiers['energy regen'][0] == -100:
-                            show_message('the {} is disabled!'.format(ship.name) )
-                            #show_message('¡El {} está desactivado!'.format(ship.name) )
+                            show_message(__('the {} is disabled!').format(ship.name) )
                             ship.en = 0
                         else:
                             if not ship.just_spawned: ship.en = ship.max_en
@@ -1747,28 +1681,28 @@ init -2 python:
             self.move_cost_multiplier = 1.0
             #[display name, level,increase/upgrade,upgrade cost,cost multiplier]
             self.upgrades = {
-                'max_hp':['Hull Plating',1,100,100,1.5],
-                'max_en':['Energy Reactor',1,5,200,1.4],
-                'move_cost_multiplier':['Move Cost',1,-0.05,100,2.5],
-                'evasion':['Evasion',1,5,500,2.5],
-                'kinetic_dmg':['Kinetic Damage',1,0.05,105,1.55],
-                'kinetic_acc':['Kinetic Accuracy',1,0.05,100,1.5],
-                'kinetic_cost':['Kinetic Energy Cost',1,-0.05,100,2.0],
-                'energy_dmg':['Energy Damage',1,0.1,100,1.3],
-                'energy_acc':['Energy Accuracy',1,0.05,150,1.75],
-                'energy_cost':['Energy Cost',1,-0.075,100,1.8],
-                'missile_dmg':['Missile Damage',1,0.10,100,1.5],
-                'missile_eccm':['Missile Flak Resistance',1,1,100,1.5],
-                'missile_cost':['Missile Energy Cost',1,-0.1,150,2.5],
-                'max_missiles':['Missile Storage',1,1,500,3],
-                'melee_dmg':['Melee Damage',1,0.05,100,1.5],
-                'melee_acc':['Melee Accuracy',1,0.05,100,1.5],
-                'melee_cost':['Melee Energy Cost',1,-0.05,100,2.0],
-                'shield_generation':['Shield Power',1,5,500,2],
-                'shield_range':['Shield Range',1,1,1000,5],
-                'flak':['Flak',1,5,500,2],
-                'base_armor':['Armor',1,1,100,1.3],
-                'repair':['Repair Crew',1,50,500,2]
+                'max_hp':[_('Hull Plating'),1,100,100,1.5],
+                'max_en':[_('Energy Reactor'),1,5,200,1.4],
+                'move_cost_multiplier':[_('Move Cost'),1,-0.05,100,2.5],
+                'evasion':[_('Evasion'),1,5,500,2.5],
+                'kinetic_dmg':[_('Kinetic Damage'),1,0.05,105,1.55],
+                'kinetic_acc':[_('Kinetic Accuracy'),1,0.05,100,1.5],
+                'kinetic_cost':[_('Kinetic Energy Cost'),1,-0.05,100,2.0],
+                'energy_dmg':[_('Energy Damage'),1,0.1,100,1.3],
+                'energy_acc':[_('Energy Accuracy'),1,0.05,150,1.75],
+                'energy_cost':[_('Energy Cost'),1,-0.075,100,1.8],
+                'missile_dmg':[_('Missile Damage'),1,0.10,100,1.5],
+                'missile_eccm':[_('Missile Flak Resistance'),1,1,100,1.5],
+                'missile_cost':[_('Missile Energy Cost'),1,-0.1,150,2.5],
+                'max_missiles':[_('Missile Storage'),1,1,500,3],
+                'melee_dmg':[_('Melee Damage'),1,0.05,100,1.5],
+                'melee_acc':[_('Melee Accuracy'),1,0.05,100,1.5],
+                'melee_cost':[_('Melee Energy Cost'),1,-0.05,100,2.0],
+                'shield_generation':[_('Shield Power'),1,5,500,2],
+                'shield_range':[_('Shield Range'),1,1,1000,5],
+                'flak':[_('Flak'),1,5,500,2],
+                'base_armor':[_('Armor'),1,1,100,1.3],
+                'repair':[_('Repair Crew'),1,50,500,2]
                 }
             self.total_damage = 0  #refers to damage done, not taken. used by AI
             self.total_kinetic_damage = 0
@@ -1805,17 +1739,17 @@ init -2 python:
               #modifiers list temporary (de)buffs.
               #these values represent the strength of the modifier and the number of turns it stays in effect
             self.modifiers = {
-                'accuracy':[0,0],
-                'move_cost':[0,0],
-                'evasion':[0,0],
-                'damage':[0,0],
-                'armor':[0,0],
-                'shield':[0,0],
-                'flak':[0,0],
-                'energy':[0,0],
-                'stealth':[0,0],
-                'shield_generation':[0,0],
-                'energy regen':[0,0],
+                _('accuracy'):[0,0],
+                _('move_cost'):[0,0],
+                _('evasion'):[0,0],
+                _('damage'):[0,0],
+                _('armor'):[0,0],
+                _('shield'):[0,0],
+                _('flak'):[0,0],
+                _('energy'):[0,0],
+                _('stealth'):[0,0],
+                _('shield_generation'):[0,0],
+                _('energy regen'):[0,0],
                 }
 
         #return None if an attribute does not exist
@@ -1876,19 +1810,13 @@ init -2 python:
             if damage == None:
                 return
             if damage == 'no energy':
-                if _preferences.language == None:
-                    renpy.say('ERROR','the {} does not have the energy for this attack'.format(attacker.name))
-                else:
-                    renpy.say('ERROR','El {} no tiene suficiente energía para este ataque'.format(attacker.name))
+                renpy.say('ERROR','the {} does not have the energy for this attack'.format(attacker.name))
                 return
             elif damage == 'no ammo':
-                if _preferences.language == None:
-                    renpy.say('ERROR','the {} does not have enough ammo for this attack'.format(attacker.name))
-                else:
-                    renpy.say('ERROR','El {} no tiene suficientes municiones para este ataque'.format(attacker.name))
+                renpy.say('ERROR','the {} does not have enough ammo for this attack'.format(attacker.name))
                 return
             elif damage == 'miss':
-                BM.battle_log_insert(['attack'], "-El ataque de {0} falló".format(attacker.name))
+                BM.battle_log_insert(['attack'], "-The attack of {0} missed".format(attacker.name))
                 if wtype == 'Melee':
                     store.damage = damage
                     try:
@@ -1924,7 +1852,6 @@ init -2 python:
                 #handle healing
                 if wtype == 'Support':
                     BM.battle_log.append("{0} is healed for {1} HP".format(self.name, str(int(damage))))
-                    #BM.battle_log.append("El {0} es curado con {1} HP".format(self.name, str(int(damage))))
                     self.hp += int(damage)
                     if self.hp > self.max_hp:
                         self.hp = self.max_hp
@@ -1968,7 +1895,7 @@ init -2 python:
                 store.damage = damage #the global variant is used by the health_animation screen
 
                   #if the attack hits, show the hit animation of the target based on weapon type
-                BM.battle_log_insert(['attack'], "-El {0} inflige {1} daño al {2}".format(attacker.name, damage, self.name))
+                BM.battle_log_insert(['attack'], "-{0} inflicts {1} damage to {2}".format(attacker.name, damage, self.name))
                 self.hp -= damage
 
                 if wtype == 'Melee':
@@ -1983,7 +1910,7 @@ init -2 python:
                         show_message('missing animation. "hitanim_{}_{}" doesn\'t seem to exist'.format(self.animation_name,wtype.lower()))
 
                 if self.hp <= 0:
-                    BM.battle_log_insert(['attack'], "-El {0} destruye al {1}".format(attacker.name, self.name))
+                    BM.battle_log_insert(['attack'], "-{0} destroys {1}".format(attacker.name, self.name))
                     self.destroy(attacker)
                     update_stats()
                 else:
@@ -2043,7 +1970,7 @@ init -2 python:
 
         def register_weapon(self, weapon):
             if len(self.weapons) >= self.max_weapons:
-                raise IndexError('ERROR: Demasiadas armas asignadas al {}'.format(self.name))
+                raise IndexError('ERROR: Too many weapons asigned to {}'.format(self.name))
             else:
                 self.weapons.append(weapon)
 
@@ -2107,7 +2034,7 @@ init -2 python:
 
             self.current_location = self.location #store a temporary location
             self.next_location = new_location
-            bm.battle_log_insert(['detailed'], "-El {0} se mueve de {1} a {2}".format(self.name, str(self.current_location)[1:-1].replace(', ', '/'), str(self.next_location)[1:-1].replace(', ', '/')))
+            bm.battle_log_insert(['detailed'], "-{0} moves from {1} to {2}".format(self.name, str(self.current_location)[1:-1].replace(', ', '/'), str(self.next_location)[1:-1].replace(', ', '/')))
             self.travel_time = get_distance(self.location,new_location) * SHIP_SPEED
             self.location = None #this makes the imagebutton of this ship not be displayed on battle_screen
             bm.moving = True
@@ -2146,11 +2073,8 @@ init -2 python:
                                 counter = weapon
                         if counter != None:
                             enemy.en = enemy.max_en
-                            if _preferences.language == "spanish":
-                                show_message('¡CONTRAATAQUE!')
-                            else:
-                                show_message('COUNTER ATTACK!')
-                            BM.battle_log_insert(['attack'], "-El {0} contra-ataca al {1}".format(enemy.name, self.name))
+                            show_message(_('COUNTER ATTACK!'))
+                            BM.battle_log_insert(['attack'], "-{0} counterattacks {1}".format(enemy.name, self.name))
                             enemy.AI_attack_target(self,counter,True)
                             BM.just_moved = False
             else:
@@ -2166,11 +2090,8 @@ init -2 python:
                             if counter != None:
                                 EN = ship.en
                                 ship.en = 200
-                                if _preferences.language == "spanish":
-                                    show_message('¡CONTRAATAQUE!')
-                                else:
-                                    show_message('COUNTER ATTACK!')
-                                BM.battle_log_insert(['attack'], "-El {0} contra-ataca al {1}".format(ship.name, self.name))
+                                show_message(_('COUNTER ATTACK!'))
+                                BM.battle_log_insert(['attack'], "-{0} counterattacks {1}".format(ship.name, self.name))
                                 self.update_stats()
                                 try:
                                     renpy.call_in_new_context('atkanim_{}_{}'.format(ship.animation_name,counter.wtype.lower()))
@@ -2199,7 +2120,6 @@ init -2 python:
             self.shot_count = 1
             self.accuracy = 100
             self.tooltip = ''
-            self.tooltip_es = ''
             #a dict that keeps track of what specific fields on this class should be after a reset.
             self.keep_after_reset = {}
 
@@ -2227,7 +2147,6 @@ init -2 python:
             accuracy = get_acc(self, parent, target)
 
             BM.battle_log_insert(['attack', 'laser'], "{0} attacks {1} with laser weapon".format(parent.name, target.name))
-            #BM.battle_log_insert(['attack', 'laser'], "-El {0} ataca al {1} con un arma láser".format(parent.name, target.name))
                 ## actual damage calculation
             total_damage = 0
             store.total_armor_negation = 0
@@ -2251,26 +2170,21 @@ init -2 python:
                         damage -= negation
                         store.total_shield_negation += int(negation)
                         BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>{1}'s shields negated {2} damage of {3}'s laser attack".format(str(shot), target.name, str(int(negation)), parent.name))
-                        #BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>El escudo del {1} negó {2} daño del ataque láser del {3}".format(str(shot), target.name, str(int(negation)), parent.name))
 
                     if damage <= target.armor:
                         damage = 1
                         store.total_armor_negation += damage
                         BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>{1}'s armour withstood {2}'s laser attack".format(str(shot), target.name, parent.name))
-                        #BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>La armadura del {1} resistió el ataque láser del {2}".format(str(shot), target.name, parent.name))
                     else:
                         damage -= target.armor
                         store.total_armor_negation += target.armor
                         BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>{1}'s armour negated {2} damage of {3}'s laser attack".format(str(shot), target.name, target.armor, parent.name))
-                        #BM.battle_log_insert(['attack', 'laser', 'detailed'], "<{0}>La armadura del {1} negó {2} daño del ataque láser del {3}".format(str(shot), target.name, target.armor, parent.name))
                     total_damage += int(damage)
                     store.hit_count += 1
 
             if total_damage > 0:
                 BM.battle_log_insert(['attack', 'laser'], "{0}'s shields negated {1} total damage of {2}'s attack".format(target.name, store.total_armor_negation, parent.name))
                 BM.battle_log_insert(['attack', 'laser'], "{0}'s armour negated {1} total damage of {2}'s attack".format(target.name, store.total_armor_negation, parent.name))
-                #BM.battle_log_insert(['attack', 'laser'], "-El escudo del {0} negó {1} daño total del ataque del {2}".format(target.name, store.total_armor_negation, parent.name))
-                #BM.battle_log_insert(['attack', 'laser'], "-La armadura del {0} negó {1} daño total del ataque del {2}".format(target.name, store.total_armor_negation, parent.name))
                 return total_damage
             else:
                 return 'miss'
@@ -2299,7 +2213,6 @@ init -2 python:
                 parent.en -= self.energy_cost(parent)
 
             BM.battle_log_insert(['attack', 'kinetic'], "{0} attacks {1} with kinetic weapon".format(parent.name, target.name))
-            #BM.battle_log_insert(['attack', 'kinetic'], "-El {0} ataca al {1} con un arma kinética".format(parent.name, target.name))
             accuracy = get_acc(self, parent, target)
             if accuracy == 0: return 'miss'
 
@@ -2316,7 +2229,6 @@ init -2 python:
             for shot in range(self.shot_count):
                 if not get_shot_hit(accuracy,self.shot_count,parent.faction):
                     BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}> miss".format(str(shot)))
-                    #BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}>Falló".format(str(shot)))
                 else:
                     damage = self.damage * parent.kinetic_dmg * renpy.random.triangular(0.95,1.05)  #add a little variation in the damage
                     damage = damage * (100 + parent.modifiers['damage'][0] + BM.environment['damage']) / 100.0
@@ -2331,15 +2243,12 @@ init -2 python:
                     if damage <= 1:
                         damage = 1 #it's rpg tradition you still do 1 damage against a big armored enemy :)
                         BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}>{1}'s armour withstood {2}'s kinetic attack".format(str(shot), target.name, parent.name))
-                        #BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}>La armadura del {1} resistió el ataque kinético del {2}".format(str(shot), target.name, parent.name))
                     else:
                         BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}>{1}'s armour negated {2} damage of {3}'s kinetic attack".format(str(shot), target.name, target.armor *2, parent.name))
-                        #BM.battle_log_insert(['attack', 'kinetic', 'detailed'], "<{0}>La armadura del {1} negó {2} daño del ataque kinético del {3}".format(str(shot), target.name, target.armor *2, parent.name))
                     total_damage += damage
                     store.hit_count += 1
             if total_damage == 0: return 'miss'
             BM.battle_log_insert(['attack', 'kinetic'], "{0}'s armour negated {1} total damage of {2}'s attack".format(target.name, store.total_armor_negation, parent.name))
-            #BM.battle_log_insert(['attack', 'kinetic'], "-La armadura del {0} negó {1} daño total del ataque del {2}".format(target.name, store.total_armor_negation, parent.name))
             return int(total_damage)
 
         ## Missiles ##
@@ -2379,7 +2288,6 @@ init -2 python:
                 else:
                     parent.missiles -= self.ammo_use
                     BM.battle_log_insert(['attack', 'missile'], "{0} attacks {1} with missiles".format(parent.name, target.name))
-                    #BM.battle_log_insert(['attack', 'missile'], "-El {0} ataca al {1} con misiles".format(parent.name, target.name))
                     wName = "missile"
 
             if self.uses_rockets:
@@ -2388,7 +2296,6 @@ init -2 python:
                 else:
                     parent.rockets -= self.ammo_use
                     BM.battle_log_insert(['attack', 'missile'], "{0} attacks {1} with rocket".format(parent.name, target.name))
-                    #BM.battle_log_insert(['attack', 'missile'], "-El {0} ataca al {1} con torpedo".format(parent.name, target.name))
                     wName = "rocket"
 
             accuracy = get_acc(self, parent, target)
@@ -2448,20 +2355,16 @@ init -2 python:
                     if damage <= 1:
                         damage = 1
                         BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}> {1}'s armour withstood {2}'s {3}".format(str(shot), target.name, parent.name, wName))
-                        #BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}> La armadura del {1} resistió el {3} del {2}".format(str(shot), target.name, parent.name, wName))
                     else:
                         BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}> {1}'s armour negated {2} damage of {3}'s {4}".format(str(shot), target.name, target.armor, parent.name, wName))
-                        #BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}> La armadura del {1} negó {2} daño del {4} del {3}".format(str(shot), target.name, target.armor, parent.name, wName))
                     total_damage += damage
                     store.hit_count += 1
                 else:
                     BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}> miss".format(str(shot)))
-                    #BM.battle_log_insert(['attack', 'missile', 'detailed'], "<{0}>Falló".format(str(shot)))
 
             BM.missiles = []
             if total_damage == 0: return 'miss'
             BM.battle_log_insert(['attack', 'missile'], "{0}'s armour negated {1} total damage of {2}'s attack".format(target.name, store.total_armor_negation, parent.name))
-            #BM.battle_log_insert(['attack', 'missile'], "-La armadura del {0} negó {1} daño total del ataque del {2}".format(target.name, store.total_armor_negation, parent.name))
             return int(total_damage)
 
         def simulate(self,parent,target):
@@ -2582,7 +2485,6 @@ init -2 python:
                 parent.en -= energy_cost
 
             BM.battle_log_insert(['attack', 'melee'], "{0} attacks {1} melee".format(parent.name, target.name))
-            #BM.battle_log_insert(['attack', 'melee'], "-El {0} ataca al {1} con melee".format(parent.name, target.name))
             accuracy = get_acc(self, parent, target)
             if accuracy == 0: return 'miss'
             total_damage = 0
@@ -2593,7 +2495,6 @@ init -2 python:
             for shot in range(self.shot_count):
                 if not get_shot_hit(accuracy,self.shot_count,parent.faction):
                     BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}> miss".format(str(shot)))
-                    #BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}>Falló".format(str(shot)))
                 else:
                     damage = self.damage * parent.melee_dmg * renpy.random.triangular(0.95,1.05)  #add a little variation in the damage
                     damage = damage * (100 + parent.modifiers['damage'][0] + BM.environment['damage']) / 100.0
@@ -2605,15 +2506,12 @@ init -2 python:
                     if damage <= 1:
                         damage = 1 #it's rpg tradition you still do 1 damage against a big armored enemy :)
                         BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}>{1}'s armour withstood {2}'s melee attack".format(str(shot), target.name, parent.name))
-                        #BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}>La armadura del {1} resistió el ataque melee del {2}".format(str(shot), target.name, parent.name))
                     else:
                         BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}>{1}'s armour negated {2} damage of {3}'s melee attack".format(str(shot), target.name, target.armor * 2, parent.name))
-                        #BM.battle_log_insert(['attack', 'melee', 'detailed'], "<{0}>La armadura del {1} negó {2} daño del ataque melee del {3}".format(str(shot), target.name, target.armor * 2, parent.name))
                     total_damage += damage
                     store.hit_count += 1
             if total_damage == 0: return 'miss'
             BM.battle_log_insert(['attack', 'melee'], "{0}'s armour negated {1} total damage of {2}'s melee attack".format(target.name, store.total_armor_negation, parent.name))
-            #BM.battle_log_insert(['attack', 'melee'], "-La armadura del {0} negó {1} daño total del ataque melee del {2}".format(target.name, store.total_armor_negation, parent.name))
             return int(total_damage)
 
     class Support(store.object):
@@ -2687,10 +2585,8 @@ init -2 python:
                 if parent is target:
                     #heal itself
                     BM.battle_log_insert(['support', 'heal'], "{0} heals {1} HP".format(parent.name, str(int(healing))))
-                    #BM.battle_log_insert(['support', 'heal'], "-El {0} se cura {1} HP".format(parent.name, str(int(healing))))
                 else:
                     BM.battle_log_insert(['support', 'heal'], "{0} heals {1} for {2} HP".format(parent.name, target.name, str(int(healing))))
-                    #BM.battle_log_insert(['support', 'heal'], "-El {0} cura al {1} {2} HP".format(parent.name, target.name, str(int(healing))))
 
                 #time to hear the lamentations of the women.
                 parent.hate += healing / 5
@@ -2700,18 +2596,18 @@ init -2 python:
             elif self.modifies == 'restore':
                 successful = False
                 if parent is target:
-                    BM.battle_log_insert(['support', 'debuff'], "-El {0} realiza una auto-restauración".format(parent.name))
+                    BM.battle_log_insert(['support', 'debuff'], "-{0} attempts to self-heal".format(parent.name))
                 else:
-                    BM.battle_log_insert(['support', 'debuff'], "-El {0} intenta restaurar al {1}".format(parent.name, target.name))
+                    BM.battle_log_insert(['support', 'debuff'], "-{0} attempts to restore {1}".format(parent.name, target.name))
                 for modifier in target.modifiers:
                     if target.modifiers[modifier][0] < 0: #a modifier lower than 0 is assumed to be a curse
                         successful = True
-                        BM.battle_log_insert(['support', 'debuff'], "-El {0} es curado de su maldición de {1}".format(target.name, modifier.replace('_', ' ')))
+                        BM.battle_log_insert(['support', 'debuff'], "-{0} is healed from its curse of {1}".format(target.name, modifier.replace('_', ' ')))
                         target.modifiers[modifier] = [0,0]
 
                 if not successful:
                     #there were no curses to remove
-                    message = "No se removio ninguna maldición del {0}".format(target.name)
+                    message = "No curses were removed from {0}".format(target.name)
                     BM.battle_log_insert(['support', 'debuff'], message)
                     show_message(message)
                     parent.en += self.energy_use
@@ -2752,18 +2648,15 @@ init -2 python:
                     target.getting_buff = True
                     log_tags = ['support', 'buff']
                     BM.battle_log_insert(log_tags, "{0} uses {1}".format(parent.name, self.name))
-                    #BM.battle_log_insert(log_tags, "-El {0} usa {1}".format(parent.name, self.name))
                 else:
                     if self.wtype == 'Support':
                         target.getting_buff = True
                         log_tags = ['support', 'buff']
                         BM.battle_log_insert(log_tags, "{0} uses {1} on {2}".format(parent.name, self.name, target.name))
-                        #BM.battle_log_insert(log_tags, "-El {0} usa {1} en el {2}".format(parent.name, self.name, target.name))
                     else:
                         target.getting_curse = True
                         log_tags = ['support', 'debuff']
                         BM.battle_log_insert(log_tags, "{0} uses {1} on {2}".format(parent.name, self.name, target.name))
-                        #BM.battle_log_insert(log_tags, "-El {0} usa {1} en el {2}".format(parent.name, self.name, target.name))
                 if hasattr(self.modifies,"__iter__"):  #this checks is the var is an iterable (like a list). if it's not it should be a string.
                     for modifier in self.modifies:
                         if apply_modifier(target,modifier,self.buff_strength,self.buff_duration,self.cumulative): successful = True
@@ -2772,7 +2665,7 @@ init -2 python:
 
                 if not successful:
                     #wasted
-                    message = "Un efecto similar o más poderoso ya está presente en el {0}".format(target.name)
+                    message = "A similar or more powerful effect is already present in {0}".format(target.name)
                     BM.battle_log_insert(log_tags, message)
                     show_message(message)
                     target.getting_buff = False
@@ -2781,9 +2674,9 @@ init -2 python:
 
                 update_stats()
                 if target.getting_buff:
-                    BM.battle_log_insert(['support', 'buff'], "-El {0} es apoyado con {1}".format(target.name, self.name))
+                    BM.battle_log_insert(['support', 'buff'], "-{0} is supported with {1}".format(target.name, self.name))
                 else:
-                    BM.battle_log_insert(['support', 'debuff'], "-El {0} es maldecido con {1}".format(target.name, self.name))
+                    BM.battle_log_insert(['support', 'debuff'], "-{0} is cursed with {1}".format(target.name, self.name))
                 if not hidden:
                     BM.selectedmode = False
                     renpy.hide_screen('battle_screen')
@@ -2842,12 +2735,11 @@ init -2 python:
             self.buff_strength = 0 #how many points does it increase a stat?
             self.buff_duration = 1
             self.keep_after_reset = {} #used by save compatibility code
-            self.tooltip = """
+            self.tooltip = _("""
             Allows Claude to move any Ryder a single hex.
             This movement will provoke Blindside attacks, if you move an enemy Ryder
             into the range of a friendly unit with an Assault type weapon.
-            Has unlimited range."""
-            self.tooltip_es = "Permite a Claude mover a cualquier una sola casilla.\nEste movimiento provocará contraataques, si mueves a un Ryder enemigo\nen el rango de una unidad aliada con un arma de tipo Asalto.\nTiene rango ilimitado."
+            Has unlimited range.""")
 
             #always hits
             self.accuracy = 9999
@@ -2861,10 +2753,7 @@ init -2 python:
 
             #only works on ryders
             if target.stype != 'Ryder':
-                if _preferences.language == "spanish":
-                    show_message('¡Solo puedes usar esta habilidad en ryders!')
-                else:
-                    show_message('you can only use this ability on ryders!')
+                show_message(_('you can only use this ability on ryders!'))
                 return
 
             #energy handeling
@@ -2903,7 +2792,6 @@ init -2 python:
                     target.faction = target_faction
                     target.move_ship(result[1],BM) #result[1] is the new location to move towards
                     BM.battle_log_insert(['support'], "{0} used Gravity Gun on {1}".format(parent.name, target.name))
-                    #BM.battle_log_insert(['support'], "-El {0} usa Arma de Gravedad en el {1}".format(parent.name, target.name))
                     looping = False
 
                 # player clicked the right mouse button
@@ -2947,7 +2835,7 @@ init -2 python:
         def destroy(self):
             if self in BM.covers:
                 BM.covers.remove(self)
-                show_message('¡El asteroide fue destruido!')
+                show_message(_('the asteroid was destroyed!'))
                 renpy.pause(0.5)
 
          ### WEAPONFIRE PARTICLE GENERATOR ###
@@ -3293,7 +3181,6 @@ init -2 python:
             self.display_name = 'master item' #how it appears in the store
             self.cost = 0                #cost of this item
             self.tooltip = ''            #text explaining what this item does
-            self.tooltip_es = ''
             self.variable_name = None    #[string or None] what variable keeps track of how many of this item the player has?
             self.max_amt = 0             #maximum allowed of this item. irrelevant if self.amount_variable == None
 

@@ -16,38 +16,16 @@ define mar = Character('Maray',     what_outlines=[(5, "#000000", 1, 1),(2, "#97
 define gre = Character('Grey',      what_outlines=[(5, "#000000", 1, 1),(2, "#265739", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#265739", 0, 0)] )
 define arc = Character('Arcadius',  what_outlines=[(5, "#000000", 1, 1),(2, "#701d2a", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#701d2a", 0, 0)] )
 define ryu = Character('Jaylor',    what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
-define pro = Character('Prototype', what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
-define prt = Character('Prototipo', what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
+define pro = Character(_('Prototype'), what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
 define cla = Character('Claude',    what_outlines=[(5, "#000000", 1, 1),(2, "#e6a2c3", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#e6a2c3", 0, 0)] )
 define fon = Character('Fontana',   what_outlines=[(5, "#000000", 1, 1),(2, "#3b0b39", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#3B0B39", 0, 0)] )
 define cul = Character('Cullen',    what_outlines=[(5, "#000000", 1, 1),(2, "#df6a3d", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#df6a3d", 0, 0)] )
 define ica = Character('Icari',     what_outlines=[(5, "#000000", 1, 1),(2, "#dd9c38", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#dd9c38", 0, 0)] )
 define kry = Character('Kryska',    what_outlines=[(5, "#000000", 1, 1),(2, "#3b3d66", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#3b3d66", 0, 0)] )
 define cos = Character('Cosette',   what_outlines=[(5, "#000000", 1, 1),(2, "#d39980", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#d39980", 0, 0)] )
-define pi  = Character('Pilot',     what_outlines=[(5, "#000000", 1, 1),(2, "#d04545", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#d04545", 0, 0)] )
+define pi  = Character(_('Pilot'),     what_outlines=[(5, "#000000", 1, 1),(2, "#d04545", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#d04545", 0, 0)] )
 define kyo = Character('Kyoko',     what_outlines=[(5, "#000000", 1, 1),(2, "#cbb9a7", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#cbb9a7", 0, 0)] )
 define sop = Character('Sophita',   what_outlines=[(5, "#000000", 1, 1),(2, "#ffd290", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#ffd290", 0, 0)] )
-
-# I don't know why some characters 'who' don't get displayed in translations so let's use all of them there this way
-define kay2 = Character('Kayto2',     what_outlines=[(5, "#000000", 1, 1),(2, "#575757", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#575757", 0, 0)] )
-define asa2 = Character('Asaga2',     what_outlines=[(5, "#000000", 1, 1),(2, "#be4c58", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#be4c58", 0, 0)] )
-define chi2 = Character('Chigara2',   what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
-define ava2 = Character('Ava2',       what_outlines=[(5, "#000000", 1, 1),(2, "#4a2a1a", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#4A2A1A", 0, 0)] )
-define sol2 = Character('Sola2',      what_outlines=[(5, "#000000", 1, 1),(2, "#75798a", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#75798A", 0, 0)] )
-define mar2 = Character('Maray2',     what_outlines=[(5, "#000000", 1, 1),(2, "#979797", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#979797", 0, 0)] )
-define gre2 = Character('Grey2',      what_outlines=[(5, "#000000", 1, 1),(2, "#265739", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#265739", 0, 0)] )
-define arc2 = Character('Arcadius2',  what_outlines=[(5, "#000000", 1, 1),(2, "#701d2a", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#701d2a", 0, 0)] )
-define ryu2 = Character('Jaylor2',    what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
-define pro2 = Character('Prototype2', what_outlines=[(5, "#000000", 1, 1),(2, "#615a9b", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#615a9b", 0, 0)] )
-define cla2 = Character('Claude2',    what_outlines=[(5, "#000000", 1, 1),(2, "#e6a2c3", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#e6a2c3", 0, 0)] )
-define fon2 = Character('Fontana2',   what_outlines=[(5, "#000000", 1, 1),(2, "#3b0b39", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#3B0B39", 0, 0)] )
-define cul2 = Character('Cullen2',    what_outlines=[(5, "#000000", 1, 1),(2, "#df6a3d", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#df6a3d", 0, 0)] )
-define ica2 = Character('Icari2',     what_outlines=[(5, "#000000", 1, 1),(2, "#dd9c38", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#dd9c38", 0, 0)] )
-define kry2 = Character('Kryska2',    what_outlines=[(5, "#000000", 1, 1),(2, "#3b3d66", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#3b3d66", 0, 0)] )
-define cos2 = Character('Cosette2',   what_outlines=[(5, "#000000", 1, 1),(2, "#d39980", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#d39980", 0, 0)] )
-define pi2  = Character('Pilot2',     what_outlines=[(5, "#000000", 1, 1),(2, "#d04545", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#d04545", 0, 0)] )
-define kyo2 = Character('Kyoko2',     what_outlines=[(5, "#000000", 1, 1),(2, "#cbb9a7", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#cbb9a7", 0, 0)] )
-define sop2 = Character('Sophita2',   what_outlines=[(5, "#000000", 1, 1),(2, "#ffd290", 0, 0) ], who_outlines=[(5, "#000000", 1, 1),(3, "#ffd290", 0, 0)] )
 
 label splashscreen:
     $BM = Battle()
@@ -74,9 +52,6 @@ label start:
     $ InGame = True
     $ InGameInit = True
 
-    if language == "spanish":
-        $ _preferences.language = "spanish"
-
     if config.developer:
         menu:
             "normal start":
@@ -91,10 +66,7 @@ label start:
     with Dissolve(2)
 
     if store.Difficulty == 3:
-        if _preferences.language == "spanish":
-            $ show_message('Por favor seleccione su dificultad.',0.5,0.8,2)
-        else:
-            $ show_message('Please select your difficulty.',0.5,0.8,2)
+        $ show_message(_('Please select your difficulty.'),0.5,0.8,2)
         show screen gameprefs
 
     play music "Music/Tides.ogg" loop
@@ -110,29 +82,29 @@ label start:
     pause
     hide introtext0 with Dissolve(1)
 
-    show screen intro_1
+    show expression Text(_("Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro1
     pause
-    hide screen intro_1
+    hide intro1
     with Dissolve(1)
 
-    show screen intro_2
+    show expression Text(_("Yet, we are far from secure."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro2
     pause
-    hide screen intro_2
+    hide intro2
     with Dissolve(1)
 
-    show screen intro_3
+    show expression Text(_("War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro3
     pause
-    hide screen intro_3
+    hide intro3
     with Dissolve(1)
 
-    show screen intro_4
+    show expression Text(_("Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro4
     pause
-    hide screen intro_4
+    hide intro4
     with Dissolve(1)
 
-    show screen intro_5
+    show expression Text(_("Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins..."),xalign=0.5, yalign=0.12, text_align=0.5, size=30, font="Font/GOTHIC.TTF") as intro5
     pause
-    hide screen intro_5
+    hide intro5
     with Dissolve(1)
 
     $ renpy.pause (2.0)
@@ -13058,10 +13030,7 @@ label battlefarportstart:
     $ alliancecruiser1 = create_ship(AllianceCruiser(),(5,5),alliancecruiser_weapons)
     $ alliancecruiser2 = create_ship(AllianceCruiser(),(5,4),alliancecruiser_weapons)
 
-    if _preferences.language == "spanish":
-        $ BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp']
-    else:
-        $ BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
+    $ BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
 
     call mission12_inits from _call_mission12_inits
     $ BM.mission = 12
@@ -15882,10 +15851,7 @@ label afterbeachcarry:
         if alliancecruiser2 in BM.ships:
             BM.ships.remove(alliancecruiser2)
             player_ships.remove(alliancecruiser2)
-    if _preferences.language == "spanish":
-        $ BM.orders['RESURRECCIÓN'] = [2000,'resurrect']
-    else:
-        $ BM.orders['RESURRECTION'] = [2000,'resurrect']
+    $ BM.orders['RESURRECTION'] = [2000,'resurrect']
 
     $ versta_ambush = True
     $ farport_losttech = True
@@ -16276,10 +16242,7 @@ label mission14:
         ava "It's... unlike anything I've ever seen before!"
         "Tip: The Retreat Order is available to escape from this battle."
 
-        if _preferences.language == "spanish":
-            $ BM.orders['RETIRADA'] = [0,'retreat']
-        else:
-            $ BM.orders['RETREAT'] = [0,'retreat']
+        $ BM.orders['RETREAT'] = [0,'retreat']
 
         hide ava onlayer screens with dissolve
 
@@ -23073,12 +23036,6 @@ label credits:
 
     hide credits1 with dissolve
 
-    show credits1b:
-        xalign 0.5
-        ypos 1.1
-        linear 15 ypos -0.25
-    pause 3.0
-
     show credits2:
         xalign 0.5
         ypos 1.1
@@ -23699,10 +23656,7 @@ label continuewithchoices:
         BM.money = 19000
         BM.cmd = 4000
         ## Adds in SRW, since the plot event to add it is skipped. Tested it in the current steam ver with and without, should work.
-        if _preferences.language == "spanish":
-            BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp'] 
-        else:
-            BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp'] 
+        BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp'] 
         gal_event = 'jumptogalaxy'
         alliancecruiser1 = None
         alliancecruiser2 = None

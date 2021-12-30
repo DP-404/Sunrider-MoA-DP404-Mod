@@ -978,14 +978,9 @@ label miss_sunrider:
     show sunrider_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     if Random == 1:
         play avavoice "sound/Voice/Ava/Ava No Damage 1.ogg"
@@ -1943,14 +1938,9 @@ label miss_pactmissilefrigate: #############################PACT MISSILE FRIGATE
     show pactmissilefrigate_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -2884,14 +2874,9 @@ label miss_blackjack:
     show blackjack behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,6)
 
@@ -3553,14 +3538,9 @@ label miss_liberty:
     show liberty behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,6)
 
@@ -4224,14 +4204,9 @@ label miss_seraphim:
     show seraphim behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,5)
 
@@ -5075,14 +5050,9 @@ label miss_piratebomber:
     show piratebomber behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -5828,14 +5798,9 @@ label miss_pactcruiser:
     show pactcruiser_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -6650,14 +6615,9 @@ label miss_pactbattleship:
     show pactbattleship_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -7310,14 +7270,9 @@ label miss_ryuviancruiser:
     show ryuviancruiser_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -8124,14 +8079,9 @@ label miss_havoc:
     show havoc behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -8948,14 +8898,9 @@ label miss_piratedestroyer:
     show piratedestroyer behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -9537,14 +9482,9 @@ label miss_pactstation: #############################PACT MISSILE FRIGATE MISS
     show pactstation behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -10237,14 +10177,9 @@ label miss_pactmook:
     show pactmook behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -10844,14 +10779,9 @@ label miss_seraphimenemy:
     show seraphimenemy behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -11536,14 +11466,9 @@ label miss_pirategrunt:
     show pirategrunt behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -12309,14 +12234,9 @@ label miss_piratebase: #############################PACT MISSILE FRIGATE MISS
     show piratebase behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -12986,14 +12906,9 @@ label miss_phoenixboaster:
     show phoenixboaster behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -13751,14 +13666,9 @@ label miss_pactbomber:
     show pactbomber behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -14214,14 +14124,9 @@ label miss_agamemnon:
     show agamemnon_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -14771,14 +14676,9 @@ label miss_mochi:
     show mochi_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -15411,14 +15311,9 @@ label miss_phoenix:
     show phoenix behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,7)
 
@@ -16183,14 +16078,9 @@ label miss_phoenixenemy:
     show phoenix behind miss:
         xpos 0.5 ypos 0.5 xzoom -1
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -16691,14 +16581,9 @@ label miss_bianca:
     show bianca behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,7)
 
@@ -17581,14 +17466,9 @@ label miss_alliancecruiser:
     show alliancecruiser_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -18475,14 +18355,9 @@ label miss_alliancebattleship:
     show alliancebattleship_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -19278,14 +19153,9 @@ label miss_pactcarrier:
     show pactcarrier_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -19920,14 +19790,9 @@ label miss_paladin:
     show paladin behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     $ Random = renpy.random.randint(1,6)
 
@@ -20595,14 +20460,9 @@ label miss_unionfrigate:
     show unionfrigate_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -21365,14 +21225,9 @@ label miss_nightmare:
     show nightmare behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -21932,14 +21787,9 @@ label miss_pactsupport:
     show pactsupport behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -22650,14 +22500,9 @@ label miss_pactelite:
     show pactelite behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -23510,14 +23355,9 @@ label miss_pactassaultcarrier:
     show pactassaultcarrier_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -24158,14 +23998,9 @@ label miss_legion:
     show legion_side behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 
@@ -24877,14 +24712,9 @@ label miss_pirateironhog:
     show pirateironhog behind miss:
         xpos 0.5 ypos 0.5
 
-    if _preferences.language == None:
-        show miss:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
-    else:
-        show miss_es:
-            xpos 0.5 ypos 0.5
-            ease 3 ypos 0.3 alpha 0
+    show expression Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5) as miss:
+        xpos 0.5 ypos 0.5
+        ease 3 ypos 0.3 alpha 0
 
     pause 2
 

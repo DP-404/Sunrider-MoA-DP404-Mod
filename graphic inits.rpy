@@ -925,25 +925,24 @@ init -5:
         alpha 0.0
         linear 2.0 alpha 1.0
 
-    image intro1 = Text("Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars.", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image intro2 = Text("Yet, we are far from secure.", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image intro3 = Text("War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire.", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image intro4 = Text("Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order.", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image intro5 = Text("Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins...", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image comingsoon = Text("SUNRIDER IS IN CONSTRUCTION", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image miss = Text("Miss", size=60, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image intro1 = Text(_("Humanity has spread to the four corners of the galaxy.{p}Subjugating all life, we have become the dominant species throughout the stars."), size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image intro2 = Text(_("Yet, we are far from secure."), size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image intro3 = Text(_("War brews from the northern quadrant of the galaxy.{p}PACT, the People's Alliance, has toppled the once mighty New Empire."), size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image intro4 = Text(_("Led by a mysterious individual known only as Veniczar Arcadius, PACT seeks to{p}subjugate the galaxy under its new world order."), size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image intro5 = Text(_("Distant from the brewing clouds of war, {p}the neutral world of Cera seemed safe from the approaching PACT war machine.{p}It is on this quiet world where our journey begins..."), size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #mage comingsoon = Text("SUNRIDER IS IN CONSTRUCTION", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
+    #image miss = Text(_("Miss"), size=60, font="Font/GOTHIC.TTF", text_align=0.5)
     image battlewarning:
         "gameplay/battlestations.png"
         xanchor 0.5
         yanchor 0.5
 
     image shieldsvanguard1 = Text("This is my command!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
-    image shieldsvanguard2 = Text("Prepare the fire in the Vanguard Cannon!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
+    image shieldsvanguard2 = Text("Prepare to fire the Vanguard Cannon!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
     image shieldsvanguard3 = Text("Vanguards...", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
     image shieldsvanguard4 = Text("FIRE!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
 
     image credits1 = Text("Project Director {p}         Sam Yang (Samu-kun)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
-    image credits1b = Text("Mod Creator{p}         DP404", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits2 = Text("Writer{p}         Sam Yang (Samu-kun)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits3 = Text("Lead Character Artist{p}         Ashton Wilson (Melonbunny)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)
     image credits5 = Text("Additional Character Design{p}         Adrian Ferrer (Sixten)", size=30, font="Font/GOTHIC.TTF", text_align=0.5)

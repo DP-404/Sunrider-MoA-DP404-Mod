@@ -29,3 +29,12 @@ translate spanish strings:
     # renpy/common/00keymap.rpy:279
     old "Saved screenshot as %s."
     new "Guardada captura de pantalla como %s"
+
+    # renpy/common/00accessibility.rpy:30
+    old "Self-voicing enabled. "
+    new "Self-voicing activado. "
+
+    # renpy/common/00action_file.rpy:912
+    old "Quick save complete."
+    new "Guardado rápido completado."
+

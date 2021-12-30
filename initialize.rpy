@@ -97,7 +97,7 @@ init python:
     Planet("CERA", "Dynamic_mission", 1297, 480, "warpto_occupiedcera","Map/cera.jpg","Map/occupiedcera_info.png")
     Planet("TYDARIA", "Dynamic_mission", 1390, 540, "warpto_tydaria","Map/tydaria.jpg","Map/tydaria_info.png")
     Planet("ASTRAL{p}EXPANSE", "Dynamic_mission", 1250, 540, "warpto_astralexpanse","Map/astralexpanse.jpg","Map/astralexpanse_info.png")
-    Planet("PACT STATION", "Dynamic_mission", 1420, 480, "warpto_pactstation1","Map/pactstation.jpg","Map/pactstation_info.png")
+    Planet(_("PACT STATION"), "Dynamic_mission", 1420, 480, "warpto_pactstation1","Map/pactstation.jpg","Map/pactstation_info.png")
     Planet("VERSTA", "Dynamic_mission", 1490, 725, "warpto_versta","Map/versta.jpg","Map/versta_info.png")
     Planet("NOMODORN", "Dynamic_mission", 1630, 590, "warpto_nomodorn","Map/nomodorn.jpg","Map/nomodorn_info.png")
     Planet("RYUVIA{p}PRIME", "Dynamic_mission", 1410, 740, "warpto_ryuvia","Map/ryuvia.jpg","Map/ryuvia_info.png")

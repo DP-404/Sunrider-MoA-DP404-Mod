@@ -46,46 +46,6 @@ screen say:
     if 'mouseup_2' not in config.keymap['game_menu']:
         key 'mouseup_2' action HideInterface()
     key 'H' action HideInterface()
-
-# I don't know why some characters 'who' don't get displayed in translations so let's use all of them there this way
-    if who == 'Kayto2':
-        $ who = 'Kayto'
-    if who == 'Asaga2':
-        $ who = 'Asaga'
-    if who == 'Chigara2':
-        $ who = 'Chigara'
-    if who == 'Ava2':
-        $ who = 'Ava'
-    if who == 'Sola2':
-        $ who = 'Sola'
-    if who == 'Maray2':
-        $ who = 'Maray'
-    if who == 'Grey2':
-        $ who = 'Grey'
-    if who == 'Arcadius2':
-        $ who = 'Arcadius'
-    if who == 'Jaylor2':
-        $ who = 'Jaylor'
-    if who == 'Prototype2':
-        $ who = 'Prototipo'
-    if who == 'Claude2':
-        $ who = 'Claude'
-    if who == 'Fontana2':
-        $ who = 'Fontana'
-    if who == 'Cullen2':
-        $ who = 'Cullen'
-    if who == 'Icari2':
-        $ who = 'Icari'
-    if who == 'Kryska2':
-        $ who = 'Kryska'
-    if who == 'Cosette2':
-        $ who = 'Cosette'
-    if who == 'Pilot2':
-        $ who = 'Piloto'
-    if who == 'Kyoko2':
-        $ who = 'Kyoko'
-    if who == 'Sophita2':
-        $ who = 'Sophita'
     
     # Defaults for side_image and two_window
     default side_image = None
@@ -419,20 +379,12 @@ screen load:
         $ BM = Battle()
         $ MasterBM = BM
     if (BM.phase == 'PACT' or BM.phase == 'Pirate' or BM.phase == 'Unknown'):
-        if _preferences.language == "spanish":
-            text '¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo.':
-                xalign 0.5
-                yalign 0.5
-                size 35
-                color 'fff'
-                outlines [(2,'f00',0,0)]
-        else:
-            text 'WARNING! \n You can not save during the enemy \n turn.':
-                xalign 0.5
-                yalign 0.5
-                size 35
-                color 'fff'
-                outlines [(2,'f00',0,0)]
+        text _('WARNING! \n You can not save during the enemy \n turn.'):
+            xalign 0.5
+            yalign 0.5
+            size 35
+            color 'fff'
+            outlines [(2,'f00',0,0)]
 
         timer 2 action Hide('load')
     else:
@@ -509,7 +461,7 @@ screen save:
         $ BM = Battle()
         #No need to update the MasterBM if there is no battle manager to begin with.  Besides, the MasterBM and the BM might not be the same
     if (BM.phase == 'PACT' or BM.phase == 'Pirate'):
-        text '¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo.':
+        text _('WARNING! \n You can not save during the enemy \n turn.'):
             xalign 0.5
             yalign 0.5
             size 35
@@ -636,9 +588,9 @@ screen preferences:
         hotspot (726, 59, 137, 44) action [ Hide('preferences'), Show('save', transition=dissolve) ]
         hotspot (1140, 59, 137, 44) action MainMenu()
 
-        imagebutton xpos 1140 ypos 500 idle "Menu/usa_base.jpg" hover "Menu/usa_hover.jpg" selected_idle "Menu/usa_select.jpg" selected_hover "Menu/usa_select_hover.jpg" action Language(None),Show("lang")
+        imagebutton xpos 1140 ypos 500 idle "Menu/usa_base.jpg" hover "Menu/usa_hover.jpg" selected_idle "Menu/usa_select.jpg" selected_hover "Menu/usa_select_hover.jpg" action Language(None)
 
-        imagebutton xpos 1140 ypos 600 idle "Menu/spain_base.jpg" hover "Menu/spain_hover.jpg" selected_idle "Menu/spain_select.jpg" selected_hover "Menu/spain_select_hover.jpg" action Language("spanish"),Show("lang")
+        imagebutton xpos 1140 ypos 600 idle "Menu/spain_base.jpg" hover "Menu/spain_hover.jpg" selected_idle "Menu/spain_select.jpg" selected_hover "Menu/spain_select_hover.jpg" action Language("spanish")
 
         hotspot (948, 926, 107, 23) action Hide('preferences', transition=dissolve)
 
@@ -681,62 +633,6 @@ screen preferences:
             ypos 880
             xmaximum 250
             value Preference("auto-forward time")
-       
-screen lang:
-
-    python:
-
-        if _preferences.language == "spanish":
-
-            for order in BM.orders:
-
-                if order == "RESURRECTION":
-                    del BM.orders['RESURRECTION']
-                    BM.orders['RESURRECCIÓN'] = [2000,'resurrection']
-                if order == "ALL GUARD":
-                    del BM.orders['ALL GUARD']
-                    BM.orders['DEFENSA TOTAL'] = [750,'all_guard']
-                if order == "FULL FORWARD":
-                    del BM.orders['FULL FORWARD']
-                    BM.orders['AVANCE COMPLETO'] = [750,'full_forward']
-                if order == "REPAIR DRONES":
-                    del BM.orders['REPAIR DRONES']
-                    BM.orders['DRONES REPARADORES'] = [750,'repair_drones']
-                if order == "SHORT RANGE WARP":
-                    del BM.orders['SHORT RANGE WARP']
-                    BM.orders['SALTO DE CORTO RANGO'] = [750,'short_range_warp']
-                if order == "RETREAT":
-                    del BM.orders['RETREAT']
-                    BM.orders['RETIRADA'] = [0,'retreat']
-                if order == "VANGUARD CANNON":
-                    del BM.orders['VANGUARD CANNON']
-                    BM.orders['CAÑÓN VANGUARDIA'] = [2500,'order_vanguard_cannon']
-
-        else:
-
-            for order in BM.orders:
-
-                if order == "RESURRECCIÓN":
-                    del BM.orders['RESURRECCIÓN']
-                    BM.orders['RESURRECTION'] = [2000,'resurrection']
-                if order == "DEFENSA TOTAL":
-                    del BM.orders['DEFENSA TOTAL']
-                    BM.orders['ALL GUARD'] = [750,'all_guard']
-                if order == "AVANCE COMPLETO":
-                    del BM.orders['AVANCE COMPLETO']
-                    BM.orders['FULL FORWARD'] = [750,'full_forward']
-                if order == "DRONES REPARADORES":
-                    del BM.orders['DRONES REPARADORES']
-                    BM.orders['REPAIR DRONES'] = [750,'repair_drones']
-                if order == "SALTO DE CORTO RANGO":
-                    del BM.orders['SALTO DE CORTO RANGO']
-                    BM.orders['SHORT RANGE WARP'] = [750,'short_range_warp']
-                if order == "RETIRADA":
-                    del BM.orders['RETIRADA']
-                    BM.orders['RETREAT'] = [0,'retreat']
-                if order == "CAÑÓN VANGUARDIA":
-                    del BM.orders['CAÑÓN VANGUARDIA']
-                    BM.orders['VANGUARD CANNON'] = [2500,'order_vanguard_cannon']
 
 screen gameprefs:
     

@@ -2,6 +2,10 @@
 
 translate spanish strings:
 
+    # game/screens.rpy:382
+    old "WARNING! \n You can not save during the enemy \n turn."
+    new "¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo."
+
     # game/screens.rpy:783
     old "Yes"
     new "Sí"
