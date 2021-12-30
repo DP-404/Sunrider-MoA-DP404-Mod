@@ -938,7 +938,7 @@ init -5:
         yanchor 0.5
 
     image shieldsvanguard1 = Text("This is my command!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
-    image shieldsvanguard2 = Text("Prepare the fire in the Vanguard Cannon!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
+    image shieldsvanguard2 = Text("Prepare to fire the Vanguard Cannon!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
     image shieldsvanguard3 = Text("Vanguards...", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
     image shieldsvanguard4 = Text("FIRE!", size=75, font="Font/GOTHIC.TTF", xalign=0.5, yalign=0.85)
 
