@@ -22965,8 +22965,8 @@ label after_mission21:
 
     fon "It is over, Prototype."
     fon "I have already disarmed the Paradox Core."
-    pro "WHAT!? FONTANA!"
-    pro "YOU TRAITOR!"
+    arc "WHAT!? FONTANA!"
+    arc "YOU TRAITOR!"
     fon "A traitor? I?"
     fon "It is I, who must hold the crimson banner. For you have already spat at all it stood for!"
     fon "The Great Arcadius only made a single mistake! It was allowing a monstrosity like you into our ranks!"
@@ -22981,7 +22981,7 @@ label after_mission21:
 
     "PACT troops loyal to Fontana brought forth who - or what - was formerly known to be Veniczar Arcadius."
 
-    pro "... ... ..."
+    arc "... ... ..."
 
     "Fontana tore the mask of Arcadius off."
 

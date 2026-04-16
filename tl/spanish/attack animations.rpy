@@ -124,7 +124,7 @@ translate spanish die_havoc_002c4ec4:
 translate spanish die_havoc_3d4602d4:
 
     # asa "Looks like you could use a hand there! Don't worry, my Black Jack will take care of these guys in a flash!"
-    asa "¡Parece que ustedes necesitan una mano allí! ¡No se preocupen, mi Black Jack se hará cargo de esos tipos en un destello!"
+    asa "¡Parece que ustedes necesitan una mano ahí! ¡No se preocupen, mi Black Jack se hará cargo de esos tipos en un destello!"
 
 # game/attack animations.rpy:8216
 translate spanish die_havoc_2e600900:
@@ -184,7 +184,7 @@ translate spanish die_havoc_1c09d45f:
 translate spanish die_havoc_b6c7d7df:
 
     # cos "Tsch... These guys aren't worth it! Fall back!"
-    cos "Tesch... ¡Estos tipos no valen la pena! ¡Retirada!"
+    cos "Tsch... ¡Estos tipos no valen la pena! ¡Retirada!"
 
 # game/attack animations.rpy:8265
 translate spanish die_havoc_4e8cf22d:
@@ -196,7 +196,7 @@ translate spanish die_havoc_4e8cf22d:
 translate spanish die_havoc_adda2fc8:
 
     # asa "Whoo! That sure was exciting!"
-    asa "¡Whoo! ¡Eso seguro fue emocionante!"
+    asa "¡Whoo! ¡Eso sí que fue emocionante!"
 
 # game/attack animations.rpy:8272
 translate spanish die_havoc_ff9cfb95:

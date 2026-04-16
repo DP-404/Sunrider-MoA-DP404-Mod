@@ -74,7 +74,6 @@ label firstvariables:
     $ cla_location = None
     $ cos_location = None
     $ kry_location = None
-    $ gly_location = None
 
     $ warpto_tydaria = False
     $ warpto_occupiedcera = False

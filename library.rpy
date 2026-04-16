@@ -339,7 +339,7 @@ init 2 python:
         def __init__(self):
             super(AllianceCruiser, self).__init__()
             self.stype = 'Cruiser'
-            self.name = 'Alliance Cruiser'
+            self.name = _('Alliance Cruiser')
             self.animation_name = 'alliancecruiser'
             self.faction = 'Player'
             self.mercenary = True
@@ -375,7 +375,7 @@ init 2 python:
         def __init__(self):
             super(AllianceBattleship, self).__init__()
             self.stype = 'Battleship'
-            self.name = 'Alliance Battleship'
+            self.name = _('Alliance Battleship')
             self.animation_name = 'alliancebattleship'
             self.faction = 'Player'
             self.mercenary = True
@@ -411,7 +411,7 @@ init 2 python:
         def __init__(self):
             super(UnionFrigate, self).__init__()
             self.stype = 'Frigate'
-            self.name = 'Mining Union Frigate'
+            self.name = _('Mining Union Frigate')
             self.animation_name = 'unionfrigate'
             self.faction = 'Player'
             self.mercenary = True
@@ -492,7 +492,7 @@ init 2 python:
         def __init__(self):
             super(Freighter, self).__init__()
             self.stype = 'Ship'
-            self.name = 'Freighter'
+            self.name = _('Freighter')
             self.animation_name = 'mochi'
             self.faction = 'Player'
             self.max_hp = 1000
@@ -535,7 +535,7 @@ init 2 python:
         def __init__(self):
             super(PhoenixBoaster, self).__init__()
             self.stype = 'Ryder'
-            self.name = 'Unknown Hostile'
+            self.name = _('Unknown Hostile')
             self.animation_name = 'phoenixboaster'
             self.faction = 'PACT'
             self.max_hp = 700
@@ -560,7 +560,7 @@ init 2 python:
         def __init__(self):
             super(PactBomber, self).__init__()
             self.stype = 'Ryder' #subtype bomber
-            self.name = 'PACT Bomber'
+            self.name = _('PACT Bomber')
             self.animation_name = 'pactbomber'
             self.faction = 'PACT'
             self.max_hp = 400
@@ -589,7 +589,7 @@ init 2 python:
         def __init__(self):
             super(SeraphimEnemy, self).__init__()
             self.stype = 'Ryder' #subtype bomber
-            self.name = 'Ryuvian Ryder'
+            self.name = _('Ryuvian Ryder')
             self.animation_name = 'seraphimenemy'
             self.faction = 'Unknown'
             self.max_hp = 375
@@ -665,7 +665,7 @@ init 2 python:
         def __init__(self):
             super(MissileFrigate, self).__init__()
             self.stype = 'Frigate'
-            self.name = 'PACT Missile Frigate'
+            self.name = _('PACT Missile Frigate')
             self.animation_name = 'pactmissilefrigate'
             self.faction = 'PACT'
             self.max_hp = 400
@@ -687,7 +687,7 @@ init 2 python:
         def __init__(self):
             super(PactMook, self).__init__()
             self.stype = 'Ryder'
-            self.name = 'PACT Mook'
+            self.name = _('PACT Mook')
             self.animation_name = 'pactmook'
             self.faction = 'PACT'
             self.max_hp = 300
@@ -808,7 +808,7 @@ init 2 python:
         def __init__(self):
             super(PactElite, self).__init__()
             self.stype = 'Ryder'
-            self.name = 'PACT Elite'
+            self.name = _('PACT Elite')
             self.animation_name = 'pactelite'
             self.faction = 'PACT'
             self.max_hp = 700
@@ -841,7 +841,7 @@ init 2 python:
         def __init__(self):
             super(PactSupport, self).__init__()
             self.stype = 'Ryder'
-            self.name = 'PACT Support'
+            self.name = _('PACT Support')
             self.support = True  #signifies to the AI this unit uses support skills
             self.animation_name = 'pactsupport'
             self.faction = 'PACT'
@@ -874,7 +874,7 @@ init 2 python:
         def __init__(self):
             super(PactCruiser, self).__init__()
             self.stype = 'Cruiser'
-            self.name = 'PACT Cruiser'
+            self.name = _('PACT Cruiser')
             self.faction = 'PACT'
             self.animation_name = 'pactcruiser'
             self.max_hp = 900
@@ -903,7 +903,7 @@ init 2 python:
         def __init__(self):
             super(RyuvianCruiser, self).__init__()
             self.stype = 'Cruiser'
-            self.name = 'Ryuvian Cruiser'
+            self.name = _('Ryuvian Cruiser')
             self.faction = 'Unknown'
             self.animation_name = 'ryuviancruiser'
             self.max_hp = 1200
@@ -932,7 +932,7 @@ init 2 python:
         def __init__(self):
             super(PactOutpost, self).__init__()
             self.stype = 'Station'
-            self.name = 'PACT Spire'
+            self.name = _('PACT Spire')
             self.faction = 'PACT'
             self.animation_name = 'pactstation'
             self.max_hp = 900
@@ -962,7 +962,7 @@ init 2 python:
         def __init__(self):
             super(PactBattleship, self).__init__()
             self.stype = 'Battleship'
-            self.name = 'PACT Battleship'
+            self.name = _('PACT Battleship')
             self.faction = 'PACT'
             self.animation_name = 'pactbattleship'
             self.max_hp = 1600
@@ -991,7 +991,7 @@ init 2 python:
         def __init__(self):
             super(PactCarrier, self).__init__()
             self.stype = 'Carrier'
-            self.name = 'PACT Carrier'
+            self.name = _('PACT Carrier')
             #indicate what units this carrier can spawn. syntax: [ship,cost,weaponlist]
             self.spawns = [
                 ( PactMook,50,[ PACTMookLaser(),PACTMookMissile(),PACTMookAssault() ] ),
@@ -1025,7 +1025,7 @@ init 2 python:
         def __init__(self):
             super(PactAssaultCarrier, self).__init__()
             self.stype = 'Assault Carrier'
-            self.name = 'PACT Assault Carrier'
+            self.name = _('PACT Assault Carrier')
             #indicate what units this carrier can spawn. syntax: [ship,cost,weaponlist]
             self.spawns = [
                 ( PactElite,60,[ PACTEliteLaser(),PACTEliteMissile(),PACTEliteAssault(),PACTEliteMelee() ] ),
@@ -1091,7 +1091,7 @@ init 2 python:
         def __init__(self):
             super(PirateBomber, self).__init__()
             self.stype = 'Ryder' #subtype bomber
-            self.name = 'Pirate Bomber'
+            self.name = _('Pirate Bomber')
             self.animation_name = 'piratebomber'
             self.faction = 'Pirate'
             self.max_hp = 350
@@ -1157,7 +1157,7 @@ init 2 python:
         def __init__(self):
             super(PirateGrunt, self).__init__()
             self.stype = 'Ryder'
-            self.name = 'Pirate Grunt'
+            self.name = _('Pirate Grunt')
             self.animation_name = 'pirategrunt'
             self.faction = 'Pirate'
             self.max_hp = 275
@@ -1184,7 +1184,7 @@ init 2 python:
         def __init__(self):
             super(PirateDestroyer, self).__init__()
             self.stype = 'Destroyer'
-            self.name = 'Pirate Destroyer'
+            self.name = _('Pirate Destroyer')
             self.animation_name = 'piratedestroyer'
             self.faction = 'Pirate'
             self.max_hp = 500
@@ -1204,7 +1204,7 @@ init 2 python:
         def __init__(self):
             super(PirateBase, self).__init__()
             self.stype = 'Station'
-            self.name = 'Pirate Base'
+            self.name = _('Pirate Base')
             self.faction = 'Pirate'
             self.animation_name = 'piratebase'
             self.max_hp = 1200
@@ -1234,7 +1234,7 @@ init 2 python:
         def __init__(self):
             super(PirateIronhog, self).__init__()
             self.stype = 'Destroyer'
-            self.name = 'Pirate Ironhog'
+            self.name = _('Pirate Ironhog')
             self.faction = 'Pirate'
             self.animation_name = 'pirateironhog'
             self.max_hp = 480
@@ -2280,7 +2280,7 @@ init 2 python:
             self.accuracy = 100
             self.lbl = Image('Battle UI/button_asaawaken.png')
             self.tooltip = _("""
-            Cancela el efecto despertar""")
+            Cancels the awakening effect.""")
 
         def fire(self,parent,target,counter = False):
             blackjack.modifiers['damage'] = [0,0]

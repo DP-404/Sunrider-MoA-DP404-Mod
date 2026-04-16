@@ -46,6 +46,10 @@ translate spanish strings:
     old "there are still ships you have not placed!"
     new "¡Todavía quedan naves que no has colocado!"
 
+    # game/classes.rpy:432
+    old "too far infield"
+    new "Demasiado adentro en el campo."
+
     # game/classes.rpy:580
     old "The target is out of range, captain!"
     new "¡El objetivo está fuera del rango, capitán!"
@@ -57,6 +61,10 @@ translate spanish strings:
     # game/classes.rpy:700
     old "Full Forward order cancelled!"
     new "¡Orden Avance Completo cancelada!"
+
+    # game/classes.rpy:707
+    old "all guard"
+    new "Defensa Total"
 
     # game/classes.rpy:717
     old "alredy active!"
@@ -70,6 +78,10 @@ translate spanish strings:
     old "All Guard order cancelled!"
     new "¡Orden Defensa Total cancelada!"
 
+    # game/classes.rpy:759
+    old "full forward"
+    new "Avance Completo"
+
     # game/classes.rpy:773
     old "All ships gain 20% damage and 15% accuracy!"
     new "¡Todas las naves ganan 20% de daño y 15% de precisión!"
@@ -82,9 +94,13 @@ translate spanish strings:
     old "ORDER: Repair drones restore 50% of Sunrider's hull integrity"
     new "ORDEN: Drones reparadores restauran el 50% de la integridad del casco del Sunrider."
 
+    # game/classes.rpy:1055
+    old "You were defeated! better luck next time..."
+    new "¡Fuiste derrotado! Mejor suerte la próxima vez..."
+
     # game/classes.rpy:1189
     old "the {} is disabled!"
-    new "¡El {} está desactivado!"
+    new "¡{} está desactivado!"
 
     # game/classes.rpy:1683
     old "Hull Plating"
@@ -222,9 +238,25 @@ translate spanish strings:
     old "COUNTER ATTACK!"
     new "¡CONTRAATAQUE!"
 
+    # game/classes.rpy:2609
+    old "No curses were removed from {0}"
+    new "No se removieron maldiciones de {0}."
+
+    # game/classes.rpy:2625
+    old "All curses were removed from the {}"
+    new "Se removieron todas las maldiciones de {0}."
+
+    # game/classes.rpy:2640
+    old "The Legion is immune!"
+    new "¡El Legion es inmune!"
+
+    # game/classes.rpy:2668
+    old "A similar or more powerful effect is already present in {0}"
+    new "Un efecto similar o más poderoso ya está presente en {0}."
+
     # game/classes.rpy:2738
     old "\n            Allows Claude to move any Ryder a single hex.\n            This movement will provoke Blindside attacks, if you move an enemy Ryder\n            into the range of a friendly unit with an Assault type weapon.\n            Has unlimited range."
-    new "        Permite a Claude mover a cualquier Ryder una sola casilla.\n        Este movimiento provocará contraataques, si mueves a un Ryder enemigo\n        en el rango de una unidad aliada con un arma de tipo Asalto.\n        Tiene rango ilimitado."
+    new "\n        Permite a Claude mover a cualquier Ryder una sola casilla.\n        Este movimiento provocará contraataques, si mueves a un Ryder enemigo\n        en el rango de una unidad aliada con un arma de tipo Asalto.\n        Tiene rango ilimitado."
 
     # game/classes.rpy:2756
     old "you can only use this ability on ryders!"

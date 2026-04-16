@@ -24,11 +24,11 @@ translate spanish strings:
 
     # game/screens custom.rpy:1014
     old "Deals {} unavoidable damage to all units in a straight line extending outwards from the Sunrider with a maximum range of {} hexes."
-    new "Provoca {} daño inevadible a todas las unidades en línea recta desde el Sunrider con un rango máximo de {} casillas."
+    new "Provoca {} daño ineludible a todas las unidades en línea recta desde el Sunrider con un rango máximo de {} casillas."
 
     # game/screens custom.rpy:1027
     old "Moves the Sunrider to any point on the map. Does not cancel the command tab if used."
-    new "Mueve al Sunrider a cualquier punto en el mapa. No cancela "
+    new "Mueve al Sunrider a cualquier punto en el mapa. No cancela la ventana de comando si se usa."
 
     # game/screens custom.rpy:1040
     old "Select a downed unit to launch into the battle once more at full health."
@@ -124,7 +124,7 @@ translate spanish strings:
 
     # game/screens custom.rpy:1900
     old "Click on ADD PLAYER SHIPS and click and drop your units to the map. Do the same to add enemy units."
-    new "Haz click en AÑADIR NAVES DEL JUGADOR, click en tus unidades y suéltalas en el mapa. Haz lo mismo para añadir unidades enemigas."
+    new "Haz clic en AÑADIR NAVES DEL JUGADOR, clic en tus unidades y suéltalas en el mapa. Haz lo mismo para añadir unidades enemigas."
 
     # game/screens custom.rpy:1901
     old "Pressing SHIFT allows you to add the selected unit multiple times to the map."
@@ -136,7 +136,7 @@ translate spanish strings:
 
     # game/screens custom.rpy:1903
     old "To remove placed units, simply press the REMOVE button, then click on the unit you wish to remove."
-    new "Para remover unidades colocadas, simplemente presiona el botón REMOVER, y entonces haz click en la unidad que deseas remover."
+    new "Para remover unidades colocadas, simplemente presiona el botón REMOVER, y entonces haz clic en la unidad que deseas remover."
 
     # game/screens custom.rpy:1904
     old "You may set the amount of usable command points during the battle using the buttons on the player pool bar."
@@ -144,21 +144,14 @@ translate spanish strings:
 
     # game/screens custom.rpy:1905
     old "Additionally, you can freely try out all possible upgrades by clicking the blue upgrades button."
-    new "Adicionalmente, puedes intentar libremente todas las posibles mejoras al hacer click en el botón azul de mejoras."
+    new "Adicionalmente, puedes intentar libremente todas las posibles mejoras al hacer clic en el botón azul de mejoras."
 
     # game/screens custom.rpy:1906
     old "Keep in mind that you will {b}not{/b} earn any money or command points in Skirmish Mode!"
-    new "¡Ten en cuenta que {b}no{/b} ganaras dinero ni puntos de comando en el Modo Escaramuza!"
+    new "¡Ten en cuenta que {b}no{/b} ganarás dinero ni puntos de comando en el Modo Escaramuza!"
 
     # game/screens custom.rpy:1908
     old "PROCEED"
     new "PROCEDER"
 
-# TODO: Translation updated at 2021-10-15 15:47
-
-translate spanish strings:
-
-    # game/screens custom.rpy:986
-    old "Provides +20 Flak, +10 Evasion and +10 Shield Generation to all allied units. Will cancel FULL FORWARD if active."
-    new ""
 

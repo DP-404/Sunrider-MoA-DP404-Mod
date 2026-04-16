@@ -16,7 +16,7 @@ translate spanish censorscene1_47d5e714:
 translate spanish censorscene1_3be3a694:
 
     # kay "I hear Far Port has pretty good weather. Tropical year round."
-    kay "Oí que Far Port tiene un muy buen clima. Tropical todo el año."
+    kay "Escuché que Far Port tiene un muy buen clima. Tropical todo el año."
 
 # game/censoreddata.rpy:20
 translate spanish censorscene1_b73b0bf1:
@@ -262,7 +262,7 @@ translate spanish censorscene1_e770f05a:
 translate spanish censorscene1_627ac7b0:
 
     # kay "I'll be a year behind you. Who knows what will happen."
-    kay "Estaré un año detrás de tí. Quién sabe qué pasará."
+    kay "Estaré un año detrás de ti. Quién sabe qué pasará."
 
 # game/censoreddata.rpy:74
 translate spanish censorscene1_b0775208:
@@ -304,7 +304,7 @@ translate spanish censorscene1_ada991b8:
 translate spanish censorscene1_f5915a46:
 
     # kay "We'll have adventures across the galaxy. Defeat bad guys. Defend humanity."
-    kay "Tendremos aventuras por la galaixa. Derrotaremos a los tipos malos. Defenderemos la humanidad."
+    kay "Tendremos aventuras por la galaxia. Derrotaremos a los tipos malos. Defenderemos la humanidad."
 
 # game/censoreddata.rpy:81
 translate spanish censorscene1_175d5f83:
@@ -316,7 +316,7 @@ translate spanish censorscene1_175d5f83:
 translate spanish censorscene1_8e9b5250:
 
     # kay "Captain Crescentia and First Officer Shields."
-    kay "La Capitana Crescentia y el Primer Oficial Shields."
+    kay "La Capitán Crescentia y el Primer Oficial Shields."
 
 # game/censoreddata.rpy:83
 translate spanish censorscene1_44e45769:

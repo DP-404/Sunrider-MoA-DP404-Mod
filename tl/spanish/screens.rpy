@@ -6,6 +6,10 @@ translate spanish strings:
     old "WARNING! \n You can not save during the enemy \n turn."
     new "¡ADVERTENCIA! \n No puedes guardar durante el turno \n enemigo."
 
+    # game/screens.rpy:439
+    old "Empty Slot."
+    new "Espacio Vacío."
+
     # game/screens.rpy:783
     old "Yes"
     new "Sí"

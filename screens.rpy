@@ -436,7 +436,7 @@ screen load:
                             # Format the description, and add it as text.
                             $ description = "% 2s. %s\n%s" % (
                                 FileSlotName(i, columns * rows),
-                                FileTime(i, empty=_("Empty Slot.")),
+                                FileTime(i, empty=__("Empty Slot.")),
                                 FileSaveName(i))
 
                             text description
@@ -519,7 +519,7 @@ screen save:
                             # Format the description, and add it as text.
                             $ description = "% 2s. %s\n%s" % (
                                 FileSlotName(i, columns * rows),
-                                FileTime(i, empty=_("Empty Slot.")),
+                                FileTime(i, empty=__("Empty Slot.")),
                                 FileSaveName(i))
 
                             text description

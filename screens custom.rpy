@@ -1088,7 +1088,9 @@ screen commands: ##show the weapon buttons etc##
                 if BM.selected in enemy_ships:
                     $ index = ' ' + str(enemy_ships.index(BM.selected))
                 # text str(index) xanchor 1.0 xpos 1880 ypos 800 size 20 outlines [(1,'000',0,0)]
-            text (BM.selected.name + index) xanchor 1.0 xpos 1880 ypos 726 outlines [(1,'000',0,0)]
+            text (_(BM.selected.name)) xanchor 1.0 xpos 1880 ypos 726 outlines [(1,'000',0,0)]
+            if index != '':
+                text ('# ' + index) xanchor 1.0 xpos 1880 ypos 750 outlines [(1,'000',0,0)]
 
         $hp_size = int(374*(float(BM.selected.hp)/BM.selected.max_hp))
         $en_size = int(298*(float(BM.selected.en)/BM.selected.max_en))
@@ -1946,9 +1948,9 @@ screen battle_log():
                             $filter_all = True
                         else:
                             $filter_all = False
-                        label "Filtros:":
+                        label "Filters:":
                             right_padding 10
-                        textbutton "Todo":
+                        textbutton "all":
                             action If(filter_all, true=[ToggleScreenVariable("filter_all"),
                                                         SetScreenVariable("filter_system", False),
                                                         SetScreenVariable("filter_attack", False),
@@ -1977,12 +1979,12 @@ screen battle_log():
                                                         SetScreenVariable("filter_debuff", True),
                                                         SetScreenVariable("filter_order", True),
                                                         SelectedIf(filter_all)])
-                        textbutton "Sistema":
+                        textbutton "system":
                             action [ToggleScreenVariable("filter_system")]
-                        textbutton "Ordenes":
+                        textbutton "order":
                             action [ToggleScreenVariable("filter_order")]
                         if filter_attack:
-                            textbutton "Ataques":
+                            textbutton "attack":
                                 action [ToggleScreenVariable("filter_attack"),
                                         SetScreenVariable("filter_laser", True),
                                         SetScreenVariable("filter_kinetic", False),
@@ -1990,19 +1992,19 @@ screen battle_log():
                                         SetScreenVariable("filter_melee", False),
                                         SelectedIf(filter_attack)]
                         elif filter_laser:
-                            textbutton "Laser":
+                            textbutton "laser":
                                 action [ToggleScreenVariable("filter_laser"), ToggleScreenVariable("filter_kinetic"), SelectedIf(filter_laser)]
                         elif filter_kinetic:
-                            textbutton "Kinético":
+                            textbutton "kinetic":
                                 action [ToggleScreenVariable("filter_kinetic"), ToggleScreenVariable("filter_missile"), SelectedIf(filter_kinetic)]
                         elif filter_missile:
-                            textbutton "Misiles":
+                            textbutton "missile":
                                 action [ToggleScreenVariable("filter_missile"), ToggleScreenVariable("filter_melee"), SelectedIf(filter_missile)]
                         elif filter_melee:
-                            textbutton "Melee":
+                            textbutton "melee":
                                     action [ToggleScreenVariable("filter_melee")]
                         else: #means attack is not selected
-                            textbutton "Ataque":
+                            textbutton "attack":
                                 action [ToggleScreenVariable("filter_attack"),
                                         SetScreenVariable("filter_laser", True),
                                         SetScreenVariable("filter_kinetic", True),
@@ -2010,34 +2012,31 @@ screen battle_log():
                                         SetScreenVariable("filter_melee", True),
                                         SelectedIf(filter_attack)]
                         if filter_support:
-                            textbutton "Apoyo":
+                            textbutton "support":
                                 action [ToggleScreenVariable("filter_support"),
                                         SetScreenVariable("filter_heal", True),
                                         SetScreenVariable("filter_buff", False),
                                         SetScreenVariable("filter_debuff", False),
                                         SelectedIf(filter_support)]
                         elif filter_heal:
-                            textbutton "Curar":
+                            textbutton "heal":
                                 action [ToggleScreenVariable("filter_heal"), ToggleScreenVariable("filter_buff"), SelectedIf(filter_heal)]
                         elif filter_buff:
-                            textbutton "Mejorar":
+                            textbutton "buff":
                                 action [ToggleScreenVariable("filter_buff"), ToggleScreenVariable("filter_debuff"), SelectedIf(filter_buff)]
                         elif filter_debuff:
-                            textbutton "Maldecir":
+                            textbutton "debuff":
                                     action [ToggleScreenVariable("filter_debuff")]
                         else: #means that support is not selected
-                            textbutton "Apoyo":
+                            textbutton "support":
                                 action [ToggleScreenVariable("filter_support"),
                                         SetScreenVariable("filter_heal", True),
                                         SetScreenVariable("filter_buff", True),
                                         SetScreenVariable("filter_debuff", True),
                                         SelectedIf(filter_support)]
-                        textbutton "Detalles":
+                        textbutton "details":
                             action [ToggleScreenVariable("filter_details")]
 
-                    #textbutton "-":
-                        #xalign 1.0
-                        #action If()
                     textbutton "X":
                         xalign 1.0
                         action [Hide('battle_log'), SetField(BM, 'show_battle_log', False)]

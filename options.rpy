@@ -30,7 +30,7 @@ init -1 python hide:
     ## running in a window.
 
     config.name = "Sunrider Mask of Arcadius"
-    config.version = " DP404 Mod 1.5 (7.2)"
+    config.version = " DP404 Mod 1.6 (7.2)"
     config.window_title = config.name+config.version
 
     config.image_cache_size = 24#8

@@ -261,8 +261,7 @@ init -2 python:
         #similar to formation. Should be merged?
         def skirmish_start(self):
             if len(enemy_ships) == 0:
-                show_message('Please add at least 1 enemy unit')
-                #show_message('Por favor añada al menos 1 unidad enemiga')
+                show_message(_('Please add at least 1 enemy unit'))
                 renpy.jump('mission_skirmish')
             player_ship_present = False
 
@@ -430,7 +429,7 @@ init -2 python:
 
                 #when setting up before a mission you can't put your ships farther to the right than column 7
                 if new_location[0] > self.formation_range:
-                    show_message('Muy lejos del campo colocable.')
+                    show_message(_('too far infield'))
                 else:
                     set_cell_available(new_location,True) #passing True actually sets it unavailable
 
@@ -704,7 +703,7 @@ init -2 python:
                         if ship.modifiers['damage'][0] == 20:
                             ship.modifiers['damage'] = [0,0]
 
-                self.active_strategy = ['all guard',5]
+                self.active_strategy = [_('all guard'),5]
 
                 succesful = False
                 for ship in player_ships:
@@ -756,14 +755,14 @@ init -2 python:
                         if ship.modifiers['evasion'][0] == 10:
                             ship.modifiers['evasion'] = [0,0]
 
-                self.active_strategy = ['full forward',5]
+                self.active_strategy = [_('full forward'),5]
 
                 succesful = False
                 for ship in player_ships:
                     if apply_modifier(ship,'accuracy',15,5): succesful = True
                     if apply_modifier(ship,'damage',20,5): succesful = True
                 if not succesful:
-                    show_message('alredy active!')
+                    show_message(_('alredy active!'))
                     self.order_used = False
                     self.cmd += self.orders[self.result[0]][0]
                 else:
@@ -1053,7 +1052,7 @@ init -2 python:
             if self.mission != 'skirmishbattle':
                 renpy.jump('sunrider_destroyed')
             else:
-                show_message('You were defeated! better luck next time...')
+                show_message(_('You were defeated! better luck next time...'))
                 clean_battle_exit()
                 renpy.jump('dispatch')
 
@@ -1186,7 +1185,7 @@ init -2 python:
                     if not pship.modifiers['energy regen'][0] == -100:
                         pship.AI()
                     else:
-                        show_message(__('the {} is disabled!').format(pship.name) )
+                        show_message(__('the {} is disabled!').format(_(pship.name)) )
                 except:
                     pship.modifiers['energy regen'] = (0,0)
                     pship.AI()
@@ -1211,7 +1210,7 @@ init -2 python:
                     if not pship.modifiers['energy regen'][0] == -100:
                         pship.AI()
                     else:
-                        show_message(__('the {} is disabled!').format(pship.name) )
+                        show_message(__('the {} is disabled!').format(__(pship.name)) )
                 except:
                     pship.modifiers['energy regen'] = (0,0)
                     pship.AI()
@@ -1226,7 +1225,7 @@ init -2 python:
 
                     try:
                         if ship.modifiers['energy regen'][0] == -100:
-                            show_message(__('the {} is disabled!').format(ship.name) )
+                            show_message(__('the {} is disabled!').format(__(ship.name)) )
                             ship.en = 0
                         else:
                             ship.en = ship.max_en
@@ -1291,7 +1290,7 @@ init -2 python:
                     if not eship.modifiers['energy regen'][0] == -100:
                         eship.AI()
                     else:
-                        show_message(_('the {} is disabled!').format(eship.name) )
+                        show_message(__('the {} is disabled!').format(__(eship.name)) )
                         eship.en = 0
                 except:
                     eship.modifiers['energy regen'] = (0,0)
@@ -1320,7 +1319,7 @@ init -2 python:
                     if not eship.modifiers['energy regen'][0] == -100:
                         eship.AI()
                     else:
-                        show_message(__('the {} is disabled!').format(eship.name) )
+                        show_message(__('the {} is disabled!').format(__(eship.name)) )
                         eship.en = 0
                 except:
                     eship.modifiers['energy regen'] = (0,0)
@@ -1336,7 +1335,7 @@ init -2 python:
 
                     try:
                         if ship.modifiers['energy regen'][0] == -100:
-                            show_message(__('the {} is disabled!').format(ship.name) )
+                            show_message(__('the {} is disabled!').format(__(ship.name)) )
                             ship.en = 0
                         else:
                             if not ship.just_spawned: ship.en = ship.max_en
@@ -2607,7 +2606,7 @@ init -2 python:
 
                 if not successful:
                     #there were no curses to remove
-                    message = "No curses were removed from {0}".format(target.name)
+                    message = __("No curses were removed from {0}").format(__(target.name))
                     BM.battle_log_insert(['support', 'debuff'], message)
                     show_message(message)
                     parent.en += self.energy_use
@@ -2623,7 +2622,7 @@ init -2 python:
                         if BM.phase == 'Player':
                             if not target == parent and target.faction == 'Player':
                                 renpy.music.play( 'sound/Voice/{}'.format( renpy.random.choice(target.buffed_voice) ),channel = target.voice_channel )
-                        message = "Todas las maldiciones fueron removidas del {}".format(target.name)
+                        message = __("All curses were removed from the {}").format(__(target.name))
                         BM.battle_log_insert(['support', 'debuff'], message)
                         show_message(message)
                         target.getting_buff = False
@@ -2638,7 +2637,7 @@ init -2 python:
 
                 #I should replace this with proper immunity flagging.
                 if self.name == 'Disable' and target.name == 'Legion':
-                    show_message( "¡El Legion es inmune!" )
+                    show_message(_("The Legion is immune!"))
                     parent.en += self.energy_use
                     return 0
 
@@ -2665,7 +2664,7 @@ init -2 python:
 
                 if not successful:
                     #wasted
-                    message = "A similar or more powerful effect is already present in {0}".format(target.name)
+                    message = __("A similar or more powerful effect is already present in {0}").format(__(target.name))
                     BM.battle_log_insert(log_tags, message)
                     show_message(message)
                     target.getting_buff = False

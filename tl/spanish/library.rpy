@@ -2,69 +2,157 @@
 
 translate spanish strings:
 
+    # game/library.rpy:342
+    old "Alliance Cruiser"
+    new "Crucero [[Alianza]"
+
+    # game/library.rpy:378
+    old "Alliance Battleship"
+    new "Acorazado [[Alianza]"
+
+    # game/library.rpy:414
+    old "Mining Union Frigate"
+    new "Fragata [[Unión Minera]"
+
+    # game/library.rpy:495
+    old "Freighter"
+    new "Carguero"
+
+    # game/library.rpy:538
+    old "Unknown Hostile"
+    new "Enemigo Desconocido"
+
+    # game/library.rpy:563
+    old "PACT Bomber"
+    new "Bombardero [[PACT]"
+
+    # game/library.rpy:592
+    old "Ryuvian Ryder"
+    new "Ryder [[Ryuvia]"
+
+    # game/library.rpy:668
+    old "PACT Missile Frigate"
+    new "Fragata de Misiles [[PACT]"
+
+    # game/library.rpy:690
+    old "PACT Mook"
+    new "Mook [[PACT]"
+
+    # game/library.rpy:811
+    old "PACT Elite"
+    new "Élite [[PACT]"
+
+    # game/library.rpy:844
+    old "PACT Support"
+    new "Apoyo [[PACT]"
+
+    # game/library.rpy:877
+    old "PACT Cruiser"
+    new "Crucero [[PACT]"
+
+    # game/library.rpy:906
+    old "Ryuvian Cruiser"
+    new "Crucero [[Ryuvia]"
+
+    # game/library.rpy:935
+    old "PACT Spire"
+    new "Aguja [[PACT]"
+
+    # game/library.rpy:965
+    old "PACT Battleship"
+    new "Acorazado [[PACT]"
+
+    # game/library.rpy:994
+    old "PACT Carrier"
+    new "Carguero [[PACT]"
+
+    # game/library.rpy:1028
+    old "PACT Assault Carrier"
+    new "Carguero de Asalto [[PACT]"
+
+    # game/library.rpy:1094
+    old "Pirate Bomber"
+    new "Bombardero [[Pirata]"
+
+    # game/library.rpy:1160
+    old "Pirate Grunt"
+    new "Soldado [[Pirata]"
+
+    # game/library.rpy:1187
+    old "Pirate Destroyer"
+    new "Destructor [[Pirata]"
+
+    # game/library.rpy:1207
+    old "Pirate Base"
+    new "Base [[Pirata]"
+
+    # game/library.rpy:1237
+    old "Pirate Ironhog"
+    new "Acorazado [[Pirata]"
+
     # game/library.rpy:1277
     old "\n            Lasers are accurate even from long distances, but lack fire power.\n            Mitigated by enemy shields."
-    new "        Los láseres tienen alta precisión incluso a largas distancias,\n        pero pierden poder de fuego. Mitigados por los escudos enemigos."
+    new "\n        Los láseres tienen alta precisión incluso a largas distancias,\n        pero pierden poder de fuego. Mitigados por los escudos enemigos."
 
     # game/library.rpy:1293
     old "\n            Fires a barrage of guided missiles at the enemy. While individually weak,\n            their large numbers provide heavy fire power and great accuracy even\n            at long range. Limited in supply. Enemy flak and heavy armor mitigate missiles."
-    new "        Dispara una barrera de misiles guiados al enemigo. Siendo débiles individualmente, sus largos números\n        proveen un pesado poder de fuego, y gran precisión incluso a largo rango. Limitados por suministros.\n        El fuego antiaéreo enemigo y armaduras pesadas mitigan a los misiles."
+    new "\n        Dispara una barrera de misiles guiados al enemigo. Siendo débiles individualmente, sus largos números\n        proveen un pesado poder de fuego, y gran precisión incluso a largo rango. Limitados por suministros.\n        El fuego antiaéreo enemigo y armaduras pesadas mitigan a los misiles."
 
     # game/library.rpy:1308
     old "\n            Kinetics pack a punch, but are inaccurate against distant or small foes.\n            Armor is twice as effective at mitigating kinetic weaponry."
-    new "        Kinéticos asestan un golpe, pero son imprecisos contra distantes o pequeños enemigos.\n        La armadura es el doble de efectiva al mitigar armamento kinético."
+    new "\n        Kinéticos asestan un golpe, pero son imprecisos contra distantes o pequeños enemigos.\n        La armadura es el doble de efectiva al mitigar armamento kinético."
 
     # game/library.rpy:1322
     old "\n            Fires a high volume of laser pulses. Even if the enemy evades one bolt,\n            others may still strike. Collectively, they are more powerful than\n            stream lasers, but cannot pierce armor. Also mitigated by shields."
-    new "        Dispara un alto volumen de pulsos de láser. Incluso si el enemigo evade un rayo,\n        otros podrían golpearlo. Colectivamente, son mas poderosos que rayos láseres,\n        pero no pueden atravesar la armadura. También son mitigados por escudos."
+    new "\n        Dispara un alto volumen de pulsos de láser. Incluso si el enemigo evade un rayo,\n        otros podrían golpearlo. Colectivamente, son mas poderosos que rayos láseres,\n        pero no pueden atravesar la armadura. También son mitigados por escudos."
 
     # game/library.rpy:1337
     old "\n            Assault guns spray explosive low caliber rounds at the enemy. Even if\n            the enemy evades one round, others may hit. Armor is twice as\n            effective against assault. Also used to shoot down incoming enemy missiles,\n            but loses effectiveness against sustained barrages."
-    new "        Armas de asalto disparan rondas explosivos de bajo calibre al enemigo. Incluso si\n        el enemigo evade una ronda, otras podrían golpearlo. La armadura es el doble de\n        efectiva contra asalto. También pueden ser usadas para derribar misiles enemigos,\n        pero pierde efectividad contra barreras sustanciadas."
+    new "\n        Armas de asalto disparan rondas explosivos de bajo calibre al enemigo. Incluso si\n        el enemigo evade una ronda, otras podrían golpearlo. La armadura es el doble de\n        efectiva contra asalto. También pueden ser usadas para derribar misiles enemigos,\n        pero pierde efectividad contra barreras sustanciadas."
 
     # game/library.rpy:1356
     old "\n            Fires a large rocket at the enemy topped with a devastating warhead.\n            Highly limited in supply. Can be shot down by enemy flak."
-    new "        Dispara un gran proyectil al enemigo con una devastadora cabeza de guerra.\n        Áltamente limitado en suministros. Puede ser derribado por el\n        fuego antiaéreo enemigo."
+    new "\n        Dispara un gran proyectil al enemigo con una devastadora cabeza de guerra.\n        Altamente limitado en suministros. Puede ser derribado por el\n        fuego antiaéreo enemigo."
 
     # game/library.rpy:1479
     old "\n            The ultimate in interstellar destruction. Can punch holes through\n            the toughest armor, but requires an enormous amount of energy. Ineffective against\n            small targets."
-    new "        Lo último en destrucción interestelar. Puede crear agujeros a través de\n        las mas duras armaduras, pero requiere enorme cantidad de energía.\n        Inefectivo contra pequeños objetivos."
+    new "\n        Lo último en destrucción interestelar. Puede crear agujeros a través de\n        las mas duras armaduras, pero requiere enorme cantidad de energía.\n        Inefectivo contra pequeños objetivos."
 
     # game/library.rpy:1576
     old "\n            Slice an enemy ryder for devastating damage. However, can only be used on adjacent\n            ryders. Moving directly next to an enemy ryder will trigger an enemy blindside attack."
-    new "        Corta a un ryder enemigo causando un daño devastador. De cualquier forma, solo puede ser usado en\n        ryders adyacentes. Moverse directamente hacia un ryder enemigo activara el contraataque del enemigo."
+    new "\n        Corta a un ryder enemigo causando un daño devastador. De cualquier forma, solo puede ser usado en\n        ryders adyacentes. Moverse directamente hacia un ryder enemigo activara el contraataque del enemigo."
 
     # game/library.rpy:2162
     old "\n            Restores approximately 300 HP to target.\n            Has a range of 3 hexes."
-    new "        Restaura aproximadamente 400 HP a un ryder adyacente.\n        Tiene un rango de 3 casillas."
+    new "\n        Restaura aproximadamente 400 HP a un ryder adyacente.\n        Tiene un rango de 3 casillas."
 
     # game/library.rpy:2174
     old "\n            Adds an additional 15 points to the target's weapon accuracy.\n            Has a range of 3 hexes."
-    new "        Añade 15 puntos adicionales a la precisión con armas del objetivo.\n        Tiene un rango de 3 casillas."
+    new "\n        Añade 15 puntos adicionales a la precisión con armas del objetivo.\n        Tiene un rango de 3 casillas."
 
     # game/library.rpy:2186
     old "\n            Increases the target's weapon damage by 20 percent.\n            Has a range of 3 hexes."
-    new "        Incrementa el daño con armas del objetivo en un 20 porciento.\n        Tiene un rango de 3 casillas."
+    new "\n        Incrementa el daño con armas del objetivo en un 20 por ciento.\n        Tiene un rango de 3 casillas."
 
     # game/library.rpy:2199
     old "\n            Removes all enemy status ailments from the target.\n            Has a range of 3 hexes."
-    new "        Remueve todos los estados alterados enemigos del objetivo.\n        Tiene un rango de 3 casillas."
+    new "\n        Remueve todos los estados alterados enemigos del objetivo.\n        Tiene un rango de 3 casillas."
 
     # game/library.rpy:2215
     old "\n            Become immune to enemy blindsides for one turn."
-    new "        Se vuelve inmine a contraataques enemigos durante un turno."
+    new "\n        Se vuelve inmune a contraataques enemigos durante un turno."
 
     # game/library.rpy:2231
     old "\n            Temporarily overcharges the Seraphim's systems, providing\n            an additional 100 additional points to accuracy as well as\n            doubling weapon damage for three turns."
-    new "        Sobrecarga temporalmente los sistemas del Seraphim, otorgando\n        100 puntos adicionales a la precisión así como\n        duplicar el daño con armas durante tres turnos."
+    new "\n        Sobrecarga temporalmente los sistemas del Seraphim, otorgando\n        100 puntos adicionales a la precisión así como\n        duplicar el daño con armas durante tres turnos."
 
     # game/library.rpy:2250
     old "\n            Improves the Black Jack's damage, evasion and armor each turn, but also causes progressively more damage each turn until canceled."
-    new "        Icrementa el daño, la evasión y la armadura del Black Jack cada turno,\n        pero también causa daño progresivo cada turno hasta que se cancele."
+    new "\n        Icrementa el daño, la evasión y la armadura del Black Jack cada turno,\n        pero también causa daño progresivo cada turno hasta que se cancele."
 
     # game/library.rpy:2282
-    old "\n            Cancela el efecto despertar"
-    new "        Cancela el efecto despertar."
+    old "\n            Cancels the awakening effect."
+    new "\n        Cancela el efecto despertar."
 
     # game/library.rpy:2309
     old "Aim Down"
@@ -72,7 +160,7 @@ translate spanish strings:
 
     # game/library.rpy:2311
     old "\n            Reduces the target's weapon accuracy by 25 points."
-    new "        Reduce la precisión con armas del objetivo en 25 puntos."
+    new "\n        Reduce la precisión con armas del objetivo en 25 puntos."
 
     # game/library.rpy:2322
     old "Disable"
@@ -80,7 +168,7 @@ translate spanish strings:
 
     # game/library.rpy:2324
     old "\n            Completely disables the target for one turn."
-    new "        Desactiva completamente al ovjetivo durante un turno."
+    new "\n        Desactiva completamente al objetivo durante un turno."
 
     # game/library.rpy:2335
     old "Flak Off"
@@ -88,7 +176,7 @@ translate spanish strings:
 
     # game/library.rpy:2337
     old "\n            The target can no longer counter attack or fire flak at missiles for two turns."
-    new "        El objetivo ya no puede contraatacar ni disparar fuego antiaéreo a misiles durante dos turnos."
+    new "\n        El objetivo ya no puede contraatacar ni disparar fuego antiaéreo a misiles durante dos turnos."
 
     # game/library.rpy:2348
     old "Shield Down"
@@ -96,7 +184,7 @@ translate spanish strings:
 
     # game/library.rpy:2350
     old "\n            Deactivates the target's shields for two turns."
-    new "        Desactiva los escudos del objetivo durante dos turnos."
+    new "\n        Desactiva los escudos del objetivo durante dos turnos."
 
     # game/library.rpy:2362
     old "Shield Jam"
@@ -104,15 +192,15 @@ translate spanish strings:
 
     # game/library.rpy:2364
     old "\n            Temporarily reduce the target's shield generation by 15 points. Can be used multiple times on the same target."
-    new "        Reduce temporalmente la generación de escudo del objetivo en 15 puntos. Puede ser usado múltiples veces en el mismo objetivo."
+    new "\n        Reduce temporalmente la generación de escudo del objetivo en 15 puntos. Puede ser usado múltiples veces en el mismo objetivo."
 
     # game/library.rpy:2517
     old "\n            Sola's rifle is an elegant weapon from a more civilized age.\n            Incredibly powerful and accurate weapon, but demands much energy."
-    new "        El rifle de Sola es una elegante arma de una era mas civilizada.\n        Un arma increíblemente poderosa y precisa, pero demanda mucha energía."
+    new "\n        El rifle de Sola es una elegante arma de una era mas civilizada.\n        Un arma increíblemente poderosa y precisa, pero demanda mucha energía."
 
     # game/library.rpy:2533
     old "\n            Provides reliable firepower, but highly inaccurate unless the target\n            is nearby and large. Can also be used for blindside attacks."
-    new "        Provee un seguro poder de fuego, pero áltamente impreciso sin importar si\n        el objetivo esta cerca o lejos. Puede ser usado para contraataques."
+    new "\n        Provee un seguro poder de fuego, pero altamente impreciso sin importar si\n        el objetivo esta cerca o lejos. Puede ser usado para contraataques."
 
     # game/library.rpy:2644
     old "WARHEAD AMMO"
@@ -168,7 +256,7 @@ translate spanish strings:
 
     # game/library.rpy:2731
     old "The Wishall is an ancient Ryuvian artifact which allows its user to make one free command decision during the story. Alternately, you may decide to sell it here for an instant cash infusion of 10 000 credits."
-    new "El Wishall es un antiguo artefacto Ryuviano que permite a su usuario realizar una desición libre de costo durante la historia. Alternativamente, puedes decidir venderlo por una infusion de efectivo instantánea de 10 000 créditos."
+    new "El Wishall es un antiguo artefacto Ryuviano que permite a su usuario realizar una decisión libre de costo durante la historia. Alternativamente, puedes decidir venderlo por una infusión de efectivo instantánea de 10 000 créditos."
 
     # game/library.rpy:2741
     old "SUNRIDER SHIELD UPGRADE"
@@ -180,7 +268,7 @@ translate spanish strings:
 
     # game/library.rpy:2755
     old "BLACK JACK THRUSTER UPGRADES"
-    new "MEJORA DE ACELERADORES DEL BLACK JACK"
+    new "MEJORAS DE MOTORES DEL BLACK JACK"
 
     # game/library.rpy:2757
     old "The Black Jack was designed to be compatible with military grade high-powered thrusters, but those are not easy to find. Thanks to your connections with the Mining Union, this no longer needs to hold her back."
@@ -200,5 +288,5 @@ translate spanish strings:
 
     # game/library.rpy:2782
     old "Increase the Vanguard cannon's damage from 800 to 1000 damage and extend the range by 1 hex"
-    new "Incrementa el daño del cañón Vanguard de 800 a 1000 de daño y extiene el rango en 1 casilla."
+    new "Incrementa el daño del cañón Vanguard de 800 a 1000 de daño y extiende el rango en 1 casilla."
 

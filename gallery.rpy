@@ -125,7 +125,6 @@ init -1 python:
     gallery.image("porkfleet_back","portfleet_1c","portfleet_2c","portfleet_3c","portfleet_4c","portfleet_5c","portfleet_6c","portfleet_7c","portfleet_8c","portfleet_9c")
     gallery.image("porkfleet_back","portfleet_1c","portfleet_2c","portfleet_3c","portfleet_4c","portfleet_5c","portfleet_6c","portfleet_7c","portfleet_8c","portfleet_9c","portfleet_10c")
     # gallery.image("porkfleet_back","portfleet_1c","portfleet_2c","portfleet_3c","portfleet_4c","portfleet_5c","portfleet_6c","portfleet_7c","portfleet_8c","portfleet_9c","portfleet_10c","portfleet_11c")
-    gallery.image("porkfleet_assembled")
     gallery.image("porkfleet_assembled","porkfleet_fire")
 
     gallery.button("cg23")
@@ -146,7 +145,6 @@ init -1 python:
     gallery.button("cg27")
     gallery.image("cg_asagashower1_censored")
     gallery.image("cg_asagashower2_censored")
-    gallery.image("cg_asagashower3_censored")
 
     gallery.button("cg28")
     gallery.image("cg_chigarateatime_sad")
@@ -509,7 +507,6 @@ init 10:
         $ gallery.button("cg27")
         $ gallery.image("cg_asagashower1")
         $ gallery.image("cg_asagashower2")
-        $ gallery.image("cg_asagashower3")
 
         $ gallery.button("cg47")
         $ gallery.image("cg_avascene")

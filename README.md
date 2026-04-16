@@ -20,6 +20,21 @@ This mod works correctly whether or not you have the decensor patch installed.
 
 # Changelog
 
+## DP404 Mod v1.6
+
+### Changes
+- Translated battle popup messages, credits, subtitles, unit names.
+- Translated backgrounds, phases, skirmish, weapon buttons.
+- Several other minor translations.
+
+### Bugs and Other fixes
+- Fixed gallery repeated and nonexistent images.
+- Fixed intro images, map images, thumbs.
+- Fixed brief appearance of previous scene when moving through shipmap.
+- Fixed battle log.
+- Fixed weapon tooltips.
+- Several other minor changes and fixes.
+
 ## DP404 Mod v1.5
 
 ### Changes

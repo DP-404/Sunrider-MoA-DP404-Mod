@@ -12,7 +12,7 @@ translate spanish strings:
 
     # renpy/common/00gui.rpy:376
     old "Are you sure you want to overwrite your save?"
-    new "¿Está seguro que quiere sobreescribir su partida?"
+    new "¿Está seguro que quiere sobrescribir su partida?"
 
     # renpy/common/00gui.rpy:377
     old "Loading will lose unsaved progress.\nAre you sure you want to do this?"
