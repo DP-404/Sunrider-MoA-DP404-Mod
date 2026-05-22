@@ -208,7 +208,7 @@ translate spanish censorscene1_cefdfb8f:
 translate spanish censorscene1_46320738:
 
     # "They were left breathing on top of each other for a moment."
-    "Ellos se quedaron respirando encima del otro por un momento."
+    "Se quedaron respirando encima del otro por un momento."
 
 # game/censoreddata.rpy:62
 translate spanish censorscene1_a7c23fe4:

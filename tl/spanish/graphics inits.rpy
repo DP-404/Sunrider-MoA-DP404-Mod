@@ -8,7 +8,7 @@ translate spanish strings:
 
     # game/graphics inits.rpy:941
     old "Prepare to fire the Vanguard Cannon!"
-    new "¡Prepárense para diparar el Cañón Vanguard!"
+    new "¡Prepárense para disparar el Cañón Vanguard!"
 
     # game/graphics inits.rpy:942
     old "Vanguards..."

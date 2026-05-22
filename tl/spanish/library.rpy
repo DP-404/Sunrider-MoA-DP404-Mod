@@ -148,7 +148,7 @@ translate spanish strings:
 
     # game/library.rpy:2250
     old "\n            Improves the Black Jack's damage, evasion and armor each turn, but also causes progressively more damage each turn until canceled."
-    new "\n        Icrementa el daño, la evasión y la armadura del Black Jack cada turno,\n        pero también causa daño progresivo cada turno hasta que se cancele."
+    new "\n        Incrementa el daño, la evasión y la armadura del Black Jack cada turno,\n        pero también causa daño progresivo cada turno hasta que se cancele."
 
     # game/library.rpy:2282
     old "\n            Cancels the awakening effect."
@@ -216,7 +216,7 @@ translate spanish strings:
 
     # game/library.rpy:2659
     old "While the proliferation of nuclear warheads throughout the galaxy has made them readily available, more powerful weapons are regulated closely by the Alliance. With the payment of appropriate fees, the Union can replace your current stock of nuclear warheads with quantum warheads, permanently increasing the Sunrider's rocket damage to 1200."
-    new "Si bien la proliferación de cabezas de guerra nucleares por toda la galaxia las ha hecho fácilmente disponibles, armas más poderosas son reguladas de cerca por la Alianza. Con el pago de apropiadas cuotas, la Unión puede reemplazar tus actuales reservas de cabezas de guerra nucleares por cabezas de guerra cuánticas, incrementando permanentemente el daño de los torpedos del Sunrider a 1200."
+    new "Si bien la proliferación de cabezas de guerra nucleares por toda la galaxia las ha hecho fácilmente disponibles, armas más poderosas son reguladas de cerca por la Alianza. Con el pago de apropiadas cuotas, la Unión puede remplazar tus actuales reservas de cabezas de guerra nucleares por cabezas de guerra cuánticas, incrementando permanentemente el daño de los torpedos del Sunrider a 1200."
 
     # game/library.rpy:2670
     old "PORTABLE REPAIR BOOSTER"

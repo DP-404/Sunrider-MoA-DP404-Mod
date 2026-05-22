@@ -232,7 +232,7 @@ translate spanish die_phoenixboaster_c83d7e68:
 translate spanish die_phoenixboaster_8d7784ed:
 
     # ava "There's still the rest of the fleet to worry about. Take out their capital ships!"
-    ava "Todavía está el resto de la flota por lo qué preocuparnos. ¡Derriben sus acorazados!"
+    ava "Todavía queda preocuparnos por el resto de la flota. ¡Derriben sus acorazados!"
 
 translate spanish strings:
 
