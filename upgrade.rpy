@@ -239,16 +239,16 @@ screen upgrade:
             $ type = None
             if name.find('Damage') != -1:
                 $ type = 'damage'
-                $ quantifier = 'DMG'
+                $ quantifier = __('DMG')
             if name.find('Accuracy') != -1:
                 $ type = 'accuracy'
                 $ quantifier = '%'
             if name.find('Energy Cost') != -1:
                 $ type = 'energy_use'
-                $ quantifier = 'EN'
+                $ quantifier = __('EN')
             if name.find('Flak Resistance') != -1:
                 $ type = 'eccm'
-                $ quantifier = ' FR'
+                $ quantifier = __(' FR')
 
             $ count = 0
             for weapon in ship.weapons:

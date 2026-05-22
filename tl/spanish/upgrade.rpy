@@ -30,11 +30,23 @@ translate spanish strings:
     old "UNLIMITED"
     new "ILIMITADO"
 
+    # game/upgrade.rpy:242
+    old "DMG"
+    new "DAÑO"
+
+    # game/upgrade.rpy:248
+    old "EN"
+    new "EN"
+
+    # game/upgrade.rpy:251
+    old " FR"
+    new " RES"
+
     # game/upgrade.rpy:291
     old "Future costs:"
     new "Costes futuros:"
 
     # game/upgrade.rpy:297
     old "Mark {}:"
-    new "Marca {}:"
+    new "Modelo {}:"
 
