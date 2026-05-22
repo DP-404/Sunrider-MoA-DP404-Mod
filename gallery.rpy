@@ -3,11 +3,11 @@ init -1 python:
 ########## GALLERY
 
     gallery = Gallery()
-    
+
     gallery_room = 0
-    
+
 ########## CG
-        
+
     gallery.button("cg1")
     gallery.image("bg cera")
 
@@ -177,6 +177,8 @@ init -1 python:
     gallery.image("cg_alliancefleet_farport7")
 
     gallery.button("cg33")
+    gallery.image("cg_blackjack_farport1", Transform("cg_blackjack_farport2", xanchor=0.5, yanchor=0.5, xpos=0.5, ypos=0.5))
+    gallery.image("cg_blackjack_farport1", Transform("cg_blackjack_farport2", xanchor=0.5, yanchor=0.5, xpos=0.42, ypos=0.54, zoom=0.5))
     gallery.image("cg_blackjack_farport3")
     gallery.image("cg_blackjack_farport4")
     gallery.image("cg_blackjack_farport5")
