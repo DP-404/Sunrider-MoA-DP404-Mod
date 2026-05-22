@@ -16894,6 +16894,9 @@ label onroutetoongess:
 
 label arrivalatongess:
 
+    if renpy.music.get_playing(channel="music") != "Music/The_Meteor.ogg":
+        play music "Music/The_Meteor.ogg" fadeout 1.5
+
     $ Random = renpy.random.randint(1,9)
 
     if Random == 1:
@@ -16974,6 +16977,9 @@ label arrivalatongess:
     jump dispatch
 
 label greyonboard:
+
+    if renpy.music.get_playing(channel="music") != "Music/The_Meteor.ogg":
+        play music "Music/The_Meteor.ogg" fadeout 1.5
 
     hide screen ship_map
     scene bg hangar
