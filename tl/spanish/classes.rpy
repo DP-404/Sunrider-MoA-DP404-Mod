@@ -31,6 +31,10 @@ translate spanish strings:
     new "RETIRADA"
 
     # game/classes.rpy:273
+    old "Please add at least 1 enemy unit"
+    new "Por favor añada al menos 1 unidad del enemigo."
+
+    # game/classes.rpy:273
     old "Please add at least 1 player unit"
     new "Por favor añada al menos 1 unidad del jugador."
 
