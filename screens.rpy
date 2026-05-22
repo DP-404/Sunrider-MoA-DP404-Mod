@@ -569,7 +569,7 @@ screen preferences:
             hotspot (1065, 130, 175, 50) action [ Hide('preferences'), Show('gameprefs', transition=dissolve) ]
             hotspot (825, 235, 91, 25) action Preference("display", "window")
             hotspot (1000, 235, 205, 25) action Preference("display", "fullscreen")
-            hotspot (805, 343, 193, 25) action Preference("skip", "seen")
+            hotspot (805, 343, 193, 29) action Preference("skip", "seen")
             hotspot (1065, 347, 65, 25) action Preference("skip", "all")
             hotspot (802, 410, 178, 25) action Preference("after choices", "skip")
             hotspot (1025, 410, 170, 25) action Preference("after choices", "stop")
